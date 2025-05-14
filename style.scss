@@ -133,11 +133,12 @@ table {
 
 //Standard font sizes mobile
 :root {
-	--standard-font-size: 14px;
+	--standard-font-size: 16px;
 	--header-height: 80px;
 	--padding-left-right: 20px;
 	--heading-padding-bottom-h1-h2: 30px;
-	--heading-padding-bottom-h3-h4: 15px;
+	--heading-padding-bottom-h3: 15px;
+	--heading-padding-bottom-h4: 10px;
 	--standard-green: #007078;
 	--lighter-green: #009fa9;
 	--nav-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
@@ -171,29 +172,32 @@ h2 {
 	padding-bottom: var(--heading-padding-bottom-h1-h2);
 }
 
-h3,
+h3 {
+	padding-bottom: var(--heading-padding-bottom-h3);
+}
+
 h4 {
-	padding-bottom: var(--heading-padding-bottom-h3-h4);
+	padding-bottom: var(--heading-padding-bottom-h4);
 }
 
 i {
-	color: var(--standard-green);
+	color: #222;
 }
 
 h1 {
-	font-size: clamp(2.5rem, 5vw, 3rem);
+	font-size: clamp(2.125rem, 5vw, 3rem);
 }
 
 h2 {
-	font-size: clamp(2rem, 5vw, 2.5rem);
+	font-size: clamp(1.875rem, 5vw, 2.5rem);
 }
 
 h3 {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 }
 
 h4 {
-	font-size: 1.25rem;
+	font-size: 1.125rem;
 }
 
 nav {
@@ -201,7 +205,7 @@ nav {
 }
 
 p {
-	font-size: 1.125rem;
+	font-size: 1rem;
 	line-height: 1.5;
 }
 
@@ -218,7 +222,11 @@ p:not(:last-child) {
 }
 
 p.small {
-	font-size: 0.875rem;
+	font-size: 0.75rem;
+}
+
+p.slogan {
+	font-size: 1.125rem;
 }
 
 /////////////////////////
@@ -444,25 +452,28 @@ main {
 			}
 		}
 
-		.contact-details {
-			padding: 50px 0;
-			width: 250px;
+		.contact-details-container {
+			//padding-top: 50px;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
 			h4 {
 				text-align: start;
 				color: var(--standard-green);
 			}
 
 			a {
-				//text-decoration: none;
 				color: var(--lighter-green);
 			}
 
-			.social-media {
+			.social-media-container {
+				width: 100px;
 				display: flex;
 				flex-direction: column;
+				justify-content: space-between;
 
 				span {
-					width: 100px;
+					width: 100%;
 					display: flex;
 					justify-content: space-between;
 					i {
@@ -476,12 +487,67 @@ main {
 		}
 	}
 
+	.organisations {
+		.organisation-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 20px 50px;
+
+			img {
+				height: 80px;
+			}
+		}
+	}
+
 	.orange-contact-btn {
 		background-color: #db7602;
 		color: #fff;
 		font-weight: 500;
 		font-size: 1.5rem;
 		padding: 15px 20px;
+	}
+}
+
+//FOOTER
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	background-color: var(--standard-green);
+	padding: 20px var(--padding-left-right);
+	color: #fff;
+
+	.footer-links {
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 10px 30px;
+			font-size: var(--standard-font-size);
+
+			a {
+				color: #fff;
+				text-decoration: none;
+				text-transform: none;
+			}
+		}
+	}
+
+	.download-btn {
+		background-color: #ebe9f3;
+		color: var(--standard-green);
+		padding: 10px 50px;
+	}
+
+	.slogan {
+		padding-bottom: 0;
+		text-transform: uppercase;
+	}
+
+	.copyright {
+		font-weight: 300;
 	}
 }
 
