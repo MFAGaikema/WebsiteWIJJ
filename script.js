@@ -40,7 +40,14 @@ const menuIsExpanded = (button) => {
 const toggleAttributeHidden = (menuName, button, expanded) => {
 	const menu = document.getElementById(menuName);
 	button.setAttribute('aria-expanded', !expanded);
-	menu.hidden = expanded;
+
+	if (expanded) {
+		setTimeout(() => {
+			menu.hidden = expanded;
+		}, 100);
+	} else {
+		menu.hidden = expanded;
+	}
 };
 
 //openen en sluiten van navigatie mobile
@@ -55,9 +62,13 @@ const toggleNavbar = () => {
 	if (menuIsExpanded(navbarToggleBtn)) {
 		navbarToggleBtn.setAttribute('aria-label', 'Sluit navigatie');
 		toggleBtnIcon.setAttribute('class', 'fa-solid fa-xmark fa-2xl');
+		setTimeout(() => {
+			navMenuMobile.style.left = '0';
+		}, 1);
 	} else {
 		navbarToggleBtn.setAttribute('aria-label', 'Open navigatie');
 		toggleBtnIcon.setAttribute('class', 'fa-solid fa-bars fa-2xl');
+		navMenuMobile.style.left = '-100vw';
 	}
 };
 
