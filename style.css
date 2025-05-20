@@ -101,7 +101,6 @@ footer,
 header,
 hgroup,
 menu,
-nav,
 section {
   display: block;
 }
@@ -136,10 +135,10 @@ table {
 :root {
   --standard-font-size: 16px;
   --header-height: 80px;
-  --padding-left-right: 20px;
-  --heading-padding-bottom-h1-h2: 30px;
-  --heading-padding-bottom-h3: 15px;
-  --heading-padding-bottom-h4: 10px;
+  --padding-left-right: 1.25em;
+  --heading-padding-bottom-h1-h2: 1em;
+  --heading-padding-bottom-h3: 1em;
+  --heading-padding-bottom-h4: 1.125em;
   --standard-green: #007078;
   --lighter-green: #009fa9;
   --nav-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
@@ -186,7 +185,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.875rem, 5vw, 2.5rem);
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
 }
 
 h3 {
@@ -226,55 +225,68 @@ p.slogan {
   font-size: 1.125rem;
 }
 
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+footer button:focus-visible,
+footer a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
 header {
   height: var(--header-height);
   width: 100%;
-  padding: 10px var(--padding-left-right);
-  position: relative;
+  padding: 0.625em var(--padding-left-right);
+  position: fixed;
+  top: 0;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff;
+  transition: 0.2s;
+  box-shadow: var(--nav-shadow);
+  -webkit-box-shadow: var(--nav-shadow);
+  -moz-box-shadow: var(--nav-shadow);
 }
 header a {
   height: 100%;
   color: var(--standard-green);
-}
-header a.dropdown-btn {
   text-decoration: none;
 }
 header a img {
   height: inherit;
   width: auto;
 }
-header button {
-  color: var(--standard-green);
+header button#navbar-toggle-btn {
   background: none;
-  color: inherit;
   border: none;
   padding: 0;
   font: inherit;
   cursor: pointer;
-  text-transform: uppercase;
+  height: 2rem;
+  border-radius: 2px;
 }
-header button.hamburger-btn, header button.close-btn {
-  height: 34px;
+header button#navbar-toggle-btn i {
+  color: var(--standard-green);
 }
-header .close-btn {
-  display: none;
-}
-header nav {
-  display: none;
+header nav#nav-menu-mobile {
   position: absolute;
   width: 100%;
+  height: 100vh;
   top: var(--header-height);
   left: 0;
-  padding: 20px var(--padding-left-right);
+  padding: 1.25em var(--padding-left-right);
   background-color: #fff;
 }
-header nav.open {
+header nav#nav-menu-mobile.open {
   display: block;
 }
-header nav:after {
+header nav#nav-menu-mobile:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -282,48 +294,62 @@ header nav:after {
   z-index: -1;
   box-shadow: var(--nav-shadow);
 }
-header nav .dropdown-container {
-  list-style-type: none;
-  padding: 20px var(--padding-left-right);
-  background-color: white;
-  width: 100%;
-  color: var(--standard-green);
+header nav#nav-menu-mobile li:not(:last-child) {
+  margin-bottom: 1.5em;
 }
-header nav #overons-menu {
+header nav#nav-menu-mobile hr {
+  margin-top: 2rem;
+}
+header nav#nav-menu-mobile .sub-menu {
+  padding: 1em var(--padding-left-right);
+}
+header nav#nav-menu-mobile .sub-menu:last-child {
   padding-bottom: 0;
 }
-header nav li:not(:last-child) {
-  margin-bottom: 20px;
+header nav#nav-menu-mobile .sub-menu li {
+  font-size: 1rem;
 }
-header nav .dropdown-btn {
+header nav#nav-menu-mobile .sub-menu li:not(:last-child) {
+  margin-bottom: 1em;
+}
+header nav#nav-menu-mobile .sub-menu i {
+  color: var(--standard-green);
+  padding-right: 1em;
+}
+header nav#nav-menu-mobile .dropdown-btn {
   cursor: pointer;
 }
-header nav .dropdown-btn .fa-chevron-down {
+header nav#nav-menu-mobile .dropdown-btn .fa-chevron-down {
   padding: 0 10px;
 }
-header nav .nav-right-container.mobile {
+header nav#nav-menu-mobile .nav-right-container.mobile {
   width: fit-content;
   padding-top: 40px;
 }
-header nav .nav-right-container .phone-number {
+header nav#nav-menu-mobile .nav-right-container .phone-number {
+  font-size: 1.5rem;
   color: var(--lighter-green);
-  margin: 10px 0;
+  text-decoration: underline;
 }
-header nav .nav-right-container .nav-search-contact-container {
-  padding-top: 10px;
+header nav#nav-menu-mobile .nav-right-container .nav-search-contact-container {
+  padding-top: 1.25em;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header nav .nav-right-container .nav-search-contact-container .green-contact-btn {
+header nav#nav-menu-mobile .nav-right-container .nav-search-contact-container .green-contact-btn {
   background-color: var(--standard-green);
   color: #fff;
   padding: 5px 20px;
   border-radius: 9999px;
   text-decoration: none;
 }
+header .desktop-navigation {
+  display: none;
+}
 
 .background-image {
+  margin-top: var(--header-height);
   background-image: url(/Assets/Images/DEF_WIJJ_intro.png);
   aspect-ratio: 2.735/1;
   width: 100vw;
@@ -374,7 +400,6 @@ main .stances article img {
 main .contact-container {
   background-color: #ebf6f8;
   width: 100%;
-  text-align: start;
 }
 main .contact-container p input[type=text],
 main .contact-container p textarea,
@@ -402,16 +427,17 @@ main .contact-container form input[type=submit] {
   padding: 5px 50px;
 }
 main .contact-container .contact-details-container {
+  text-align: start;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 main .contact-container .contact-details-container h4 {
-  text-align: start;
   color: var(--standard-green);
 }
 main .contact-container .contact-details-container a {
-  color: var(--lighter-green);
+  color: var(--standard-green);
+  font-weight: bold;
 }
 main .contact-container .contact-details-container .social-media-container {
   width: 100px;
@@ -472,6 +498,14 @@ footer .download-btn {
   background-color: #ebe9f3;
   color: var(--standard-green);
   padding: 10px 50px;
+  position: relative;
+}
+footer .download-btn i {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  color: var(--standard-green);
 }
 footer .slogan {
   padding-bottom: 0;

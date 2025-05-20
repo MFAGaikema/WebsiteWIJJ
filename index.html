@@ -69,29 +69,86 @@
 	</head>
 	<body>
 		<header>
-			<a href="/">
+			<a class="header-logo" href="/">
 				<img src="/Assets/Images/Logos/LogoWIJJ.svg" alt="Logo WIJJ" />
 			</a>
-			<button class="hamburger-btn">
+			<button
+				aria-expanded="false"
+				aria-controls="nav-menu-mobile"
+				id="navbar-toggle-btn"
+				aria-label="Open navigatie"
+			>
 				<i class="fa-solid fa-bars fa-2xl"></i>
 			</button>
-			<button class="close-btn">
-				<i class="fa-solid fa-xmark fa-2xl"></i>
-			</button>
-			<nav>
+			<nav id="nav-menu-mobile" class="mobile-navigation" hidden>
+				<ul>
+					<li>
+						<a href=""> Coachen </a>
+						<ul class="sub-menu">
+							<li>
+								<a href=""
+									><i class="fa-solid fa-chevron-right"></i>Modulaire
+									re-integratie</a
+								>
+							</li>
+							<li>
+								<a href=""
+									><i class="fa-solid fa-chevron-right"></i>Werkfit traject</a
+								>
+							</li>
+							<li>
+								<a href=""
+									><i class="fa-solid fa-chevron-right"></i>Naar werk traject</a
+								>
+							</li>
+							<li>
+								<a href=""
+									><i class="fa-solid fa-chevron-right"></i>Gemeentelijk traject
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="">Zorgen</a></li>
+					<li><a href="">Werken</a></li>
+					<li>
+						<a href="">Over Ons</a>
+						<ul class="sub-menu">
+							<li>
+								<a href=""><i class="fa-solid fa-chevron-right"></i>Over ons</a>
+							</li>
+							<li>
+								<a href=""
+									><i class="fa-solid fa-chevron-right"></i>Over WIJJ</a
+								>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<hr />
+				<div class="nav-right-container mobile">
+					<a class="phone-number" href="tel:+31857600204"
+						>Bel nu: 085-7600204</a
+					>
+					<div class="nav-search-contact-container">
+						<a href="" class="search-btn">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</a>
+						<a href="" class="green-contact-btn">Contact</a>
+					</div>
+				</div>
+			</nav>
+			<nav class="desktop-navigation">
 				<ul>
 					<li>
 						<a
-							role="button"
 							aria-haspopup="true"
 							aria-expanded="false"
 							aria-controls="coachen-menu"
 							class="coachen-btn dropdown-btn"
-							tabindex="0"
 						>
 							Coachen <i class="fa-solid fa-chevron-down"></i>
 						</a>
-						<ul id="coachen-menu" class="dropdown-container" hidden>
+						<ul id="coachen-menu" class="dropdown-container">
 							<li><a href="">Modulaire re-integratie</a></li>
 							<li><a href="">Werkfit traject</a></li>
 							<li><a href="">Naar werk traject</a></li>
@@ -102,14 +159,13 @@
 					<li><a href="">Werken</a></li>
 					<li>
 						<a
-							role="button"
 							aria-haspopup="true"
 							aria-expanded="false"
 							aria-controls="overons-menu"
 							class="overons-btn dropdown-btn"
 							>Over Ons <i class="fa-solid fa-chevron-down"></i
 						></a>
-						<ul id="overons-menu" class="dropdown-container" hidden>
+						<ul id="overons-menu" class="dropdown-container">
 							<li><a href="">Over ons</a></li>
 							<li><a href="">Over WIJJ</a></li>
 						</ul>
@@ -335,7 +391,9 @@
 					<li><a href="">Sitemap</a></li>
 				</ul>
 			</nav>
-			<button class="download-btn">Download onze brochure</button>
+			<button class="download-btn">
+				Download onze brochure <i class="fa-solid fa-download"></i>
+			</button>
 			<p class="slogan">Wijj: jouw team voor toekomst</p>
 			<p class="copyright">WIJJ &copy; 2025</p>
 		</footer>

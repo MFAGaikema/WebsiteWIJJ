@@ -1,64 +1,139 @@
 //Navbar elements
-const hamburgerBtn = document.querySelector('.hamburger-btn');
-const closeBtn = document.querySelector('.close-btn');
-const nav = document.querySelector('nav');
+const navbarToggleBtn = document.querySelector('#navbar-toggle-btn');
+const toggleBtnIcon = navbarToggleBtn.querySelector('i');
+const headerLogoLink = document.querySelector('.header-logo');
+const navMenuMobile = document.getElementById('nav-menu-mobile');
 const header = document.querySelector('header');
 const coachenBtn = document.querySelector('.coachen-btn');
 const overonsBtn = document.querySelector('.overons-btn');
+const chevrons = Array.from(document.getElementsByClassName('fa-chevron-down'));
+const dropdownContainers = Array.from(
+	document.getElementsByClassName('dropdown-container')
+);
 
-//UI functions in navbar
-const openNavbar = () => {
-	nav.style.display = 'block';
-	hamburgerBtn.style.display = 'none';
-	closeBtn.style.display = 'block';
+//ATTRIBUTEN DIE TOEGEVOEGD MOETEN WORDEN BIJ GROTERE BEELDSCHERMEN (OP DROPDOWNKNOP)
+// aria-haspopup="true"
+// 							aria-expanded="false"
+// 							aria-controls="coachen-menu"
+// aria-haspopup="true"
+// 							aria-expanded="false"
+// 							aria-controls="overons-menu"
+
+//Visibility of dropdowncontainer based on screenwidth
+const dropdownContainerUpdateAttributes = () => {
+	dropdownContainers.forEach((container) => {
+		if (window.innerWidth > 768) {
+			container.setAttribute('hidden', true);
+		}
+	});
 };
 
-const closeNavbar = () => {
-	nav.style.display = 'none';
-	hamburgerBtn.style.display = 'block';
-	closeBtn.style.display = 'none';
+window.addEventListener('resize', dropdownContainerUpdateAttributes);
+window.addEventListener('load', dropdownContainerUpdateAttributes);
 
-	//reset alle knoppen/menu's
-	const chevrons = document.getElementsByClassName('fa-chevron-down');
-	Array.from(chevrons).forEach(
-		(chevron) => (chevron.style.transform = 'rotate(0deg)')
-	);
-
-	const dropdownContainers =
-		document.getElementsByClassName('dropdown-container');
-	Array.from(dropdownContainers).forEach(
-		(container) => (container.hidden = true)
-	);
+//check of menu uitgeklapt is
+const menuIsExpanded = (button) => {
+	return button.getAttribute('aria-expanded') === 'true';
 };
+
+//openen en sluiten van menu's algemeen
+const toggleAttributeHidden = (menuName, button, expanded) => {
+	const menu = document.getElementById(menuName);
+	button.setAttribute('aria-expanded', !expanded);
+	menu.hidden = expanded;
+};
+
+//openen en sluiten van navigatie mobile
+const toggleNavbar = () => {
+	//const expanded = navbarToggleBtn.getAttribute('aria-expanded') === 'true';
+	toggleAttributeHidden(
+		'nav-menu-mobile',
+		navbarToggleBtn,
+		menuIsExpanded(navbarToggleBtn)
+	);
+
+	if (menuIsExpanded(navbarToggleBtn)) {
+		navbarToggleBtn.setAttribute('aria-label', 'Sluit navigatie');
+		toggleBtnIcon.setAttribute('class', 'fa-solid fa-xmark fa-2xl');
+	} else {
+		navbarToggleBtn.setAttribute('aria-label', 'Open navigatie');
+		toggleBtnIcon.setAttribute('class', 'fa-solid fa-bars fa-2xl');
+	}
+};
+
+navbarToggleBtn.addEventListener('click', toggleNavbar);
+
+//reset alle knoppen/menu's
+// chevrons.forEach((chevron) => (chevron.style.transform = 'rotate(0deg)'));
+
+// dropdownContainers.forEach((container) => (container.hidden = true));
+//};
+
+//Sluiten van navigatie als er buiten de header en navigatie wordt geklikt
+document.addEventListener('click', (e) => {
+	const isClickOnOpenBtn = navbarToggleBtn.contains(e.target);
+	const isClickOnHeader = header.contains(e.target);
+
+	if (!isClickOnHeader && !isClickOnOpenBtn) {
+		navMenuMobile.setAttribute('hidden', '');
+		navbarToggleBtn.setAttribute('aria-label', 'Open navigatie');
+		toggleBtnIcon.setAttribute('class', 'fa-solid fa-bars fa-2xl');
+	}
+});
+
+//Voorkomen dat de focus uit de header gaat als de navigatie geopend is
+const focusableItems = Array.from(navMenuMobile.querySelectorAll('button, a'));
+const firstFocusableItem = focusableItems[0];
+const lastFocusableItem = focusableItems[focusableItems.length - 1];
+
+const keepFocusInHeader = (e) => {
+	if (e.shiftKey) {
+		if (document.activeElement === headerLogoLink) {
+			e.preventDefault();
+			lastFocusableItem.focus();
+		}
+	} else {
+		if (document.activeElement === lastFocusableItem) {
+			e.preventDefault();
+			headerLogoLink.focus();
+		}
+	}
+};
+
+header.addEventListener('keydown', (e) => {
+	if (e.key === 'Tab' && menuIsExpanded(navbarToggleBtn)) {
+		keepFocusInHeader(e);
+	}
+});
+
+//Scroll behavior of header
+let initialHeaderPosition = window.pageYOffset;
+
+const handleHeader = () => {
+	const currentHeaderPosition = window.pageYOffset;
+	if (!menuIsExpanded(navbarToggleBtn)) {
+		initialHeaderPosition > currentHeaderPosition
+			? (header.style.top = '0')
+			: (header.style.top = '-5em');
+		initialHeaderPosition = currentHeaderPosition;
+	}
+};
+
+window.addEventListener('scroll', handleHeader);
 
 const handleDropdownMenu = (button, menuName) => {
+	const expanded = button.getAttribute('aria-expanded') === 'true';
+
+	toggleAttributeHidden(menuName, button, expanded);
+
 	const buttonClass = button.classList[0];
 
 	const chevron = document.querySelector(`.${buttonClass} .fa-chevron-down`);
-
-	const menu = document.getElementById(menuName);
-	const expanded = button.getAttribute('aria-expanded') === 'true';
-	button.setAttribute('aria-expanded', !expanded);
-	menu.hidden = expanded;
 
 	expanded
 		? (chevron.style.transform = 'rotate(0deg)')
 		: (chevron.style.transform = 'rotate(180deg)');
 };
-
-//openen en sluiten van navigatie mobile
-hamburgerBtn.addEventListener('click', openNavbar);
-closeBtn.addEventListener('click', closeNavbar);
-
-document.addEventListener('click', (e) => {
-	const isClickInsideNav = nav.contains(e.target);
-	const isClickOnOpenBtn = hamburgerBtn.contains(e.target);
-	const isClickOnHeader = header.contains(e.target);
-
-	if (!isClickInsideNav && !isClickOnHeader && !isClickOnOpenBtn) {
-		closeNavbar();
-	}
-});
 
 //openen dropdowns
 coachenBtn.addEventListener('click', () =>

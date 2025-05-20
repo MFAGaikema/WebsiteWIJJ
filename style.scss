@@ -104,7 +104,6 @@ footer,
 header,
 hgroup,
 menu,
-nav,
 section {
 	display: block;
 }
@@ -131,14 +130,14 @@ table {
 	border-spacing: 0;
 }
 
-//Standard font sizes mobile
+//Standard sizes mobile
 :root {
 	--standard-font-size: 16px;
 	--header-height: 80px;
-	--padding-left-right: 20px;
-	--heading-padding-bottom-h1-h2: 30px;
-	--heading-padding-bottom-h3: 15px;
-	--heading-padding-bottom-h4: 10px;
+	--padding-left-right: 1.25em;
+	--heading-padding-bottom-h1-h2: 1em;
+	--heading-padding-bottom-h3: 1em;
+	--heading-padding-bottom-h4: 1.125em;
 	--standard-green: #007078;
 	--lighter-green: #009fa9;
 	--nav-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
@@ -189,7 +188,7 @@ h1 {
 }
 
 h2 {
-	font-size: clamp(1.875rem, 5vw, 2.5rem);
+	font-size: clamp(1.75rem, 5vw, 2.5rem);
 }
 
 h3 {
@@ -229,6 +228,25 @@ p.slogan {
 	font-size: 1.125rem;
 }
 
+///////////////////////////
+/// STANDARD PROPERTIES ///
+///////////////////////////
+
+//FOCUS
+button:focus-visible,
+a:focus-visible {
+	outline: 2px solid #000;
+	outline-offset: 2px;
+}
+
+footer {
+	button:focus-visible,
+	a:focus-visible {
+		outline: 2px solid #fff;
+		outline-offset: 2px;
+	}
+}
+
 /////////////////////////
 /// MOBILE PROPERTIES ///
 /////////////////////////
@@ -237,22 +255,23 @@ p.slogan {
 header {
 	height: var(--header-height);
 	width: 100%;
-	padding: 10px var(--padding-left-right);
-	position: relative;
+	padding: 0.625em var(--padding-left-right);
+	position: fixed;
+	top: 0;
+	z-index: 100;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	// box-shadow: var(--nav-shadow);
-	// -webkit-box-shadow: var(--nav-shadow);
-	// -moz-box-shadow: var(--nav-shadow);
+	background-color: #fff;
+	transition: 0.2s;
+	box-shadow: var(--nav-shadow);
+	-webkit-box-shadow: var(--nav-shadow);
+	-moz-box-shadow: var(--nav-shadow);
 
 	a {
 		height: 100%;
 		color: var(--standard-green);
-
-		&.dropdown-btn {
-			text-decoration: none;
-		}
+		text-decoration: none;
 
 		img {
 			height: inherit;
@@ -260,33 +279,27 @@ header {
 		}
 	}
 
-	button {
-		color: var(--standard-green);
+	button#navbar-toggle-btn {
 		background: none;
-		color: inherit;
 		border: none;
 		padding: 0;
 		font: inherit;
 		cursor: pointer;
-		text-transform: uppercase;
+		height: 2rem;
+		border-radius: 2px;
 
-		&.hamburger-btn,
-		&.close-btn {
-			height: 34px;
+		i {
+			color: var(--standard-green);
 		}
 	}
 
-	.close-btn {
-		display: none;
-	}
-
-	nav {
-		display: none;
+	nav#nav-menu-mobile {
 		position: absolute;
 		width: 100%;
+		height: 100vh;
 		top: var(--header-height);
 		left: 0;
-		padding: 20px var(--padding-left-right);
+		padding: 1.25em var(--padding-left-right);
 		background-color: #fff;
 
 		&.open {
@@ -302,21 +315,42 @@ header {
 			box-shadow: var(--nav-shadow);
 		}
 
-		.dropdown-container {
-			list-style-type: none;
-			padding: 20px var(--padding-left-right);
-			background-color: white;
-			width: 100%;
-			color: var(--standard-green);
-		}
-
-		#overons-menu {
-			padding-bottom: 0;
-		}
-
 		li:not(:last-child) {
-			margin-bottom: 20px;
+			margin-bottom: 1.5em;
 		}
+
+		hr {
+			margin-top: 2rem;
+		}
+
+		.sub-menu {
+			padding: 1em var(--padding-left-right);
+
+			&:last-child {
+				padding-bottom: 0;
+			}
+
+			li {
+				font-size: 1rem;
+			}
+
+			li:not(:last-child) {
+				margin-bottom: 1em;
+			}
+
+			i {
+				color: var(--standard-green);
+				padding-right: 1em;
+			}
+		}
+
+		// .dropdown-container {
+		// 	list-style-type: none;
+		// 	padding: 20px var(--padding-left-right);
+		// 	background-color: white;
+		// 	width: 100%;
+		// 	color: var(--standard-green);
+		// }
 
 		.dropdown-btn {
 			cursor: pointer;
@@ -333,12 +367,13 @@ header {
 			}
 
 			.phone-number {
+				font-size: 1.5rem;
 				color: var(--lighter-green);
-				margin: 10px 0;
+				text-decoration: underline;
 			}
 
 			.nav-search-contact-container {
-				padding-top: 10px;
+				padding-top: 1.25em;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
@@ -353,10 +388,15 @@ header {
 			}
 		}
 	}
+
+	.desktop-navigation {
+		display: none;
+	}
 }
 
 //BACKGROUND IMAGE
 .background-image {
+	margin-top: var(--header-height);
 	background-image: url(/Assets/Images/DEF_WIJJ_intro.png);
 	aspect-ratio: 2.735 / 1;
 	width: 100vw;
@@ -416,7 +456,7 @@ main {
 	.contact-container {
 		background-color: #ebf6f8;
 		width: 100%;
-		text-align: start;
+		//text-align: start;
 
 		p,
 		form {
@@ -454,16 +494,17 @@ main {
 
 		.contact-details-container {
 			//padding-top: 50px;
+			text-align: start;
 			width: 100%;
 			display: flex;
 			justify-content: space-between;
 			h4 {
-				text-align: start;
 				color: var(--standard-green);
 			}
 
 			a {
-				color: var(--lighter-green);
+				color: var(--standard-green);
+				font-weight: bold;
 			}
 
 			.social-media-container {
@@ -539,6 +580,15 @@ footer {
 		background-color: #ebe9f3;
 		color: var(--standard-green);
 		padding: 10px 50px;
+		position: relative;
+
+		i {
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			transform: translateY(-50%);
+			color: var(--standard-green);
+		}
 	}
 
 	.slogan {
