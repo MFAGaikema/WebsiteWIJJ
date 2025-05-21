@@ -2,7 +2,7 @@
 const navbarToggleBtn = document.querySelector('#navbar-toggle-btn');
 const toggleBtnIcon = navbarToggleBtn.querySelector('i');
 const headerLogoLink = document.querySelector('.header-logo');
-const navMenuMobile = document.getElementById('nav-menu-mobile');
+const mobileTabletNavMenu = document.getElementById('mobile-tablet-navigation');
 const header = document.querySelector('header');
 const coachenBtn = document.querySelector('.coachen-btn');
 const overonsBtn = document.querySelector('.overons-btn');
@@ -22,7 +22,7 @@ const dropdownContainers = Array.from(
 //Visibility of dropdowncontainer based on screenwidth
 const dropdownContainerUpdateAttributes = () => {
 	dropdownContainers.forEach((container) => {
-		if (window.innerWidth > 768) {
+		if (window.innerWidth > 1024) {
 			container.setAttribute('hidden', true);
 		}
 	});
@@ -54,7 +54,7 @@ const toggleAttributeHidden = (menuName, button, expanded) => {
 const toggleNavbar = () => {
 	//const expanded = navbarToggleBtn.getAttribute('aria-expanded') === 'true';
 	toggleAttributeHidden(
-		'nav-menu-mobile',
+		'mobile-tablet-navigation',
 		navbarToggleBtn,
 		menuIsExpanded(navbarToggleBtn)
 	);
@@ -63,12 +63,12 @@ const toggleNavbar = () => {
 		navbarToggleBtn.setAttribute('aria-label', 'Sluit navigatie');
 		toggleBtnIcon.setAttribute('class', 'fa-solid fa-xmark fa-2xl');
 		setTimeout(() => {
-			navMenuMobile.style.left = '0';
+			mobileTabletNavMenu.style.left = '0';
 		}, 1);
 	} else {
 		navbarToggleBtn.setAttribute('aria-label', 'Open navigatie');
 		toggleBtnIcon.setAttribute('class', 'fa-solid fa-bars fa-2xl');
-		navMenuMobile.style.left = '-100vw';
+		mobileTabletNavMenu.style.left = '-100vw';
 	}
 };
 
@@ -93,7 +93,9 @@ document.addEventListener('click', (e) => {
 });
 
 //Voorkomen dat de focus uit de header gaat als de navigatie geopend is
-const focusableItems = Array.from(navMenuMobile.querySelectorAll('button, a'));
+const focusableItems = Array.from(
+	mobileTabletNavMenu.querySelectorAll('button, a')
+);
 const firstFocusableItem = focusableItems[0];
 const lastFocusableItem = focusableItems[focusableItems.length - 1];
 

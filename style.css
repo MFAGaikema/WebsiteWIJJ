@@ -139,6 +139,9 @@ table {
   --heading-padding-bottom-h1-h2: 1em;
   --heading-padding-bottom-h3: 1em;
   --heading-padding-bottom-h4: 1.125em;
+  --margin-hr: 1.25em;
+  --icon-font-size: 2.5rem;
+  --width-social-media-container: 8em;
   --standard-green: #007078;
   --lighter-green: #009fa9;
   --nav-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
@@ -164,6 +167,13 @@ button {
 }
 
 h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+}
+
+h1,
 h2 {
   padding-bottom: var(--heading-padding-bottom-h1-h2);
 }
@@ -181,11 +191,11 @@ i {
 }
 
 h1 {
-  font-size: clamp(2.125rem, 5vw, 3rem);
+  font-size: clamp(2.125rem, 5.25vw, 3rem);
 }
 
 h2 {
-  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
 }
 
 h3 {
@@ -214,7 +224,7 @@ html {
 }
 
 p:not(:last-child) {
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
 }
 
 p.small {
@@ -222,19 +232,38 @@ p.small {
 }
 
 p.slogan {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
+}
+
+button,
+input[type=submit] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  border-radius: 9999px;
 }
 
 button:focus-visible,
 a:focus-visible {
   outline: 2px solid #000;
   outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.download-btn:focus-visible,
+.orange-contact-btn:focus-visible {
+  border-radius: 9999px;
 }
 
 footer button:focus-visible,
 footer a:focus-visible {
   outline: 2px solid #fff;
   outline-offset: 2px;
+  border-radius: 2px;
 }
 
 header {
@@ -274,20 +303,22 @@ header button#navbar-toggle-btn {
 header button#navbar-toggle-btn i {
   color: var(--standard-green);
 }
-header nav#nav-menu-mobile {
-  position: absolute;
+header nav {
+  background-color: #fff;
   width: 100%;
+}
+header nav#mobile-tablet-navigation {
+  position: absolute;
   height: 100vh;
   top: var(--header-height);
   left: -100vw;
   padding: 1.25em var(--padding-left-right);
-  background-color: #fff;
   transition: left 0.2s;
 }
-header nav#nav-menu-mobile.open {
+header nav.open {
   display: block;
 }
-header nav#nav-menu-mobile:after {
+header nav:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -295,57 +326,51 @@ header nav#nav-menu-mobile:after {
   z-index: -1;
   box-shadow: var(--nav-shadow);
 }
-header nav#nav-menu-mobile li:not(:last-child) {
+header nav li:not(:last-child) {
   margin-bottom: 1.5em;
 }
-header nav#nav-menu-mobile hr {
+header nav hr {
   margin-top: 2rem;
 }
-header nav#nav-menu-mobile .sub-menu {
+header nav .sub-menu {
   padding: 1em var(--padding-left-right);
 }
-header nav#nav-menu-mobile .sub-menu:last-child {
+header nav .sub-menu:last-child {
   padding-bottom: 0;
 }
-header nav#nav-menu-mobile .sub-menu li {
+header nav .sub-menu li {
   font-size: 1rem;
 }
-header nav#nav-menu-mobile .sub-menu li:not(:last-child) {
+header nav .sub-menu li:not(:last-child) {
   margin-bottom: 1em;
 }
-header nav#nav-menu-mobile .sub-menu i {
+header nav .sub-menu i {
   color: var(--standard-green);
   padding-right: 1em;
 }
-header nav#nav-menu-mobile .dropdown-btn {
-  cursor: pointer;
-}
-header nav#nav-menu-mobile .dropdown-btn .fa-chevron-down {
-  padding: 0 10px;
-}
-header nav#nav-menu-mobile .nav-right-container.mobile {
+header nav .nav-right-container.mobile {
   width: fit-content;
   padding-top: 40px;
 }
-header nav#nav-menu-mobile .nav-right-container .phone-number {
+header nav .nav-right-container .phone-number {
   font-size: 1.5rem;
   color: var(--lighter-green);
   text-decoration: underline;
 }
-header nav#nav-menu-mobile .nav-right-container .nav-search-contact-container {
+header nav .nav-right-container .nav-search-contact-container {
   padding-top: 1.25em;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header nav#nav-menu-mobile .nav-right-container .nav-search-contact-container .green-contact-btn {
+header nav .nav-right-container .nav-search-contact-container .green-contact-btn {
   background-color: var(--standard-green);
   color: #fff;
   padding: 5px 20px;
   border-radius: 9999px;
   text-decoration: none;
 }
-header .desktop-navigation {
+header #larger-than-mobile-navigation {
   display: none;
 }
 
@@ -356,18 +381,6 @@ header .desktop-navigation {
   width: 100vw;
   background-position: center;
   background-size: cover;
-}
-
-button,
-input[type=submit] {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-  border-radius: 9999px;
 }
 
 main {
@@ -384,8 +397,8 @@ main section article:not(:last-child) {
 }
 main hr {
   border-top: 1px solid #777;
-  width: calc(100% - 40px);
-  margin: 0 20px;
+  width: calc(100% - 2 * var(--margin-hr));
+  margin: 0 var(--margin-hr);
 }
 main .philosophy {
   background-color: #cbe8ed;
@@ -441,7 +454,7 @@ main .contact-container .contact-details-container a {
   font-weight: bold;
 }
 main .contact-container .contact-details-container .social-media-container {
-  width: 100px;
+  width: var(--width-social-media-container);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -452,7 +465,7 @@ main .contact-container .contact-details-container .social-media-container span 
   justify-content: space-between;
 }
 main .contact-container .contact-details-container .social-media-container span i {
-  font-size: 30px;
+  font-size: var(--icon-font-size);
 }
 main .contact-container .contact-details-container img {
   width: 100%;
@@ -464,7 +477,7 @@ main .organisations .organisation-container {
   gap: 20px 50px;
 }
 main .organisations .organisation-container img {
-  height: 80px;
+  height: 4rem;
 }
 main .orange-contact-btn {
   background-color: #db7602;
@@ -478,7 +491,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 1.5em;
   background-color: var(--standard-green);
   padding: 20px var(--padding-left-right);
   color: #fff;
@@ -495,20 +508,24 @@ footer .footer-links ul a {
   text-decoration: none;
   text-transform: none;
 }
-footer .download-btn {
+footer .btn-slogan-container {
+  text-align: center;
+}
+footer .btn-slogan-container .download-btn {
   background-color: #ebe9f3;
   color: var(--standard-green);
   padding: 10px 50px;
   position: relative;
+  margin-bottom: 20px;
 }
-footer .download-btn i {
+footer .btn-slogan-container .download-btn i {
   position: absolute;
   top: 50%;
   right: 15px;
   transform: translateY(-50%);
   color: var(--standard-green);
 }
-footer .slogan {
+footer .btn-slogan-container .slogan {
   padding-bottom: 0;
   text-transform: uppercase;
 }
@@ -518,7 +535,72 @@ footer .copyright {
 
 @media (min-width: 768px) {
   :root {
-    --standard-font-size: 15px;
+    --standard-font-size: 18px;
+    --padding-left-right: 3em;
+    --margin-hr: 3em;
+  }
+  main {
+    position: relative;
+  }
+  main .intro {
+    position: absolute;
+    top: -50px;
+    background-color: #fff;
+    margin: 0 var(--padding-left-right);
+    border-radius: 50px;
+  }
+  main .philosophy {
+    padding-top: 400px;
+  }
+  main .stances {
+    --gap: 3rem;
+  }
+  main .stances .stances-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--gap);
+  }
+  main .stances .stances-container article {
+    flex: 0 0 calc(50% - var(--gap));
+  }
+}
+@media (min-width: 1025px) {
+  :root {
+    --standard-font-size: 16px;
+  }
+  header #mobile-tablet-navigation {
+    display: none;
+  }
+  header #larger-than-mobile-navigation {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+  }
+  header #larger-than-mobile-navigation .nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header #larger-than-mobile-navigation .nav-list > li {
+    margin: 0 0 0 20px;
+  }
+  header #navbar-toggle-btn {
+    display: none;
+  }
+  header .dropdown-container {
+    display: none;
+    list-style-type: none;
+    padding: 20px var(--padding-left-right);
+    background-color: white;
+    width: 100%;
+    color: var(--standard-green);
+  }
+  header .dropdown-btn {
+    cursor: pointer;
+  }
+  header .dropdown-btn .fa-chevron-down {
+    padding-left: 10px;
   }
 }
 @media (min-width: 1200px) {

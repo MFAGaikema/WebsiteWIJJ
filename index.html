@@ -74,13 +74,13 @@
 			</a>
 			<button
 				aria-expanded="false"
-				aria-controls="nav-menu-mobile"
+				aria-controls="mobile-tablet-navigation"
 				id="navbar-toggle-btn"
 				aria-label="Open navigatie"
 			>
 				<i class="fa-solid fa-bars fa-2xl"></i>
 			</button>
-			<nav id="nav-menu-mobile" class="mobile-navigation" hidden>
+			<nav id="mobile-tablet-navigation" hidden>
 				<ul>
 					<li>
 						<a href=""> Coachen </a>
@@ -137,8 +137,8 @@
 					</div>
 				</div>
 			</nav>
-			<nav class="desktop-navigation">
-				<ul>
+			<nav id="larger-than-mobile-navigation">
+				<ul class="nav-list">
 					<li>
 						<a
 							aria-haspopup="true"
@@ -244,52 +244,54 @@
 			<hr />
 			<section class="stances">
 				<h2>Hier staan wijj voor</h2>
-				<article>
-					<img src="/Assets/Images/Icons/Persoonlijkthin.png" alt="" />
-					<h3>Persoonlijk</h3>
-					<p>
-						Wij bieden niet alleen werk, maar een volledig op maat gemaakte
-						re-integratietraject, waarbij we intensief begeleiden en
-						ondersteunen om duurzame werkhervatting te realiseren.
-					</p>
-				</article>
-				<article>
-					<img src="/Assets/Images/Icons/Werkplezierthin.png" alt="" />
-					<h3>Werkplezier</h3>
-					<p>
-						Wij geloven in de kracht van herstel en zorgen ervoor dat
-						werkplezier een belangrijke rol speelt bij de terugkeer naar de
-						arbeidsmarkt. We koppelen kandidaten aan functies die zowel hun
-						vaardigheden als hun welzijn bevorderen.
-					</p>
-				</article>
-				<article>
-					<img src="/Assets/Images/Icons/Netwerk.png" alt="" />
-					<h3>Netwerk</h3>
-					<p>
-						Dankzij ons netwerk van betrouwbare partners kunnen wij snel
-						passende vacatures aanbieden in verschillende sectoren, wat de kans
-						op een succesvolle terugkeer vergroot.
-					</p>
-				</article>
-				<article>
-					<img src="/Assets/Images/Icons/Flexibel.png" alt="" />
-					<h3>Flexibel</h3>
-					<p>
-						Wij bieden flexibele werkopties en helpen bij het implementeren van
-						werkplekaanpassingen, zodat onze kandidaten in hun eigen tempo
-						kunnen re-integreren.
-					</p>
-				</article>
-				<article>
-					<img src="/Assets/Images/Icons/Resultaatgericht.png" alt="" />
-					<h3>Resultaatgericht</h3>
-					<p>
-						Wij werken met een duidelijke focus op resultaat, maar blijven
-						langdurig betrokken bij de voortgang van onze kandidaten om ervoor
-						te zorgen dat het resultaat ook op de lange termijn behaald wordt.
-					</p>
-				</article>
+				<div class="stances-container">
+					<article>
+						<img src="/Assets/Images/Icons/Persoonlijkthin.png" alt="" />
+						<h3>Persoonlijk</h3>
+						<p>
+							Wij bieden niet alleen werk, maar een volledig op maat gemaakte
+							re-integratietraject, waarbij we intensief begeleiden en
+							ondersteunen om duurzame werkhervatting te realiseren.
+						</p>
+					</article>
+					<article>
+						<img src="/Assets/Images/Icons/Werkplezierthin.png" alt="" />
+						<h3>Werkplezier</h3>
+						<p>
+							Wij geloven in de kracht van herstel en zorgen ervoor dat
+							werkplezier een belangrijke rol speelt bij de terugkeer naar de
+							arbeidsmarkt. We koppelen kandidaten aan functies die zowel hun
+							vaardigheden als hun welzijn bevorderen.
+						</p>
+					</article>
+					<article>
+						<img src="/Assets/Images/Icons/Netwerk.png" alt="" />
+						<h3>Netwerk</h3>
+						<p>
+							Dankzij ons netwerk van betrouwbare partners kunnen wij snel
+							passende vacatures aanbieden in verschillende sectoren, wat de
+							kans op een succesvolle terugkeer vergroot.
+						</p>
+					</article>
+					<article>
+						<img src="/Assets/Images/Icons/Flexibel.png" alt="" />
+						<h3>Flexibel</h3>
+						<p>
+							Wij bieden flexibele werkopties en helpen bij het implementeren
+							van werkplekaanpassingen, zodat onze kandidaten in hun eigen tempo
+							kunnen re-integreren.
+						</p>
+					</article>
+					<article>
+						<img src="/Assets/Images/Icons/Resultaatgericht.png" alt="" />
+						<h3>Resultaatgericht</h3>
+						<p>
+							Wij werken met een duidelijke focus op resultaat, maar blijven
+							langdurig betrokken bij de voortgang van onze kandidaten om ervoor
+							te zorgen dat het resultaat ook op de lange termijn behaald wordt.
+						</p>
+					</article>
+				</div>
 			</section>
 			<section class="contact-container">
 				<h2>Zullen wijj je helpen?</h2>
@@ -391,10 +393,12 @@
 					<li><a href="">Sitemap</a></li>
 				</ul>
 			</nav>
-			<button class="download-btn">
-				Download onze brochure <i class="fa-solid fa-download"></i>
-			</button>
-			<p class="slogan">Wijj: jouw team voor toekomst</p>
+			<div class="btn-slogan-container">
+				<button class="download-btn">
+					Download onze brochure <i class="fa-solid fa-download"></i>
+				</button>
+				<p class="slogan">Wijj: jouw team voor toekomst</p>
+			</div>
 			<p class="copyright">WIJJ &copy; 2025</p>
 		</footer>
 	</body>
