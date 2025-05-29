@@ -1,0 +1,62 @@
+button,
+input[type='submit'] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+	border-radius: 9999px;
+}
+
+button#navbar-toggle-btn {
+	background: none;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	height: 2rem;
+	border-radius: 2px;
+
+	i {
+		color: var(--standard-green);
+	}
+}
+
+.green-contact-btn {
+	background-color: var(--standard-green);
+	color: #fff;
+	padding: 5px 20px;
+	border-radius: 9999px;
+	text-decoration: none;
+}
+
+.orange-contact-btn {
+	background-color: #db7602;
+	color: #fff;
+	font-weight: 500;
+	font-size: 1.5rem;
+	padding: 15px 20px;
+}
+
+.download-btn {
+	background-color: #ebe9f3;
+	color: var(--standard-green);
+	padding: 10px 50px;
+	position: relative;
+	margin-bottom: 20px;
+	i {
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		transform: translateY(-50%);
+		color: var(--standard-green);
+	}
+}
+
+//FOCUS
+.download-btn:focus-visible,
+.orange-contact-btn:focus-visible {
+	border-radius: 9999px;
+}

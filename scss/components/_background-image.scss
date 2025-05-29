@@ -1,0 +1,12 @@
+//BACKGROUND IMAGE
+.background-image {
+	margin-top: var(--header-height);
+	aspect-ratio: 2.735 / 1;
+	width: 100vw;
+	background-position: center;
+	background-size: cover;
+
+	&.home {
+		background-image: url(/Assets/Images/DEF_WIJJ_intro.png);
+	}
+}

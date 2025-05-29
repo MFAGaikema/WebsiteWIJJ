@@ -1,0 +1,41 @@
+//Standard sizes mobile
+:root {
+	//text properties
+	--standard-font-size: 16px;
+	--header-height: 80px;
+	--padding-left-right: 1.25em;
+	--heading-padding-bottom-h1-h2: 1em;
+	--heading-padding-bottom-h3: 1em;
+	--heading-padding-bottom-h4: 1.125em;
+	--icon-font-size: 2.5rem;
+
+	//colors
+	--standard-green: #007078;
+	--lighter-green: #009fa9;
+
+	//other
+	--margin-hr: 1.25em;
+	--width-social-media-container: 8em;
+	--nav-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+	:root {
+		--standard-font-size: 18px;
+		--padding-left-right: 3em;
+		--margin-hr: 3em;
+	}
+}
+
+@media (min-width: 1025px) {
+	:root {
+		--standard-font-size: 16px;
+		--header-height: 90px;
+	}
+}
+
+@media (min-width: 1200px) {
+	:root {
+		--standard-font-size: 16px;
+	}
+}

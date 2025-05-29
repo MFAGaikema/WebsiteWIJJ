@@ -1,0 +1,38 @@
+//FOOTER
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5em;
+	background-color: var(--standard-green);
+	padding: 20px var(--padding-left-right);
+	color: #fff;
+
+	.footer-links {
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 10px 30px;
+			font-size: var(--standard-font-size);
+
+			a {
+				color: #fff;
+				text-decoration: none;
+				text-transform: none;
+			}
+		}
+	}
+
+	.btn-slogan-container {
+		text-align: center;
+	}
+
+	//FOCUS
+	button:focus-visible,
+	a:focus-visible {
+		outline: 2px solid #fff;
+		outline-offset: 2px;
+		border-radius: 2px;
+	}
+}
