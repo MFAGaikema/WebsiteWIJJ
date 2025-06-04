@@ -1,0 +1,12 @@
+section {
+	text-align: center;
+	padding: 2.5em var(--padding-left-right);
+
+	&:not(.intro) {
+		width: 100%;
+	}
+
+	article:not(:last-child) {
+		padding-bottom: 2em;
+	}
+}

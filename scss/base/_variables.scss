@@ -1,41 +1,36 @@
-//Standard sizes mobile
 :root {
 	//text properties
-	--standard-font-size: 16px;
-	--header-height: 80px;
-	--padding-left-right: 1.25em;
-	--heading-padding-bottom-h1-h2: 1em;
-	--heading-padding-bottom-h3: 1em;
-	--heading-padding-bottom-h4: 1.125em;
+	--standard-font-size: 14px;
+	--header-height: 5rem;
+	--padding-left-right: 1.25rem;
+	--heading-padding-bottom-h1-h2: 1rem;
+	--heading-padding-bottom-h3: 1rem;
+	--heading-padding-bottom-h4: 1.125rem;
 	--icon-font-size: 2.5rem;
 
 	//colors
 	--standard-green: #007078;
+	--standard-orange: #db7602;
+	--dark-green: color-mix(in srgb, var(--standard-green) 80%, black);
+	--dark-orange: color-mix(in srgb, var(--standard-orange) 90%, black);
 	--lighter-green: #009fa9;
 
 	//other
-	--margin-hr: 1.25em;
-	--width-social-media-container: 8em;
-	--nav-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
-}
+	--margin-hr: var(--padding-left-right);
+	--width-social-media-container: 8rem;
+	--max-width-wide-container: 1200px;
+	--max-width-text-container: 800px;
+	--nav-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5);
 
-@media (min-width: 768px) {
-	:root {
+	@media (min-width: 768px) {
+		--standard-font-size: 16px;
+	}
+
+	@media (min-width: 1025px) {
 		--standard-font-size: 18px;
-		--padding-left-right: 3em;
-		--margin-hr: 3em;
+		--header-height: 4.5rem;
+		--padding-left-right: 3.5rem;
 	}
-}
-
-@media (min-width: 1025px) {
-	:root {
-		--standard-font-size: 16px;
-		--header-height: 90px;
-	}
-}
-
-@media (min-width: 1200px) {
-	:root {
-		--standard-font-size: 16px;
+	@media (min-width: 1200px) {
 	}
 }

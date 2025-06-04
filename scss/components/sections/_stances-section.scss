@@ -1,0 +1,33 @@
+.stances {
+	@media (min-width: 768px) {
+		--gap: 3rem;
+	}
+
+	.stances-container {
+		@media (min-width: 768px) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			gap: var(--gap);
+		}
+
+		article {
+			@media (min-width: 768px) {
+				flex: 0 0 calc(50% - var(--gap));
+			}
+
+			@media (min-width: 1200px) {
+				flex: 0 0 calc(20% - var(--gap));
+			}
+		}
+	}
+
+	article {
+		text-align: start;
+		img {
+			height: 3.75em;
+			width: auto;
+			padding-bottom: 1em;
+		}
+	}
+}

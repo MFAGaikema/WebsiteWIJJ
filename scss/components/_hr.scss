@@ -1,0 +1,5 @@
+hr {
+	border-top: 1px solid #777;
+	width: calc(100% - (2 * var(--margin-hr)));
+	margin: 0 var(--margin-hr);
+}

@@ -46,11 +46,11 @@ i {
 }
 
 h1 {
-	font-size: clamp(2.125rem, 5.25vw, 3rem);
+	font-size: clamp(2.125rem, 4.5vw, 3rem);
 }
 
 h2 {
-	font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+	font-size: clamp(1.75rem, 3.75vw, 2.5rem);
 }
 
 h3 {
@@ -62,12 +62,16 @@ h4 {
 }
 
 nav {
-	font-size: 1.25rem;
+	font-size: 1rem;
 }
 
 p {
 	font-size: 1rem;
 	line-height: 1.5;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 strong {
@@ -95,4 +99,19 @@ p:not(:last-child) {
 
 .copyright {
 	font-weight: 300;
+}
+
+.phone-number {
+	font-size: 1.5rem;
+	color: var(--lighter-green);
+	text-decoration: underline;
+	height: auto;
+
+	&:hover {
+		color: var(--dark-green);
+	}
+
+	@media (min-width: 1025px) {
+		font-size: 1.25rem;
+	}
 }

@@ -20,6 +20,10 @@ footer {
 				color: #fff;
 				text-decoration: none;
 				text-transform: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 	}
