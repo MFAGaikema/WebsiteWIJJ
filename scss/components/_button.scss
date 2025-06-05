@@ -35,7 +35,13 @@ input[type='submit'] {
 .dropdown-btn {
 	margin-left: 5px;
 
+	&:hover,
+	&:focus-visible {
+		transform: scale(1.2);
+	}
+
 	i {
+		color: var(--standard-green);
 		transition: 0.2s;
 	}
 }

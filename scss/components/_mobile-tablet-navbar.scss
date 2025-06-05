@@ -8,6 +8,11 @@
 	padding: 1.25em var(--padding-left-right);
 	transition: left 0.2s;
 
+	.nav-right-container {
+		width: fit-content;
+		padding-top: 40px;
+	}
+
 	@media (min-width: 1025px) {
 		display: none;
 	}

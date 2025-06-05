@@ -1,4 +1,4 @@
-#desktop-navigation {
+#desktop-navbar {
 	display: none;
 	justify-content: space-between;
 	height: 100%;
@@ -16,14 +16,19 @@
 			margin: 0 0 0 30px;
 			position: relative;
 
-			.dropdown-container {
+			.dropdown-nav-item {
+				padding: 10px 0;
+			}
+
+			.dropdown-menu {
 				--border-radius: 10px;
 				position: absolute;
 				background-color: #fff;
-				top: 150%;
+				top: 100%;
+				//z-index: -1;
 				left: -20px;
 				min-width: 130px;
-				padding: 20px;
+				padding: 30px 20px 20px;
 				border-bottom-left-radius: var(--border-radius);
 				border-bottom-right-radius: var(--border-radius);
 
@@ -33,7 +38,7 @@
 					left: 5%;
 					width: 90%;
 					bottom: 1px;
-					z-index: -1;
+					z-index: -2;
 					box-shadow: var(--nav-shadow);
 				}
 			}

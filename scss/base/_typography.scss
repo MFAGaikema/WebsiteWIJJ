@@ -70,8 +70,12 @@ p {
 	line-height: 1.5;
 }
 
-a:hover {
-	text-decoration: underline;
+a {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 strong {
@@ -103,9 +107,7 @@ p:not(:last-child) {
 
 .phone-number {
 	font-size: 1.5rem;
-	color: var(--lighter-green);
 	text-decoration: underline;
-	height: auto;
 
 	&:hover {
 		color: var(--dark-green);

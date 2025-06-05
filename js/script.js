@@ -1,113 +1,100 @@
-//Elements
+////////////////////////////////////////////////
+///////////////////ELEMENTS/////////////////////
+////////////////////////////////////////////////
+
+//HEADER
+
+//general
 const header = document.querySelector('header');
 const headerLogoLink = document.querySelector('.header-logo');
+
+//mobile-tablet elements
 const navbarToggleBtn = document.querySelector('.navbar-toggle-btn');
 const toggleBtnIcon = navbarToggleBtn.querySelector('i');
 const mobileTabletNavMenu = document.getElementById('mobile-tablet-navbar');
+
+//desktop elements
 const coachenLink = document.querySelector('.dropdown-link-coachen');
 const overonsLink = document.querySelector('.dropdown-link-overons');
-const coachenBtn = document.querySelector('.coachen-btn');
-const overonsBtn = document.querySelector('.overons-btn');
-const chevrons = Array.from(document.getElementsByClassName('fa-chevron-down'));
-const dropdownContainers = Array.from(
-	document.getElementsByClassName('dropdown-container')
+const otherNavLinks = Array.from(
+	document.querySelectorAll('.nav-list > li > a')
+);
+const rightNavbarContainer = document.querySelector(
+	'#desktop-navbar .nav-right-container'
 );
 
-//Visibility of dropdowncontainer based on screenwidth
-// const dropdownContainerUpdateAttributes = () => {
-// 	dropdownContainers.forEach((container) => {
-// 		if (window.innerWidth > 1024) {
-// 			container.setAttribute('hidden', true);
-// 		}
-// 	});
-// };
+const coachenBtn = document.querySelector('.coachen-btn');
+const overonsBtn = document.querySelector('.overons-btn');
+const coachenMenu = document.getElementById('coachen-menu');
+const overonsMenu = document.getElementById('overons-menu');
+const chevrons = Array.from(document.getElementsByClassName('fa-chevron-down'));
+const dropdownMenus = Array.from(
+	document.getElementsByClassName('dropdown-menu')
+);
+const dropdownNavItems = Array.from(
+	document.getElementsByClassName('dropdown-nav-item')
+);
 
-// window.addEventListener('resize', dropdownContainerUpdateAttributes);
-// window.addEventListener('load', dropdownContainerUpdateAttributes);
+////////////////////////////////////////////////
+///////////////GENERAL FUNCTIONS////////////////
+////////////////////////////////////////////////
 
 //check if menu is expanded
 const menuIsExpanded = (button) => {
 	return button.getAttribute('aria-expanded') === 'true';
 };
 
-//change aria-label based on button class
-const setAriaLabel = (button, expanded) => {
-	if (button.classList[1] === 'coachen-btn') {
-		expanded
-			? button.setAttribute('aria-label', 'Coachen menu uitklappen')
-			: button.setAttribute('aria-label', 'Coachen menu inklappen');
-	}
+//Scroll behavior of header
+let initialHeaderPosition = window.pageYOffset;
 
-	if (button.classList[1] === 'overons-btn') {
-		expanded
-			? button.setAttribute('aria-label', 'Over ons menu uitklappen')
-			: button.setAttribute('aria-label', 'Over ons menu inklappen');
-	}
+const handleScrollingHeader = () => {
+	const currentHeaderPosition = window.pageYOffset;
 
-	if (button.classList[0] === 'navbar-toggle-btn') {
-		expanded
-			? button.setAttribute('aria-label', 'Open navigatie')
-			: button.setAttribute('aria-label', 'Sluit navigatie');
+	if (
+		!menuIsExpanded(navbarToggleBtn) &&
+		!menuIsExpanded(coachenBtn) &&
+		!menuIsExpanded(overonsBtn)
+	) {
+		initialHeaderPosition > currentHeaderPosition
+			? (header.style.top = '0')
+			: (header.style.top = '-5em');
+		initialHeaderPosition = currentHeaderPosition;
 	}
 };
 
-//set attributes of dropdown buttons and menus on toggle
-const toggleDropdownAttributes = (menuName, button, expanded) => {
-	const menu = document.getElementById(menuName);
-	button.setAttribute('aria-expanded', !expanded);
+window.addEventListener('scroll', handleScrollingHeader);
 
-	if (expanded) {
-		setTimeout(() => {
-			menu.hidden = expanded;
-		}, 100);
-	} else {
-		menu.hidden = expanded;
-	}
-
-	setAriaLabel(button, expanded);
-};
+////////////////////////////////////////////////
+////////FUNCTIONS FOR MOBILE DEVICES////////////
+////////////////////////////////////////////////
 
 //open and close mobile navbar
 const toggleNavbar = () => {
-	toggleDropdownAttributes(
-		'mobile-tablet-navbar',
-		navbarToggleBtn,
-		menuIsExpanded(navbarToggleBtn)
-	);
+	let expanded = menuIsExpanded(navbarToggleBtn);
 
 	//toggle hamburger/close btn and move navigation in/out of screen
-	if (menuIsExpanded(navbarToggleBtn)) {
+	navbarToggleBtn.setAttribute('aria-expanded', !expanded);
+
+	if (expanded) {
+		toggleBtnIcon.setAttribute('class', 'fa-solid fa-bars fa-2xl');
+		navbarToggleBtn.setAttribute('aria-label', 'Open navigatie');
+		mobileTabletNavMenu.style.left = '-100vw';
+		setTimeout(() => {
+			mobileTabletNavMenu.hidden = expanded;
+		}, 100);
+	} else {
 		toggleBtnIcon.setAttribute('class', 'fa-solid fa-xmark fa-2xl');
+		navbarToggleBtn.setAttribute('aria-label', 'Sluit navigatie');
+		mobileTabletNavMenu.hidden = expanded;
 		setTimeout(() => {
 			mobileTabletNavMenu.style.left = '0';
-		}, 1);
-	} else {
-		toggleBtnIcon.setAttribute('class', 'fa-solid fa-bars fa-2xl');
-		mobileTabletNavMenu.style.left = '-100vw';
+		}, 100);
 	}
 };
 
 navbarToggleBtn.addEventListener('click', toggleNavbar);
 
-//reset alle knoppen/menu's
-// chevrons.forEach((chevron) => (chevron.style.transform = 'rotate(0deg)'));
-
-// dropdownContainers.forEach((container) => (container.hidden = true));
-//};
-
-//Sluiten van navigatie als er buiten de header en navigatie wordt geklikt
-// document.addEventListener('click', (e) => {
-// 	const isClickOnOpenBtn = navbarToggleBtn.contains(e.target);
-// 	const isClickOnHeader = header.contains(e.target);
-
-// 	if (!isClickOnHeader && !isClickOnOpenBtn) {
-// 		//navMenuMobile.setAttribute('hidden', '');
-// 		navbarToggleBtn.setAttribute('aria-label', 'Open navigatie');
-// 		toggleBtnIcon.setAttribute('class', 'fa-solid fa-bars fa-2xl');
-// 	}
-// });
-
-//Voorkomen dat de focus uit de header gaat als de navigatie geopend is
+//Keep focus in header when opened
 const focusableItems = Array.from(
 	mobileTabletNavMenu.querySelectorAll('button, a')
 );
@@ -134,90 +121,107 @@ header.addEventListener('keydown', (e) => {
 	}
 });
 
-//Scroll behavior of header
-let initialHeaderPosition = window.pageYOffset;
+////////////////////////////////////////////////
+///////////FUNCTIONS FOR DESKTOP////////////////
+////////////////////////////////////////////////
 
-const handleScrollingHeader = () => {
-	const currentHeaderPosition = window.pageYOffset;
-
-	if (
-		!menuIsExpanded(navbarToggleBtn) &&
-		!menuIsExpanded(coachenBtn) &&
-		!menuIsExpanded(overonsBtn)
-	) {
-		initialHeaderPosition > currentHeaderPosition
-			? (header.style.top = '0')
-			: (header.style.top = '-5em');
-		initialHeaderPosition = currentHeaderPosition;
-	}
-};
-
-window.addEventListener('scroll', handleScrollingHeader);
-
-//Dropdown behaviour navigation menu desktop
-
-//Close dropdown menu when other is opened, also reset chevron back to down
-const closeDropdown = (button, menuName) => {
-	const menu = document.getElementById(menuName);
-	menu.hidden = true;
+//DROPDOWN BEHAVIOUR NAVIGATION MENU DESKTOP
+const openDropdownMenu = (button) => {
+	button.querySelector('.fa-chevron-down').style.transform = 'rotate(180deg)';
+	button.setAttribute('aria-expanded', true);
 
 	if (button.classList[1] === 'coachen-btn') {
-		overonsBtn.setAttribute('aria-label', 'Over ons menu uitklappen');
-		overonsBtn.querySelector('.fa-chevron-down').style.transform =
-			'rotate(0deg)';
+		button.setAttribute('aria-label', 'Coachen menu inklappen');
+		coachenMenu.hidden = false;
+
+		if (menuIsExpanded(overonsBtn)) {
+			closeDropdownMenu(overonsBtn);
+		}
 	}
 
 	if (button.classList[1] === 'overons-btn') {
-		overonsBtn.setAttribute('aria-label', 'Coachen menu uitklappen');
-		overonsBtn.querySelector('.fa-chevron-down').style.transform =
-			'rotate(0deg)';
+		button.setAttribute('aria-label', 'Over ons menu inklappen');
+		overonsMenu.hidden = false;
+
+		if (menuIsExpanded(coachenBtn)) {
+			closeDropdownMenu(coachenBtn);
+		}
 	}
 };
 
-const toggleDropdownMenu = (button, menuName) => {
-	toggleDropdownAttributes(menuName, button, menuIsExpanded(button));
+const closeDropdownMenu = (button) => {
+	button.querySelector('.fa-chevron-down').style.transform = 'rotate(0deg)';
+	button.setAttribute('aria-expanded', false);
 
-	const buttonClass = button.classList[1];
+	if (button.classList[1] === 'coachen-btn') {
+		button.setAttribute('aria-label', 'Coachen menu uitklappen');
+		coachenMenu.hidden = true;
+	}
 
-	const chevron = document.querySelector(`.${buttonClass} .fa-chevron-down`);
-
-	menuIsExpanded(button)
-		? (chevron.style.transform = 'rotate(180deg)')
-		: (chevron.style.transform = 'rotate(0deg)');
+	if (button.classList[1] === 'overons-btn') {
+		button.setAttribute('aria-label', 'Over ons menu uitklappen');
+		overonsMenu.hidden = true;
+	}
 };
 
-//open dropdown menus
+const toggleDropdownMenu = (button) => {
+	let expanded = menuIsExpanded(button);
+
+	if (!expanded) {
+		openDropdownMenu(button);
+	} else {
+		closeDropdownMenu(button);
+	}
+};
+
+const closeDropdownMenuWhenOutsideDropdownLinkOrMenu = (element) => {
+	const isInDropdownMenu = dropdownMenus.some((dropdownMenu) =>
+		dropdownMenu.contains(element)
+	);
+	const isInDropdownBtn = dropdownNavItems.some((dropdownBtn) =>
+		dropdownBtn.contains(element)
+	);
+
+	if (!isInDropdownMenu && !isInDropdownBtn) {
+		closeDropdownMenu(coachenBtn);
+		closeDropdownMenu(overonsBtn);
+	}
+};
+
+//EVENTLISTENERS TO OPEN AND CLOSE DROPDOWN MENUS
+
+//onclick events
 coachenBtn.addEventListener('click', () => {
-	toggleDropdownMenu(coachenBtn, 'coachen-menu');
-	//closeDropdown(overonsBtn, 'overons-menu');
+	toggleDropdownMenu(coachenBtn);
 });
-
-coachenBtn.addEventListener('keypress', (e) => {
-	if (e.key === 'Enter') {
-		e.preventDefault();
-		toggleDropdownMenu(coachenBtn, 'coachen-menu');
-		//closeDropdown(overonsBtn, 'overons-menu');
-	}
-});
-
-// coachenLink.addEventListener('mouseover', () => {
-// 	toggleDropdownMenu(coachenBtn, 'coachen-menu');
-// 	closeDropdown(overonsBtn, 'overons-menu');
-// });
 
 overonsBtn.addEventListener('click', () => {
-	toggleDropdownMenu(overonsBtn, 'overons-menu');
-	//closeDropdown(coachenBtn, 'coachen-menu');
-});
-overonsBtn.addEventListener('keypress', (e) => {
-	if (e.key === 'Enter') {
-		e.preventDefault();
-		toggleDropdownMenu(overonsBtn, 'overons-menu');
-		//closeDropdown(coachenBtn, 'coachen-menu');
-	}
+	toggleDropdownMenu(overonsBtn);
 });
 
-// overonsLink.addEventListener('mouseover', () => {
-// 	toggleDropdownMenu(overonsBtn, 'overons-menu');
-// 	closeDropdown(coachenBtn, 'coachen-menu');
-// });
+window.addEventListener('click', (e) =>
+	closeDropdownMenuWhenOutsideDropdownLinkOrMenu(e.target)
+);
+
+//on hover events
+window.addEventListener('mouseover', (e) => {
+	closeDropdownMenuWhenOutsideDropdownLinkOrMenu(e.target);
+});
+
+coachenLink.addEventListener('mouseover', () => {
+	openDropdownMenu(coachenBtn);
+	closeDropdownMenu(overonsBtn);
+});
+
+overonsLink.addEventListener('mouseover', () => {
+	openDropdownMenu(overonsBtn);
+	closeDropdownMenu(coachenBtn);
+});
+
+//keydown events
+window.addEventListener('keydown', (e) => {
+	if (e.key === 'Escape') {
+		closeDropdownMenu(overonsBtn);
+		closeDropdownMenu(coachenBtn);
+	}
+});

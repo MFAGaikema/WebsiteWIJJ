@@ -22,7 +22,7 @@ header {
 	align-items: center;
 
 	@media (min-width: 1025px) {
-		padding: 10px 30px;
+		padding: 0.625em;
 	}
 
 	@media (min-width: 1260px) {
@@ -32,7 +32,6 @@ header {
 	a {
 		height: 100%;
 		color: var(--standard-green);
-		text-decoration: none;
 
 		&.header-logo {
 			margin-right: 5px;
@@ -40,6 +39,10 @@ header {
 
 		&.green-contact-btn {
 			color: #fff;
+		}
+
+		&.phone-number {
+			height: auto;
 		}
 
 		img {
@@ -81,25 +84,12 @@ header {
 		}
 
 		.nav-right-container {
-			&.mobile {
-				width: fit-content;
-				padding-top: 40px;
-			}
-
 			.nav-search-contact-container {
 				padding-top: 1.25em;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
 			}
-		}
-	}
-
-	i {
-		color: var(--standard-green);
-
-		&:hover {
-			color: var(--dark-green);
 		}
 	}
 }
