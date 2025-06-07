@@ -56,8 +56,8 @@ const handleScrollingHeader = () => {
 		!menuIsExpanded(overonsBtn)
 	) {
 		initialHeaderPosition > currentHeaderPosition
-			? (header.style.top = '0')
-			: (header.style.top = '-5em');
+			? (header.style.transform = 'translateY(0)')
+			: (header.style.transform = 'translateY(-100%)');
 		initialHeaderPosition = currentHeaderPosition;
 	}
 };
