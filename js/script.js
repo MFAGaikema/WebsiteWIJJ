@@ -14,6 +14,8 @@ const toggleBtnIcon = navbarToggleBtn.querySelector('i');
 const mobileTabletNavMenu = document.getElementById('mobile-tablet-navbar');
 
 //desktop elements
+const introSection = document.querySelector('.intro');
+const secondSection = document.querySelectorAll('section')[1];
 const coachenLink = document.querySelector('.dropdown-link-coachen');
 const overonsLink = document.querySelector('.dropdown-link-overons');
 const otherNavLinks = Array.from(
@@ -124,6 +126,22 @@ header.addEventListener('keydown', (e) => {
 ////////////////////////////////////////////////
 ///////////FUNCTIONS FOR DESKTOP////////////////
 ////////////////////////////////////////////////
+
+//ADD PADDING TO SECOND SECTION BASED ON HEIGHT OF INTRO SECTION
+
+const adjustPaddingTopSecondSection = () => {
+	window.innerWidth >= 768
+		? (secondSection.style.paddingTop = `${introSection.offsetHeight}px`)
+		: (secondSection.style.paddingTop = '2.5em');
+	// if (window.innerWidth >= 768) {
+	// 	secondSection.style.paddingTop = `${introSection.offsetHeight}px`;
+	// } else {
+	// 	secondSection.style.paddingTop = '2.5em';
+	// }
+};
+
+window.onload = () => adjustPaddingTopSecondSection();
+window.onresize = () => adjustPaddingTopSecondSection();
 
 //DROPDOWN BEHAVIOUR NAVIGATION MENU DESKTOP
 const openDropdownMenu = (button) => {

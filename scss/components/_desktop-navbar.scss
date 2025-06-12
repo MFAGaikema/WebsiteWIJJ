@@ -18,6 +18,7 @@
 
 			.dropdown-nav-item {
 				padding: 10px 0;
+				display: flex;
 			}
 
 			.dropdown-menu {
@@ -25,7 +26,6 @@
 				position: absolute;
 				background-color: #fff;
 				top: 100%;
-				//z-index: -1;
 				left: -20px;
 				min-width: 130px;
 				padding: 30px 20px 20px;

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WIJJ - Jouw team voor toekomst - Modulaire re-integratie</title>
+		<!-- Standaard favicon -->
+		<link
+			rel="icon"
+			href="/Assets/Images/favicon_io/favicon.ico"
+			type="image/x-icon"
+		/>
+
+		<!-- PNG favicons voor verschillende formaten -->
+		<link
+			rel="icon"
+			href="/Assets/Images/favicon_io/favicon-32x32.png"
+			type="image/png"
+			sizes="32x32"
+		/>
+		<link
+			rel="icon"
+			href="/Assets/Images/favicon_io/favicon-16x16.png"
+			type="image/png"
+			sizes="16x16"
+		/>
+
+		<!-- Apple Touch Icon voor iOS-apparaten -->
+		<link
+			rel="apple-touch-icon"
+			href="/Assets/Images/favicon_io/apple-touch-icon.png"
+			sizes="180x180"
+		/>
+
+		<!-- Android Chrome iconen -->
+		<link
+			rel="icon"
+			href="/Assets/Images/favicon_io/android-chrome-192x192.png"
+			type="image/png"
+			sizes="192x192"
+		/>
+		<link
+			rel="icon"
+			href="/Assets/Images/favicon_io/android-chrome-512x512.png"
+			type="image/png"
+			sizes="512x512"
+		/>
+
+		<!-- Web App Manifest -->
+		<link rel="manifest" href="/Assets/Images/favicon_io/site.webmanifest" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+		/>
+
+		<script
+			src="https://kit.fontawesome.com/d4e6b0151b.js"
+			crossorigin="anonymous"
+		></script>
+		<script defer src="/js/script.js"></script>
+	</head>
+	<body>
+		<a class="skiplink" href="#main-content">Ga naar hoofdcontent</a>
+
+		<header>
+			<div class="header-container wide-container">
+				<a class="header-logo" href="/" aria-current="">
+					<img src="/assets/images/logos/LogoWIJJ.svg" alt="WIJJ" />
+				</a>
+				<button
+					aria-expanded="false"
+					aria-controls="mobile-tablet-navbar"
+					class="navbar-toggle-btn"
+					aria-label="Open navigatie"
+				>
+					<i class="fa-solid fa-bars fa-2xl"></i>
+				</button>
+				<nav id="mobile-tablet-navbar" hidden>
+					<ul class="nav-list">
+						<li>
+							<a href="/pages/coachen.html">Coachen</a>
+							<ul class="sub-menu">
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a
+										aria-current="page"
+										href="/pages/modulaire-reintegratie.html"
+										>Modulaire re-integratie</a
+									>
+								</li>
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/pages/werk-fit-traject.html">Werkfit traject</a>
+								</li>
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/pages/naar-werk-traject.html">Naar werk traject</a>
+								</li>
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/pages/gemeentelijk-traject.html"
+										>Gemeentelijk traject
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li><a href="/pages/zorgen.html">Zorgen</a></li>
+						<li><a href="/pages//werken.html">Werken</a></li>
+						<li>
+							<a href="/pages/over-ons.html">Over Ons</a>
+							<ul class="sub-menu">
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/pages/over-ons.html">Over ons</a>
+								</li>
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/pages/over-wijj.html">Over WIJJ</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<hr />
+					<div class="nav-bottom-container">
+						<a class="phone-number" href="tel:+31857600204"
+							>Bel nu: 085-7600204</a
+						>
+						<div class="nav-search-contact-container">
+							<a href="" class="search-btn">
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</a>
+							<a href="/pages/contact.html" class="green-contact-btn"
+								>Contact</a
+							>
+						</div>
+					</div>
+				</nav>
+				<nav id="desktop-navbar">
+					<ul class="nav-list">
+						<li>
+							<div class="dropdown-nav-item">
+								<a class="dropdown-link-coachen" href="/pages/coachen.html">
+									Coachen
+								</a>
+								<button
+									class="dropdown-btn coachen-btn"
+									aria-haspopup="true"
+									aria-expanded="false"
+									aria-controls="coachen-menu"
+									aria-label="Coachen menu uitklappen"
+								>
+									<i class="fa-solid fa-chevron-down"></i>
+								</button>
+							</div>
+							<ul id="coachen-menu" class="dropdown-menu" hidden>
+								<li>
+									<a
+										aria-current="page"
+										href="/pages/modulaire-reintegratie.html"
+										>Modulaire re-integratie</a
+									>
+								</li>
+								<li>
+									<a href="/pages/werk-fit-traject.html">Werkfit traject</a>
+								</li>
+								<li>
+									<a href="/pages/naar-werk-traject.html">Naar werk traject</a>
+								</li>
+								<li>
+									<a href="/pages/gemeentelijk-traject.html"
+										>Gemeentelijk traject</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li><a href="/pages/zorgen.html">Zorgen</a></li>
+						<li><a href="/pages/werken.html">Werken</a></li>
+						<li>
+							<div class="dropdown-nav-item dropdown-overons">
+								<a class="dropdown-link-overons" href="">Over Ons </a>
+								<button
+									class="dropdown-btn overons-btn"
+									aria-label="Over ons menu uitklappen"
+									aria-haspopup="true"
+									aria-expanded="false"
+									aria-controls="overons-menu"
+								>
+									<i class="fa-solid fa-chevron-down"></i>
+								</button>
+							</div>
+							<ul id="overons-menu" class="dropdown-menu" hidden>
+								<li><a href="">Over ons</a></li>
+								<li><a href="">Over WIJJ</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="nav-right-container">
+						<a class="phone-number" href="tel:+31857600204"
+							>Bel nu: 085-7600204</a
+						>
+						<div class="nav-search-contact-container">
+							<a href="" class="search-btn">
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</a>
+							<a href="" class="green-contact-btn">Contact</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<div class="background-image wide-container coachen"></div>
+		<main class="coachen">
+			<section id="main-content" class="intro">
+				<h1>Modulaire re-integratie</h1>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero modi
+					voluptatem odio nisi aperiam inventore obcaecati explicabo neque
+					beatae, recusandae error aspernatur ipsum, optio ut accusantium
+					officia fugit est corporis?
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero modi
+					voluptatem odio nisi aperiam inventore obcaecati explicabo neque
+					beatae, recusandae error aspernatur ipsum, optio ut accusantium
+					officia fugit est corporis?
+				</p>
+			</section>
+			<section>
+				<div class="text-container">
+					<h2 class="small">Werkplezier draagt bij aan levensplezier</h2>
+					<p>
+						De modulaire Re-integratie dienst bestaat uit 4 losse re-integratie
+						diensten. Wij begeleiden cliënten met name de participatie
+						interventie en het bevorderen van maatschappelijke deelname. Door
+						heftige life-events (verlies van een baan, langdurige
+						uitkeringsafhankelijkheid, echtscheiding, sterfgeval, ernstige
+						ziekte of trauma) kun je grip op het leven volledig kwijt raken.
+						Vaak ben je hierdoor ook een langere tijd uit het werkproces geraakt
+						en heb je moeite met het deelnemen aan de maatschappij. Om hier
+						herstel en verandering te krijgen, kun je wel een (onder)steun in de
+						rug gebruiken. Wij kunnen je helpen om deel te nemen in de
+						maatschappij. Wij gaan samen met jou onderzoeken waar je problemen
+						liggen op de volgende punten:
+					</p>
+					<ul class="steps-list">
+						<li>Het in kaart brengen van de probleem gebieden/ pijn punten;</li>
+						<li>Creëren van rust, regelmaat en structuur;</li>
+						<li>Basale levensvoorwaarde creëren;</li>
+						<li>Communiceren met ouders, vrienden, gezin of familieleden;</li>
+						<li>Maatschappelijke participatie;</li>
+						<li>Schulden in kaart brengen;</li>
+						<li>Herstellen van het sociale netwerk;</li>
+						<li>Gezondheid- lichamelijk en psychisch in kaart brengen;</li>
+						<li>Stimuleren van de zelfredzaamheid.</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<div class="text-container">
+					<h2 class="small">Werkplezier draagt bij aan levensplezier</h2>
+					<p>
+						WIJJ Coachen heeft veel ervaring en zijn deskundig in het begeleiden
+						van UWV re-integratietrajecten. Daarin zijn wij altijd gericht op
+						het creëren van mogelijkheden. Wij weten uit ervaring wat nodig is
+						om weer aan het werk te komen en hoe je dat aanpakt. WIJJ zijn ervan
+						overtuigd dat plezier in het werk bijdraagt aan plezier in het
+						leven.
+					</p>
+				</div>
+			</section>
+			<section class="contact-container">
+				<div class="text-container">
+					<h2>Zullen wijj je helpen?</h2>
+					<!-- <p>
+					Meer weten over onze dienstverlening? Nader kennismaken, sparren over
+					mogelijkheden? Vul onderstaand fomulier in, dan nemen wij contact met
+					u op.
+				</p>
+				<form class="contact-form">
+					<label for="voornaam">Voornaam:</label><br />
+					<input type="text" id="voornaam" name="voornaam" /><br />
+					<label for="achternaam">Achternaam:</label><br />
+					<input type="text" id="achternaam" name="achternaam" /><br />
+					<label for="email">E-mail*:</label><br />
+					<input type="text" id="email" name="email" /><br />
+					<label for="telefoonnummer">Telefoonnummer:</label><br />
+					<input type="text" id="telefoonnummer" name="telefoonnummer" /><br />
+					<label for="bericht">Bericht:</label><br />
+					<textarea id="bericht" name="bericht"></textarea><br />
+					<p class="small">
+						Uw gegevens worden uitsluitend gebruikt op uw bericht te reageren.
+					</p>
+					<span>
+						<img src="/Assets/Images/Icons/chevron up.png" alt="" />
+						<input type="submit" value="verzenden" />
+					</span>
+				</form> -->
+					<div class="contact-details-container">
+						<div class="contact-details">
+							<h4>Adres:</h4>
+							<p>
+								WIJJ BV<br />
+								Pagendijk 38<br />
+								7271DH Borculo<br />
+								<a href="tel:+31857600204">085-7600204</a><br />
+								<a href="mailto:info@wijj.nu">info@wijj.nu</a>
+							</p>
+							<p>
+								KVK: 6668506<br />
+								AGB Code: 98101613
+							</p>
+						</div>
+						<div class="social-media-container">
+							<div class="social-media">
+								<h4>Social media:</h4>
+								<span class="social-media-icons">
+									<a aria-label="Bezoek onze Facebook pagina" href="http://"
+										><i
+											aria-hidden="true"
+											class="fa-brands fa-square-facebook"
+										></i
+									></a>
+									<a aria-label="Bezoek onze Instagram" href="http://"
+										><i
+											aria-hidden="true"
+											class="fa-brands fa-square-instagram"
+										></i
+									></a>
+									<a aria-label="Bezoek onze Linkedin pagina" href="http://"
+										><i aria-hidden="true" class="fa-brands fa-linkedin"></i
+									></a>
+								</span>
+							</div>
+							<img src="/assets/images/logos/LogoWIJJ.svg" alt="" />
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="organisations">
+				<h2 class="small">Wijj zijn aangesloten bij:</h2>
+				<div class="organisation-container">
+					<a target="_blank" href="https://www.blikopwerk.nl/">
+						<img
+							src="/assets/images/logos/blik-op-werk-logo.png"
+							alt="Blik op werk"
+						/>
+					</a>
+					<a target="_blank" href="https://www.s-bb.nl/">
+						<img
+							src="/assets/images/logos/sbb-logo.png"
+							alt="Samenwerkingsorganisatie Beroepsonderwijs Bedrijfsleven"
+						/>
+					</a>
+					<a target="_blank" href="https://bvkz.nl/">
+						<img
+							src="/assets/images/logos/LogoBVKZtransparent.png"
+							alt="Branchevereniging kleinschalige zorg"
+						/>
+					</a>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<nav class="footer-links">
+				<ul>
+					<li>
+						<a href="/pages/algemene-voorwaarden.html">Algemene voorwaarden</a>
+					</li>
+					<li><a href="/pages/klachtenregeling.html">Klachtenregeling</a></li>
+					<li><a href="/pages/privacybeleid.html">Privacybeleid</a></li>
+					<li><a href="/pages/cookiebeleid.html">Cookiebeleid</a></li>
+					<li><a href="/pages/sitemap.html">Sitemap</a></li>
+				</ul>
+			</nav>
+			<div class="btn-slogan-container">
+				<button class="download-btn">
+					Download onze brochure <i class="fa-solid fa-download"></i>
+				</button>
+				<p class="slogan">Wijj: jouw team voor toekomst</p>
+			</div>
+			<p class="copyright">WIJJ &copy; 2025</p>
+		</footer>
+	</body>
+</html>

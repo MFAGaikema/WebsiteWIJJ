@@ -7,6 +7,13 @@
 	background-size: cover;
 
 	&.home {
-		background-image: url(/Assets/Images/DEF_WIJJ_intro.png);
+		background-image: url(/assets/images/bg-images/DEF_WIJJ_intro.png);
+	}
+
+	&.coachen,
+	&.zorgen,
+	&.werken {
+		background-image: url(/assets//images//bg-images/DEF_WIJJ_blauwklein.png);
+		background-position: 0 40%;
 	}
 }

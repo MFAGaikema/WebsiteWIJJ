@@ -55,7 +55,7 @@
 			href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="/css/style.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -72,8 +72,8 @@
 
 		<header>
 			<div class="header-container wide-container">
-				<a class="header-logo" href="/">
-					<img src="/Assets/Images/Logos/LogoWIJJ.svg" alt="Logo WIJJ" />
+				<a class="header-logo" href="/" aria-current="">
+					<img src="/assets/images/logos/LogoWIJJ.svg" alt="WIJJ" />
 				</a>
 				<button
 					aria-expanded="false"
@@ -84,55 +84,50 @@
 					<i class="fa-solid fa-bars fa-2xl"></i>
 				</button>
 				<nav id="mobile-tablet-navbar" hidden>
-					<ul>
+					<ul class="nav-list">
 						<li>
-							<a href=""> Coachen </a>
+							<a href="/pages/coachen.html">Coachen</a>
 							<ul class="sub-menu">
 								<li>
-									<a href=""
-										><i class="fa-solid fa-chevron-right"></i>Modulaire
-										re-integratie</a
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/pages/modulaire-reintegratie.html"
+										>Modulaire re-integratie</a
 									>
 								</li>
 								<li>
-									<a href=""
-										><i class="fa-solid fa-chevron-right"></i>Werkfit traject</a
-									>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/pages/werk-fit-traject.html">Werkfit traject</a>
 								</li>
 								<li>
-									<a href=""
-										><i class="fa-solid fa-chevron-right"></i>Naar werk
-										traject</a
-									>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/pages/naar-werk-traject.html">Naar werk traject</a>
 								</li>
 								<li>
-									<a href=""
-										><i class="fa-solid fa-chevron-right"></i>Gemeentelijk
-										traject
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/pages/gemeentelijk-traject.html"
+										>Gemeentelijk traject
 									</a>
 								</li>
 							</ul>
 						</li>
-						<li><a href="">Zorgen</a></li>
-						<li><a href="">Werken</a></li>
+						<li><a href="/pages/zorgen.html">Zorgen</a></li>
+						<li><a href="/pages//werken.html">Werken</a></li>
 						<li>
-							<a href="">Over Ons</a>
+							<a href="/pages/over-ons.html">Over Ons</a>
 							<ul class="sub-menu">
 								<li>
-									<a href=""
-										><i class="fa-solid fa-chevron-right"></i>Over ons</a
-									>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/pages/over-ons.html">Over ons</a>
 								</li>
 								<li>
-									<a href=""
-										><i class="fa-solid fa-chevron-right"></i>Over WIJJ</a
-									>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/pages/over-wijj.html">Over WIJJ</a>
 								</li>
 							</ul>
 						</li>
 					</ul>
 					<hr />
-					<div class="nav-right-container">
+					<div class="nav-bottom-container">
 						<a class="phone-number" href="tel:+31857600204"
 							>Bel nu: 085-7600204</a
 						>
@@ -140,7 +135,9 @@
 							<a href="" class="search-btn">
 								<i class="fa-solid fa-magnifying-glass"></i>
 							</a>
-							<a href="" class="green-contact-btn">Contact</a>
+							<a href="/pages/contact.html" class="green-contact-btn"
+								>Contact</a
+							>
 						</div>
 					</div>
 				</nav>
@@ -148,7 +145,9 @@
 					<ul class="nav-list">
 						<li>
 							<div class="dropdown-nav-item">
-								<a class="dropdown-link-coachen" href=""> Coachen </a>
+								<a class="dropdown-link-coachen" href="/pages/coachen.html">
+									Coachen
+								</a>
 								<button
 									class="dropdown-btn coachen-btn"
 									aria-haspopup="true"
@@ -160,14 +159,26 @@
 								</button>
 							</div>
 							<ul id="coachen-menu" class="dropdown-menu" hidden>
-								<li><a href="">Modulaire re-integratie</a></li>
-								<li><a href="">Werkfit traject</a></li>
-								<li><a href="">Naar werk traject</a></li>
-								<li><a href="">Gemeentelijk traject</a></li>
+								<li>
+									<a href="/pages/modulaire-reintegratie.html"
+										>Modulaire re-integratie</a
+									>
+								</li>
+								<li>
+									<a href="/pages/werk-fit-traject.html">Werkfit traject</a>
+								</li>
+								<li>
+									<a href="/pages/naar-werk-traject.html">Naar werk traject</a>
+								</li>
+								<li>
+									<a href="/pages/gemeentelijk-traject.html"
+										>Gemeentelijk traject</a
+									>
+								</li>
 							</ul>
 						</li>
-						<li><a href="">Zorgen</a></li>
-						<li><a href="">Werken</a></li>
+						<li><a href="/pages/zorgen.html">Zorgen</a></li>
+						<li><a href="/pages/werken.html">Werken</a></li>
 						<li>
 							<div class="dropdown-nav-item dropdown-overons">
 								<a class="dropdown-link-overons" href="">Over Ons </a>
@@ -202,7 +213,7 @@
 			</div>
 		</header>
 		<div class="background-image wide-container home"></div>
-		<main>
+		<main class="home">
 			<section id="main-content" class="intro">
 				<h1>Welkom bij WIJJ</h1>
 				<p><strong>WIJJ zijn jouw team dat werkt aan jouw toekomst</strong></p>
@@ -267,7 +278,7 @@
 				<h2>Hier staan wijj voor</h2>
 				<div class="stances-container wide-container">
 					<article>
-						<img src="/Assets/Images/Icons/Persoonlijkthin.png" alt="" />
+						<img src="/assets/images/icons/Persoonlijkthin.png" alt="" />
 						<h3>Persoonlijk</h3>
 						<p>
 							Wij bieden niet alleen werk, maar een volledig op maat gemaakte
@@ -276,7 +287,7 @@
 						</p>
 					</article>
 					<article>
-						<img src="/Assets/Images/Icons/Werkplezierthin.png" alt="" />
+						<img src="/assets/images/icons/Werkplezierthin.png" alt="" />
 						<h3>Werkplezier</h3>
 						<p>
 							Wij geloven in de kracht van herstel en zorgen ervoor dat
@@ -286,7 +297,7 @@
 						</p>
 					</article>
 					<article>
-						<img src="/Assets/Images/Icons/Netwerk.png" alt="" />
+						<img src="/assets/images/icons/Netwerk.png" alt="" />
 						<h3>Netwerk</h3>
 						<p>
 							Dankzij ons netwerk van betrouwbare partners kunnen wij snel
@@ -295,7 +306,7 @@
 						</p>
 					</article>
 					<article>
-						<img src="/Assets/Images/Icons/Flexibel.png" alt="" />
+						<img src="/assets/images/icons/Flexibel.png" alt="" />
 						<h3>Flexibel</h3>
 						<p>
 							Wij bieden flexibele werkopties en helpen bij het implementeren
@@ -304,7 +315,7 @@
 						</p>
 					</article>
 					<article>
-						<img src="/Assets/Images/Icons/Resultaatgericht.png" alt="" />
+						<img src="/assets/images/icons/Resultaatgericht.png" alt="" />
 						<h3>Resultaatgericht</h3>
 						<p>
 							Wij werken met een duidelijke focus op resultaat, maar blijven
@@ -315,7 +326,7 @@
 				</div>
 			</section>
 			<section class="contact-container">
-				<div class="wide-container">
+				<div class="text-container">
 					<h2>Zullen wijj je helpen?</h2>
 					<!-- <p>
 					Meer weten over onze dienstverlening? Nader kennismaken, sparren over
@@ -360,7 +371,7 @@
 							<div class="social-media">
 								<h4>Social media:</h4>
 								<span class="social-media-icons">
-									<a aria-label="Bezoek onze Facebook pagina" href="http://"
+									<a aria-label="Bezoek onze Facebook pagina" href=""
 										><i
 											aria-hidden="true"
 											class="fa-brands fa-square-facebook"
@@ -377,29 +388,29 @@
 									></a>
 								</span>
 							</div>
-							<img src="/Assets/Images/Logos/LogoWIJJ.svg" alt="" />
+							<img src="/assets/images/logos/LogoWIJJ.svg" alt="" />
 						</div>
 					</div>
 				</div>
 			</section>
 			<section class="organisations">
-				<h3>Wijj zijn aangesloten bij:</h3>
+				<h2 class="small">Wijj zijn aangesloten bij:</h2>
 				<div class="organisation-container">
 					<a target="_blank" href="https://www.blikopwerk.nl/">
 						<img
-							src="/Assets/Images/Logos/blik-op-werk-logo.png"
+							src="/assets/images/logos/blik-op-werk-logo.png"
 							alt="Blik op werk"
 						/>
 					</a>
 					<a target="_blank" href="https://www.s-bb.nl/">
 						<img
-							src="/Assets/Images/Logos/sbb-logo.png"
+							src="/assets/images/logos/sbb-logo.png"
 							alt="Samenwerkingsorganisatie Beroepsonderwijs Bedrijfsleven"
 						/>
 					</a>
 					<a target="_blank" href="https://bvkz.nl/">
 						<img
-							src="/Assets/Images/Logos/LogoBVKZtransparent.png"
+							src="/assets/images/logos/LogoBVKZtransparent.png"
 							alt="Branchevereniging kleinschalige zorg"
 						/>
 					</a>
@@ -409,11 +420,13 @@
 		<footer>
 			<nav class="footer-links">
 				<ul>
-					<li><a href="">Algemene voorwaarden</a></li>
-					<li><a href="">Klachtenregeling</a></li>
-					<li><a href="">Privacybeleid</a></li>
-					<li><a href="">Cookiebeleid</a></li>
-					<li><a href="">Sitemap</a></li>
+					<li>
+						<a href="/pages/algemene-voorwaarden.html">Algemene voorwaarden</a>
+					</li>
+					<li><a href="/pages/klachtenregeling.html">Klachtenregeling</a></li>
+					<li><a href="/pages/privacybeleid.html">Privacybeleid</a></li>
+					<li><a href="/pages/cookiebeleid.html">Cookiebeleid</a></li>
+					<li><a href="/pages/sitemap.html">Sitemap</a></li>
 				</ul>
 			</nav>
 			<div class="btn-slogan-container">

@@ -6,4 +6,27 @@ main {
 	@media (min-width: 768px) {
 		position: relative;
 	}
+
+	&.home {
+		section:nth-child(2) {
+			background-color: #cbe8ed;
+		}
+	}
+
+	&.coachen {
+		section:nth-child(2) {
+			background-color: #eee;
+		}
+
+		@media (min-width: 768px) {
+			.text-container {
+				text-align: start;
+
+				p,
+				ul {
+					text-align: start;
+				}
+			}
+		}
+	}
 }

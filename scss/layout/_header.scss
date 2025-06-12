@@ -30,10 +30,10 @@ header {
 	}
 
 	a {
-		height: 100%;
-		color: var(--standard-green);
+		display: flex;
 
 		&.header-logo {
+			height: 100%;
 			margin-right: 5px;
 		}
 
@@ -60,18 +60,17 @@ header {
 		}
 
 		hr {
+			margin: 0;
 			margin-top: 2rem;
+			width: 100%;
 		}
 
 		.sub-menu {
-			padding: 1em var(--padding-left-right);
-
-			&:last-child {
-				padding-bottom: 0;
-			}
+			padding-inline: var(--padding-left-right);
 
 			li {
 				font-size: 1rem;
+				display: flex;
 			}
 
 			li:not(:last-child) {
@@ -83,7 +82,8 @@ header {
 			}
 		}
 
-		.nav-right-container {
+		.nav-right-container,
+		.nav-bottom-container {
 			.nav-search-contact-container {
 				padding-top: 1.25em;
 				display: flex;

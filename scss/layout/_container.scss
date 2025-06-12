@@ -6,4 +6,21 @@
 .text-container {
 	max-width: var(--max-width-text-container);
 	margin-inline: auto;
+
+	.services-list {
+		text-align: start;
+		i {
+			margin-right: 10px;
+		}
+	}
+
+	.steps-list {
+		text-align: start;
+		list-style-type: square;
+		padding-left: var(--padding-left-right);
+
+		@media (min-width: 1200px) {
+			padding-left: 1rem;
+		}
+	}
 }

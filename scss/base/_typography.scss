@@ -51,6 +51,10 @@ h1 {
 
 h2 {
 	font-size: clamp(1.75rem, 3.75vw, 2.5rem);
+
+	&.small {
+		font-size: 1.25rem;
+	}
 }
 
 h3 {
@@ -68,13 +72,27 @@ nav {
 p {
 	font-size: 1rem;
 	line-height: 1.5;
+
+	&:not(:last-child) {
+		padding-bottom: 1.5rem;
+	}
+
+	&.small {
+		font-size: 0.75rem;
+	}
 }
 
 a {
 	text-decoration: none;
+	color: var(--standard-green);
 
 	&:hover {
 		text-decoration: underline;
+	}
+
+	&[aria-current='page'] {
+		text-decoration: underline;
+		font-weight: 500;
 	}
 }
 
@@ -85,14 +103,7 @@ strong {
 ol,
 ul {
 	list-style: none;
-}
-
-p:not(:last-child) {
-	padding-bottom: 1.5rem;
-}
-
-.small {
-	font-size: 0.75rem;
+	line-height: 1.5;
 }
 
 .slogan {

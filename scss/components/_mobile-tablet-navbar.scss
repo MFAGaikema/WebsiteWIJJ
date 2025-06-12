@@ -8,9 +8,18 @@
 	padding: 1.25em var(--padding-left-right);
 	transition: left 0.2s;
 
-	.nav-right-container {
+	.nav-list > li {
+		:first-of-type(.sub-menu) {
+			margin-bottom: 1rem;
+		}
+		> a {
+			margin-bottom: 1rem;
+		}
+	}
+
+	.nav-bottom-container {
 		width: fit-content;
-		padding-top: 40px;
+		padding-top: 2rem;
 	}
 
 	@media (min-width: 1025px) {
