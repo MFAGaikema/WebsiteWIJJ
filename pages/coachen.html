@@ -72,7 +72,7 @@
 
 		<header>
 			<div class="header-container wide-container">
-				<a class="header-logo" href="/" aria-current="">
+				<a class="header-logo" href="/">
 					<img src="/assets/images/logos/LogoWIJJ.svg" alt="WIJJ" />
 				</a>
 				<button
@@ -86,7 +86,7 @@
 				<nav id="mobile-tablet-navbar" hidden>
 					<ul class="nav-list">
 						<li>
-							<a href="/coachen">Coachen</a>
+							<a href="/coachen" aria-current="page">Coachen</a>
 							<ul class="sub-menu">
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
@@ -139,7 +139,13 @@
 					<ul class="nav-list">
 						<li>
 							<div class="dropdown-nav-item">
-								<a class="dropdown-link-coachen" href="/coachen"> Coachen </a>
+								<a
+									class="dropdown-link-coachen"
+									href="/coachen"
+									aria-current="page"
+								>
+									Coachen
+								</a>
 								<button
 									class="dropdown-btn coachen-btn"
 									aria-haspopup="true"
