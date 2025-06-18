@@ -67,7 +67,7 @@
 		></script>
 		<script defer src="/js/script.js"></script>
 	</head>
-	<body>
+	<body class="theme-coachen">
 		<a class="skiplink" href="#main-content">Ga naar hoofdcontent</a>
 
 		<header>
@@ -130,10 +130,14 @@
 							>Bel nu: 085-7600204</a
 						>
 						<div class="nav-search-contact-container">
-							<a href="/zoeken" class="search-btn">
+							<a
+								href="/zoeken"
+								aria-label="Ga naar zoekpagina"
+								class="search-btn"
+							>
 								<i class="fa-solid fa-magnifying-glass"></i>
 							</a>
-							<a href="/contact" class="green-contact-btn">Contact</a>
+							<a href="/contact" class="contact-btn">Contact</a>
 						</div>
 					</div>
 				</nav>
@@ -195,17 +199,21 @@
 							>Bel nu: 085-7600204</a
 						>
 						<div class="nav-search-contact-container">
-							<a href="/zoeken" class="search-btn">
+							<a
+								href="/zoeken"
+								aria-label="Ga naar zoekpagina"
+								class="search-btn"
+							>
 								<i class="fa-solid fa-magnifying-glass"></i>
 							</a>
-							<a href="/contact" class="green-contact-btn">Contact</a>
+							<a href="/contact" class="contact-btn">Contact</a>
 						</div>
 					</div>
 				</nav>
 			</div>
 		</header>
-		<div class="background-image wide-container coachen"></div>
-		<main class="coachen">
+		<div class="background-image wide-container"></div>
+		<main>
 			<section id="main-content" class="intro">
 				<h1>Modulaire re-integratie</h1>
 				<p>
@@ -220,6 +228,19 @@
 					beatae, recusandae error aspernatur ipsum, optio ut accusantium
 					officia fugit est corporis?
 				</p>
+			</section>
+			<section>
+				<div class="text-container">
+					<h2 class="small">Werkplezier draagt bij aan levensplezier</h2>
+					<p>
+						WIJJ Coachen heeft veel ervaring en zijn deskundig in het begeleiden
+						van UWV re-integratietrajecten. Daarin zijn wij altijd gericht op
+						het creëren van mogelijkheden. Wij weten uit ervaring wat nodig is
+						om weer aan het werk te komen en hoe je dat aanpakt. WIJJ zijn ervan
+						overtuigd dat plezier in het werk bijdraagt aan plezier in het
+						leven.
+					</p>
+				</div>
 			</section>
 			<section>
 				<div class="text-container">
@@ -249,22 +270,14 @@
 						<li>Gezondheid- lichamelijk en psychisch in kaart brengen;</li>
 						<li>Stimuleren van de zelfredzaamheid.</li>
 					</ul>
+					<a class="contact-btn blue large">
+						<i class="fa-solid fa-circle-user"></i>Neem nu contact op
+					</a>
 				</div>
 			</section>
-			<section>
-				<div class="text-container">
-					<h2 class="small">Werkplezier draagt bij aan levensplezier</h2>
-					<p>
-						WIJJ Coachen heeft veel ervaring en zijn deskundig in het begeleiden
-						van UWV re-integratietrajecten. Daarin zijn wij altijd gericht op
-						het creëren van mogelijkheden. Wij weten uit ervaring wat nodig is
-						om weer aan het werk te komen en hoe je dat aanpakt. WIJJ zijn ervan
-						overtuigd dat plezier in het werk bijdraagt aan plezier in het
-						leven.
-					</p>
-				</div>
-			</section>
-			<section class="contact-container">
+		</main>
+		<footer>
+			<div class="contact-container">
 				<div class="text-container">
 					<h2>Zullen wijj je helpen?</h2>
 					<!-- <p>
@@ -310,7 +323,7 @@
 							<div class="social-media">
 								<h4>Social media:</h4>
 								<span class="social-media-icons">
-									<a aria-label="Bezoek onze Facebook pagina" href="http://"
+									<a aria-label="Bezoek onze Facebook pagina" href=""
 										><i
 											aria-hidden="true"
 											class="fa-brands fa-square-facebook"
@@ -331,8 +344,8 @@
 						</div>
 					</div>
 				</div>
-			</section>
-			<section class="organisations">
+			</div>
+			<div class="organisations">
 				<h2 class="small">Wijj zijn aangesloten bij:</h2>
 				<div class="organisation-container">
 					<a target="_blank" href="https://www.blikopwerk.nl/">
@@ -354,27 +367,29 @@
 						/>
 					</a>
 				</div>
-			</section>
-		</main>
-		<footer>
-			<nav class="footer-links">
-				<ul>
-					<li>
-						<a href="/pages/algemene-voorwaarden.html">Algemene voorwaarden</a>
-					</li>
-					<li><a href="/pages/klachtenregeling.html">Klachtenregeling</a></li>
-					<li><a href="/pages/privacybeleid.html">Privacybeleid</a></li>
-					<li><a href="/pages/cookiebeleid.html">Cookiebeleid</a></li>
-					<li><a href="/pages/sitemap.html">Sitemap</a></li>
-				</ul>
-			</nav>
-			<div class="btn-slogan-container">
-				<button class="download-btn">
-					Download onze brochure <i class="fa-solid fa-download"></i>
-				</button>
-				<p class="slogan">Wijj: jouw team voor toekomst</p>
 			</div>
-			<p class="copyright">WIJJ &copy; 2025</p>
+			<div class="footer-bottom-container">
+				<nav class="footer-links">
+					<ul>
+						<li>
+							<a href="/pages/algemene-voorwaarden.html"
+								>Algemene voorwaarden</a
+							>
+						</li>
+						<li><a href="/pages/klachtenregeling.html">Klachtenregeling</a></li>
+						<li><a href="/pages/privacybeleid.html">Privacybeleid</a></li>
+						<li><a href="/pages/cookiebeleid.html">Cookiebeleid</a></li>
+						<li><a href="/pages/sitemap.html">Sitemap</a></li>
+					</ul>
+				</nav>
+				<div class="btn-slogan-container">
+					<button class="download-btn">
+						Download onze brochure <i class="fa-solid fa-download"></i>
+					</button>
+					<p class="slogan">Wijj: jouw team voor toekomst</p>
+				</div>
+				<p class="copyright">WIJJ &copy; 2025</p>
+			</div>
 		</footer>
 	</body>
 </html>

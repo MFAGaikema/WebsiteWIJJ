@@ -6,14 +6,17 @@
 	background-position: center;
 	background-size: cover;
 
-	&.home {
-		background-image: url(/assets/images/bg-images/DEF_WIJJ_intro.png);
-	}
-
 	&.coachen,
 	&.zorgen,
 	&.werken {
-		background-image: url(/assets//images//bg-images/DEF_WIJJ_blauwklein.png);
 		background-position: 0 40%;
+	}
+
+	&.zorgen {
+		background-image: url(/assets/images/bg-images/DEF_WIJJ_oranjeklein.png);
+	}
+
+	&.werken {
+		background-image: url(/assets/images/bg-images/DEF_WIJJ_paarsklein.png);
 	}
 }

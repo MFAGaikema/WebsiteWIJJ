@@ -1,0 +1,73 @@
+@use '../utils/mixins';
+
+.theme-home {
+	@include mixins.theme-colors(green);
+
+	.background-image {
+		background-image: url(/assets/images/bg-images/DEF_WIJJ_intro.png);
+	}
+
+	main {
+		.intro {
+			background-color: #fff;
+		}
+
+		section:nth-child(2) {
+			background-color: #cbe8ed;
+		}
+	}
+}
+
+.theme-coachen {
+	@include mixins.theme-colors(blue);
+
+	.background-image {
+		background-image: url(/assets/images//bg-images/DEF_WIJJ_blauwklein.png);
+	}
+
+	main {
+		.intro {
+			background-color: #bde4f7;
+		}
+
+		section:nth-child(2) {
+			background-color: var(--very-light-grey);
+		}
+	}
+}
+
+.theme-zorgen {
+	@include mixins.theme-colors(orange);
+
+	.background-image {
+		background-image: url(/assets/images//bg-images/DEF_WIJJ_oranjeklein.png);
+	}
+
+	main {
+		.intro {
+			background-color: #f9d298;
+		}
+
+		section:nth-child(2) {
+			background-color: var(--very-light-grey);
+		}
+	}
+}
+
+.theme-werken {
+	@include mixins.theme-colors(purple);
+
+	.background-image {
+		background-image: url(/assets/images//bg-images/DEF_WIJJ_paarsklein.png);
+	}
+
+	main {
+		.intro {
+			background-color: #dec8df;
+		}
+
+		section:nth-child(2) {
+			background-color: var(--very-light-grey);
+		}
+	}
+}

@@ -10,10 +10,18 @@
 
 	//colors
 	--standard-green: #007078;
-	--standard-orange: #db7602;
+	--standard-blue: #036c96;
+	--standard-orange: #9e5502;
+	--standard-purple: #633e74;
 	--dark-green: color-mix(in srgb, var(--standard-green) 80%, black);
+	--dark-blue: color-mix(in srgb, var(--standard-blue) 80%, black);
 	--dark-orange: color-mix(in srgb, var(--standard-orange) 90%, black);
-	--lighter-green: #009fa9;
+	--dark-purple: color-mix(in srgb, var(--standard-purple) 75%, black);
+	--very-light-grey: #f9f8f8;
+	--contact-container-green: #ebf6f8;
+	--contact-container-blue: #daeef8;
+	--contact-container-orange: #fdefdf;
+	--contact-container-purple: #f6edfa;
 
 	//other
 	--margin-hr: var(--padding-left-right);

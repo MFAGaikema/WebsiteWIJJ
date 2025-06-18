@@ -1,9 +1,15 @@
 .contact-container {
 	background-color: #ebf6f8;
 	width: 100%;
+	padding: 2.5em var(--padding-left-right);
+
+	h2 {
+		text-align: center;
+	}
 
 	a {
 		text-decoration: underline;
+		text-transform: none;
 	}
 
 	p,
@@ -45,12 +51,8 @@
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
-		h4 {
-			color: var(--standard-green);
-		}
 
 		a {
-			color: var(--standard-green);
 			font-weight: bold;
 		}
 
@@ -67,10 +69,6 @@
 
 				i {
 					font-size: var(--icon-font-size);
-
-					&:hover {
-						color: var(--dark-green);
-					}
 				}
 			}
 		}

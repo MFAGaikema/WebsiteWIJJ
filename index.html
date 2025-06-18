@@ -67,7 +67,7 @@
 		></script>
 		<script defer src="js/script.js"></script>
 	</head>
-	<body>
+	<body class="theme-home">
 		<a class="skiplink" href="#main-content">Ga naar hoofdcontent</a>
 
 		<header>
@@ -128,10 +128,14 @@
 							>Bel nu: 085-7600204</a
 						>
 						<div class="nav-search-contact-container">
-							<a href="/zoeken" class="search-btn">
+							<a
+								href="/zoeken"
+								aria-label="Ga naar zoekpagina"
+								class="search-btn"
+							>
 								<i class="fa-solid fa-magnifying-glass"></i>
 							</a>
-							<a href="/contact" class="green-contact-btn">Contact</a>
+							<a href="/contact" class="contact-btn">Contact</a>
 						</div>
 					</div>
 				</nav>
@@ -191,17 +195,21 @@
 							>Bel nu: 085-7600204</a
 						>
 						<div class="nav-search-contact-container">
-							<a href="/zoeken" class="search-btn">
+							<a
+								href="/zoeken"
+								aria-label="Ga naar zoekpagina"
+								class="search-btn"
+							>
 								<i class="fa-solid fa-magnifying-glass"></i>
 							</a>
-							<a href="/contact" class="green-contact-btn">Contact</a>
+							<a href="/contact" class="contact-btn">Contact</a>
 						</div>
 					</div>
 				</nav>
 			</div>
 		</header>
-		<div class="background-image wide-container home"></div>
-		<main class="home">
+		<div class="background-image wide-container"></div>
+		<main>
 			<section id="main-content" class="intro">
 				<h1>Welkom bij WIJJ</h1>
 				<p><strong>WIJJ zijn jouw team dat werkt aan jouw toekomst</strong></p>
@@ -225,9 +233,9 @@
 						niet alleen groeien in hun vak, maar ook in hun leven. Samenwerken
 						met onze kandidaten voor beter werk voor beter leven.
 					</p>
-					<button class="orange-contact-btn">
+					<a href="" class="contact-btn large">
 						Wil je aan de slag? Neem direct contact op
-					</button>
+					</a>
 				</div>
 			</section>
 			<section class="what-we-do">
@@ -262,9 +270,9 @@
 				</div>
 			</section>
 			<hr />
-			<section class="stances">
+			<section>
 				<h2>Hier staan wijj voor</h2>
-				<div class="stances-container wide-container">
+				<div class="content-wrapper text-container">
 					<article>
 						<img src="/assets/images/icons/Persoonlijkthin.png" alt="" />
 						<h3>Persoonlijk</h3>
@@ -313,7 +321,9 @@
 					</article>
 				</div>
 			</section>
-			<section class="contact-container">
+		</main>
+		<footer>
+			<div class="contact-container">
 				<div class="text-container">
 					<h2>Zullen wijj je helpen?</h2>
 					<!-- <p>
@@ -380,8 +390,8 @@
 						</div>
 					</div>
 				</div>
-			</section>
-			<section class="organisations">
+			</div>
+			<div class="organisations">
 				<h2 class="small">Wijj zijn aangesloten bij:</h2>
 				<div class="organisation-container">
 					<a target="_blank" href="https://www.blikopwerk.nl/">
@@ -403,27 +413,29 @@
 						/>
 					</a>
 				</div>
-			</section>
-		</main>
-		<footer>
-			<nav class="footer-links">
-				<ul>
-					<li>
-						<a href="/pages/algemene-voorwaarden.html">Algemene voorwaarden</a>
-					</li>
-					<li><a href="/pages/klachtenregeling.html">Klachtenregeling</a></li>
-					<li><a href="/pages/privacybeleid.html">Privacybeleid</a></li>
-					<li><a href="/pages/cookiebeleid.html">Cookiebeleid</a></li>
-					<li><a href="/pages/sitemap.html">Sitemap</a></li>
-				</ul>
-			</nav>
-			<div class="btn-slogan-container">
-				<button class="download-btn">
-					Download onze brochure <i class="fa-solid fa-download"></i>
-				</button>
-				<p class="slogan">Wijj: jouw team voor toekomst</p>
 			</div>
-			<p class="copyright">WIJJ &copy; 2025</p>
+			<div class="footer-bottom-container">
+				<nav class="footer-links">
+					<ul>
+						<li>
+							<a href="/pages/algemene-voorwaarden.html"
+								>Algemene voorwaarden</a
+							>
+						</li>
+						<li><a href="/pages/klachtenregeling.html">Klachtenregeling</a></li>
+						<li><a href="/pages/privacybeleid.html">Privacybeleid</a></li>
+						<li><a href="/pages/cookiebeleid.html">Cookiebeleid</a></li>
+						<li><a href="/pages/sitemap.html">Sitemap</a></li>
+					</ul>
+				</nav>
+				<div class="btn-slogan-container">
+					<button class="download-btn">
+						Download onze brochure <i class="fa-solid fa-download"></i>
+					</button>
+					<p class="slogan">Wijj: jouw team voor toekomst</p>
+				</div>
+				<p class="copyright">WIJJ &copy; 2025</p>
+			</div>
 		</footer>
 	</body>
 </html>

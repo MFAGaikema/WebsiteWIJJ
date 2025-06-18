@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WIJJ - Jouw team voor toekomst - Werken</title>
+		<!-- Standaard favicon -->
+		<link
+			rel="icon"
+			href="/Assets/Images/favicon_io/favicon.ico"
+			type="image/x-icon"
+		/>
+
+		<!-- PNG favicons voor verschillende formaten -->
+		<link
+			rel="icon"
+			href="/Assets/Images/favicon_io/favicon-32x32.png"
+			type="image/png"
+			sizes="32x32"
+		/>
+		<link
+			rel="icon"
+			href="/Assets/Images/favicon_io/favicon-16x16.png"
+			type="image/png"
+			sizes="16x16"
+		/>
+
+		<!-- Apple Touch Icon voor iOS-apparaten -->
+		<link
+			rel="apple-touch-icon"
+			href="/Assets/Images/favicon_io/apple-touch-icon.png"
+			sizes="180x180"
+		/>
+
+		<!-- Android Chrome iconen -->
+		<link
+			rel="icon"
+			href="/Assets/Images/favicon_io/android-chrome-192x192.png"
+			type="image/png"
+			sizes="192x192"
+		/>
+		<link
+			rel="icon"
+			href="/Assets/Images/favicon_io/android-chrome-512x512.png"
+			type="image/png"
+			sizes="512x512"
+		/>
+
+		<!-- Web App Manifest -->
+		<link rel="manifest" href="/Assets/Images/favicon_io/site.webmanifest" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+		/>
+
+		<script
+			src="https://kit.fontawesome.com/d4e6b0151b.js"
+			crossorigin="anonymous"
+		></script>
+		<script defer src="js/script.js"></script>
+	</head>
+	<body class="theme-werken">
+		<a class="skiplink" href="#main-content">Ga naar hoofdcontent</a>
+
+		<header>
+			<div class="header-container wide-container">
+				<a class="header-logo" href="/">
+					<img src="/assets/images/logos/LogoWIJJ.svg" alt="WIJJ" />
+				</a>
+				<button
+					aria-expanded="false"
+					aria-controls="mobile-tablet-navbar"
+					class="navbar-toggle-btn"
+					aria-label="Open navigatie"
+				>
+					<i class="fa-solid fa-bars fa-2xl"></i>
+				</button>
+				<nav id="mobile-tablet-navbar" hidden>
+					<ul class="nav-list">
+						<li>
+							<a href="/coachen">Coachen</a>
+							<ul class="sub-menu">
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/modulaire-reintegratie">Modulaire re-integratie</a>
+								</li>
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/werk-fit-traject">Werkfit traject</a>
+								</li>
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/naar-werk-traject">Naar werk traject</a>
+								</li>
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/gemeentelijk-traject">Gemeentelijk traject </a>
+								</li>
+							</ul>
+						</li>
+						<li><a href="/zorgen">Zorgen</a></li>
+						<li><a href="/werken" aria-current="page">Werken</a></li>
+						<li>
+							<a href="/over-ons">Over Ons</a>
+							<ul class="sub-menu">
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/over-ons">Over ons</a>
+								</li>
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/over-wijj">Over WIJJ</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<hr />
+					<div class="nav-bottom-container">
+						<a class="phone-number" href="tel:+31857600204"
+							>Bel nu: 085-7600204</a
+						>
+						<div class="nav-search-contact-container">
+							<a
+								href="/zoeken"
+								aria-label="Ga naar zoekpagina"
+								class="search-btn"
+							>
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</a>
+							<a href="/contact" class="contact-btn">Contact</a>
+						</div>
+					</div>
+				</nav>
+				<nav id="desktop-navbar">
+					<ul class="nav-list">
+						<li>
+							<div class="dropdown-nav-item">
+								<a class="dropdown-link-coachen" href="/coachen"> Coachen </a>
+								<button
+									class="dropdown-btn coachen-btn"
+									aria-haspopup="true"
+									aria-expanded="false"
+									aria-controls="coachen-menu"
+									aria-label="Coachen menu uitklappen"
+								>
+									<i class="fa-solid fa-chevron-down"></i>
+								</button>
+							</div>
+							<ul id="coachen-menu" class="dropdown-menu" hidden>
+								<li>
+									<a href="/modulaire-reintegratie">Modulaire re-integratie</a>
+								</li>
+								<li>
+									<a href="/werk-fit-traject">Werkfit traject</a>
+								</li>
+								<li>
+									<a href="/naar-werk-traject">Naar werk traject</a>
+								</li>
+								<li>
+									<a href="/gemeentelijk-traject">Gemeentelijk traject</a>
+								</li>
+							</ul>
+						</li>
+						<li><a href="/zorgen">Zorgen</a></li>
+						<li><a href="/werken" aria-current="page">Werken</a></li>
+						<li>
+							<div class="dropdown-nav-item dropdown-overons">
+								<a class="dropdown-link-overons" href="">Over Ons </a>
+								<button
+									class="dropdown-btn overons-btn"
+									aria-label="Over ons menu uitklappen"
+									aria-haspopup="true"
+									aria-expanded="false"
+									aria-controls="overons-menu"
+								>
+									<i class="fa-solid fa-chevron-down"></i>
+								</button>
+							</div>
+							<ul id="overons-menu" class="dropdown-menu" hidden>
+								<li><a href="/over-ons">Over ons</a></li>
+								<li><a href="/over-wijj">Over WIJJ</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="nav-right-container">
+						<a class="phone-number" href="tel:+31857600204"
+							>Bel nu: 085-7600204</a
+						>
+						<div class="nav-search-contact-container">
+							<a
+								href="/zoeken"
+								aria-label="Ga naar zoekpagina"
+								class="search-btn"
+							>
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</a>
+							<a href="/contact" class="contact-btn">Contact</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<div class="background-image wide-container"></div>
+		<main>
+			<section id="main-content" class="intro">
+				<h1>WIJJ werken</h1>
+				<p>
+					WIJJ heeft als visie dat het persoonlijke weer terug moet keren in de
+					uitzendbranche. Hoe? Door persoonlijk het gesprek aan te gaan met
+					werkgever en werkzoekenden om de wensen van beide partijen te
+					onderzoeken. Op deze manier is WIJJ er van overtuigt om dé juiste
+					matches te kunnen creëren.
+				</p>
+			</section>
+			<section>
+				<div class="text-container">
+					<h2>Hoe werkt werken via WIJJ?</h2>
+					<p>
+						Volgens WIJJ draait de uitzendbranche om het bijdragen en helpen in
+						het werkgeluk van werkzoekenden aan de ene kant en aan de andere
+						kant het ondersteunen van werkgevers/ opdrachtgevers in het oplossen
+						van personeelstekorten/HR vraagstukken. Daarom gaat WIJJ graag het
+						gesprek aan met werkzoekenden om achter de motivatie en beweegreden
+						van de kandidaat te komen. Wat wil je graag, waar ben je goed in,
+						maar voornamelijk het allerbelangrijkste, wat vind je leuk om te
+						doen?
+					</p>
+					<p>
+						Nu is het tijd om dat anders te doen: bij WIJJ staat de kandidaat
+						altijd centraal. Beter werk en beter betaald. Daar gaan wij voor!
+					</p>
+				</div>
+			</section>
+			<section>
+				<div class="content-wrapper text-container">
+					<article>
+						<img src="/assets/images/icons/WijjWerkenJob.png" alt="" />
+						<h3>Voor werkzoekenden: wij willen met jou in gesprek</h3>
+						<p>
+							WIJJ gaan graag het gesprek aan met werkzoekenden om achter de
+							motivatie en beweegredenen van de kandidaat te komen. Wat wil je
+							graag, waar ben je goed in, maar vooral het allerbelangrijkste:
+							wat vind je leuk om te doen? Want daar gaat het om.
+						</p>
+						<p>
+							Tussen de duizenden uitzendaanbieders is het daarom dus hoog tijd
+							om dat eens anders te doen. Bij WIJJ staat de kandidaat altijd
+							centraal! Wij luisteren en zoeken naar beter werk dat beter
+							betaalt.
+						</p>
+					</article>
+					<article>
+						<img src="/assets/images/icons/WIJJWerkenUserGlass.png" alt="" />
+						<h3>Voor opdrachtgevers: wij helpen werkgevers</h3>
+						<p>
+							Voor de opdrachtgever zullen WIJJ een sparringpartner zijn die
+							zich transparant opstelt en een luisterend oor biedt.
+						</p>
+						<p>
+							WIJJ profileren ons dan ook als een transparante en eerlijke
+							organisatie die voor elke opdrachtgever een zelfde kostprijs zal
+							hanteren.
+						</p>
+						<p>
+							WIJJ willen ons dan ook graag hard maken voor de werkgever/
+							opdracht- gever om middels de persoonlijke gesprekken met de
+							kandidaat een juiste match te kunnen creëren.
+						</p>
+					</article>
+				</div>
+			</section>
+			<hr />
+			<section>
+				<div class="text-container">
+					<h2>Onze vacatures</h2>
+					<div class="content-wrapper">
+						<article>
+							<h3 class="small">Leerling helpende of verzorgende - BBL</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+								diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+								aliquam erat volutpat. Ut wisi enim ad m
+							</p>
+							<a
+								href=""
+								aria-label="Meer informatie over de vacature Leerling helpende of verzorgende - BBL"
+								>Meer informatie</a
+							>
+						</article>
+						<article>
+							<h3 class="small">Leerling helpende of verzorgende - BBL</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+								diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+								aliquam erat volutpat. Ut wisi enim ad m
+							</p>
+							<a
+								href=""
+								aria-label="Meer informatie over de vacature Leerling helpende of verzorgende - BBL"
+								>Meer informatie</a
+							>
+						</article>
+						<article>
+							<h3 class="small">Leerling helpende of verzorgende - BBL</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+								diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+								aliquam erat volutpat. Ut wisi enim ad m
+							</p>
+							<a
+								href=""
+								aria-label="Meer informatie over de vacature Leerling helpende of verzorgende - BBL"
+								>Meer informatie</a
+							>
+						</article>
+						<article>
+							<h3 class="small">Leerling helpende of verzorgende - BBL</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+								diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+								aliquam erat volutpat. Ut wisi enim ad m
+							</p>
+							<a
+								href=""
+								aria-label="Meer informatie over de vacature Leerling helpende of verzorgende - BBL"
+								>Meer informatie</a
+							>
+						</article>
+						<article>
+							<h3 class="small">Leerling helpende of verzorgende - BBL</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+								diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+								aliquam erat volutpat. Ut wisi enim ad m
+							</p>
+							<a
+								href=""
+								aria-label="Meer informatie over de vacature Leerling helpende of verzorgende - BBL"
+								>Meer informatie</a
+							>
+						</article>
+						<article>
+							<h3 class="small">Leerling helpende of verzorgende - BBL</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+								diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+								aliquam erat volutpat. Ut wisi enim ad m
+							</p>
+							<a
+								href=""
+								aria-label="Meer informatie over de vacature Leerling helpende of verzorgende - BBL"
+								>Meer informatie</a
+							>
+						</article>
+					</div>
+					<button class="contact-btn large">
+						<i class="fa-solid fa-circle-user"></i>Neem nu contact op
+					</button>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="contact-container">
+				<div class="text-container">
+					<h2>Zullen wijj je helpen?</h2>
+					<div class="contact-details-container">
+						<div class="contact-details">
+							<h4>Adres:</h4>
+							<p>
+								WIJJ BV<br />
+								Pagendijk 38<br />
+								7271DH Borculo<br />
+								<a href="tel:+31857600204">085-7600204</a><br />
+								<a href="mailto:info@wijj.nu">info@wijj.nu</a>
+							</p>
+							<p>
+								KVK: 6668506<br />
+								AGB Code: 98101613
+							</p>
+						</div>
+						<div class="social-media-container">
+							<div class="social-media">
+								<h4>Social media:</h4>
+								<span class="social-media-icons">
+									<a aria-label="Bezoek onze Facebook pagina" href=""
+										><i
+											aria-hidden="true"
+											class="fa-brands fa-square-facebook"
+										></i
+									></a>
+									<a aria-label="Bezoek onze Instagram" href="http://"
+										><i
+											aria-hidden="true"
+											class="fa-brands fa-square-instagram"
+										></i
+									></a>
+									<a aria-label="Bezoek onze Linkedin pagina" href="http://"
+										><i aria-hidden="true" class="fa-brands fa-linkedin"></i
+									></a>
+								</span>
+							</div>
+							<img src="/assets/images/logos/LogoWIJJ.svg" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="organisations">
+				<h2 class="small">Wijj zijn aangesloten bij:</h2>
+				<div class="organisation-container">
+					<a target="_blank" href="https://www.blikopwerk.nl/">
+						<img
+							src="/assets/images/logos/blik-op-werk-logo.png"
+							alt="Blik op werk"
+						/>
+					</a>
+					<a target="_blank" href="https://www.s-bb.nl/">
+						<img
+							src="/assets/images/logos/sbb-logo.png"
+							alt="Samenwerkingsorganisatie Beroepsonderwijs Bedrijfsleven"
+						/>
+					</a>
+					<a target="_blank" href="https://bvkz.nl/">
+						<img
+							src="/assets/images/logos/LogoBVKZtransparent.png"
+							alt="Branchevereniging kleinschalige zorg"
+						/>
+					</a>
+				</div>
+			</div>
+			<div class="footer-bottom-container">
+				<nav class="footer-links">
+					<ul>
+						<li>
+							<a href="/pages/algemene-voorwaarden.html"
+								>Algemene voorwaarden</a
+							>
+						</li>
+						<li><a href="/pages/klachtenregeling.html">Klachtenregeling</a></li>
+						<li><a href="/pages/privacybeleid.html">Privacybeleid</a></li>
+						<li><a href="/pages/cookiebeleid.html">Cookiebeleid</a></li>
+						<li><a href="/pages/sitemap.html">Sitemap</a></li>
+					</ul>
+				</nav>
+				<div class="btn-slogan-container">
+					<button class="download-btn">
+						Download onze brochure <i class="fa-solid fa-download"></i>
+					</button>
+					<p class="slogan">Wijj: jouw team voor toekomst</p>
+				</div>
+				<p class="copyright">WIJJ &copy; 2025</p>
+			</div>
+		</footer>
+	</body>
+</html>

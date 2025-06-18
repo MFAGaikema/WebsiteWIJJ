@@ -7,6 +7,10 @@
 	max-width: var(--max-width-text-container);
 	margin-inline: auto;
 
+	& > *:not(:last-child) {
+		padding-bottom: 1.5rem;
+	}
+
 	.services-list {
 		text-align: start;
 		i {
@@ -21,6 +25,39 @@
 
 		@media (min-width: 1200px) {
 			padding-left: 1rem;
+		}
+	}
+}
+
+.content-wrapper {
+	@media (min-width: 768px) {
+		--gap: 2rem;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: var(--gap);
+	}
+
+	article {
+		text-align: start;
+
+		@media (min-width: 768px) {
+			flex: 0 0 calc(50% - var(--gap));
+		}
+
+		p.uppercase-bold {
+			text-transform: uppercase;
+			font-weight: 500;
+		}
+
+		p:not(:last-child) {
+			padding-bottom: 1rem;
+		}
+
+		img {
+			height: 3.75em;
+			width: auto;
+			padding-bottom: 1em;
 		}
 	}
 }

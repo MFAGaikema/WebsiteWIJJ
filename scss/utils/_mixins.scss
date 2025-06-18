@@ -1,2 +1,38 @@
-@mixin bottom-shadow {
+@mixin theme-colors($color) {
+	h1,
+	h2,
+	h3,
+	h4,
+	a:not(.contact-btn),
+	i {
+		color: var(--standard-#{$color});
+	}
+
+	.contact-container {
+		background-color: var(--contact-container-#{$color});
+
+		a {
+			color: var(--standard-#{$color});
+		}
+	}
+
+	.contact-btn,
+	.footer-bottom-container {
+		background-color: var(--dark-#{$color});
+	}
+
+	.contact-btn:hover {
+		background-color: var(--standard-#{$color});
+	}
+
+	.download-btn {
+		color: var(--standard-#{$color});
+	}
+
+	.contact-details-container {
+		a:hover,
+		i:hover {
+			color: var(--dark-#{$color});
+		}
+	}
 }

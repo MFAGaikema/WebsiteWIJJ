@@ -7,13 +7,9 @@ main {
 		position: relative;
 	}
 
-	&.home {
-		section:nth-child(2) {
-			background-color: #cbe8ed;
-		}
-	}
-
-	&.coachen {
+	&.coachen,
+	&.zorgen,
+	&.werken {
 		section:nth-child(2) {
 			background-color: #eee;
 		}

@@ -2,9 +2,7 @@
 	@media (min-width: 768px) {
 		position: absolute;
 		top: -3.125em;
-		background-color: #fff;
 		min-width: 37rem;
-		//margin: 0 var(--padding-left-right);
 		margin-inline: 8rem;
 		padding-inline: 4rem;
 		border-radius: 3rem;
@@ -13,11 +11,5 @@
 	@media (min-width: 1025px) {
 		margin: 0;
 		width: 42em;
-	}
-}
-
-.coachen {
-	.intro {
-		background-color: #bde4f7;
 	}
 }

@@ -6,6 +6,11 @@ a:focus-visible {
 	border-radius: 2px;
 }
 
+.contact-btn:focus-visible,
+.download-btn:focus-visible {
+	border-radius: 9999px;
+}
+
 .skiplink {
 	position: absolute;
 	top: -100px;

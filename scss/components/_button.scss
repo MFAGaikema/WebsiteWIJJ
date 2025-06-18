@@ -1,5 +1,8 @@
 button,
-input[type='submit'] {
+input[type='submit'],
+.contact-btn {
+	display: block;
+	justify-self: center;
 	background: none;
 	color: inherit;
 	border: none;
@@ -22,10 +25,6 @@ input[type='submit'] {
 	@media (min-width: 1025px) {
 		display: none;
 	}
-
-	i {
-		color: var(--standard-green);
-	}
 }
 
 .search-btn {
@@ -41,38 +40,31 @@ input[type='submit'] {
 	}
 
 	i {
-		color: var(--standard-green);
 		transition: 0.2s;
 	}
 }
 
-.green-contact-btn {
-	background-color: var(--standard-green);
+.contact-btn {
+	color: #fff;
 	padding: 5px 20px;
-	border-radius: 9999px;
-	text-decoration: none;
 
 	&:hover {
 		text-decoration: none;
-		background-color: var(--dark-green);
 	}
-}
 
-.orange-contact-btn {
-	background-color: var(--standard-orange);
-	color: #fff;
-	font-weight: 500;
-	font-size: 24px;
-	padding: 15px 20px;
+	&.large {
+		font-size: 1.25rem;
+		padding: 15px 20px;
 
-	&:hover {
-		background-color: var(--dark-orange);
+		i {
+			color: #fff;
+			margin-right: 10px;
+		}
 	}
 }
 
 .download-btn {
 	background-color: #ebe9f3;
-	color: var(--standard-green);
 	padding: 10px 50px;
 	position: relative;
 	margin-bottom: 20px;
@@ -85,7 +77,6 @@ input[type='submit'] {
 		top: 50%;
 		right: 15px;
 		transform: translateY(-50%);
-		color: var(--standard-green);
 	}
 }
 
