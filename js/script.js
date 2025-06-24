@@ -57,7 +57,7 @@ const handleScrollingHeader = () => {
 		!menuIsExpanded(coachenBtn) &&
 		!menuIsExpanded(overonsBtn)
 	) {
-		initialHeaderPosition > currentHeaderPosition
+		initialHeaderPosition > currentHeaderPosition || currentHeaderPosition <= 0
 			? (header.style.transform = 'translateY(0)')
 			: (header.style.transform = 'translateY(-100%)');
 		initialHeaderPosition = currentHeaderPosition;
