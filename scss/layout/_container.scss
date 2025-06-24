@@ -4,6 +4,9 @@
 }
 
 .text-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	max-width: var(--max-width-text-container);
 	margin-inline: auto;
 
