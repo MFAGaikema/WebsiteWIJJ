@@ -222,7 +222,13 @@
 						over mogelijkheden? <br />
 						Vul onderstaand fomulier in, dan nemen wij contact met je op.
 					</p>
-					<form class="contact-form">
+					<form
+						class="contact-form"
+						name="contact"
+						method="POST"
+						data-netlify="true"
+					>
+						<input type="hidden" name="form-name" value="contact" />
 						<div class="row">
 							<div class="form-group">
 								<label for="voornaam"

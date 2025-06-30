@@ -721,9 +721,8 @@ input[type=submit],
 
 .contact-btn {
   color: #fff;
-  padding: 5px 20px;
+  padding: 8px 20px 5px;
   width: fit-content;
-  margin: auto;
 }
 .contact-btn:hover {
   text-decoration: none;
@@ -731,6 +730,7 @@ input[type=submit],
 .contact-btn.large {
   font-size: 1.25rem;
   padding: 15px 20px;
+  margin: auto;
 }
 .contact-btn.large i {
   color: #fff;
@@ -897,6 +897,7 @@ input[type=submit],
   width: 100%;
 }
 .contact-form input[type=text],
+.contact-form input[type=email],
 .contact-form textarea {
   border: 1px solid #767676;
   border-radius: 5px;
@@ -906,6 +907,7 @@ input[type=submit],
 }
 @media (min-width: 768px) {
   .contact-form input[type=text],
+  .contact-form input[type=email],
   .contact-form textarea {
     border: 2px solid #767676;
   }
