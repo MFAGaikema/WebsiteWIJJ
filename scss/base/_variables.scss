@@ -1,11 +1,9 @@
 :root {
 	//text properties
 	--standard-font-size: 14px;
-	--header-height: 5rem;
-	--padding-left-right: 1.25rem;
-	--heading-padding-bottom-h1-h2: 1rem;
-	--heading-padding-bottom-h3: 1rem;
-	--heading-padding-bottom-h4: 1.125rem;
+	--heading-margin-bottom-h1-h2: 0.75em;
+	--heading-margin-bottom-h3: 1rem;
+	--heading-margin-bottom-h4: 1.125rem;
 	--icon-font-size: 2.5rem;
 
 	//colors
@@ -17,21 +15,29 @@
 	--dark-blue: color-mix(in srgb, var(--standard-blue) 80%, black);
 	--dark-orange: color-mix(in srgb, var(--standard-orange) 90%, black);
 	--dark-purple: color-mix(in srgb, var(--standard-purple) 75%, black);
+	--intro-bg-blue: #bde4f7;
+	--intro-bg-orange: #f9d298;
+	--intro-bg-purple: #dec8df;
 	--very-light-grey: #f9f8f8;
 	--contact-container-green: #ebf6f8;
 	--contact-container-blue: #daeef8;
 	--contact-container-orange: #fdefdf;
 	--contact-container-purple: #ece5ef;
 
-	//other
+	//layout
+	--header-height: 5rem;
+	--padding-left-right: 1.25rem;
 	--margin-hr: var(--padding-left-right);
 	--width-social-media-container: 8rem;
 	--max-width-wide-container: 1200px;
 	--max-width-text-container: 800px;
+
+	//other
 	--nav-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5);
 
 	@media (min-width: 768px) {
 		--standard-font-size: 16px;
+		--padding-left-right: 2.5rem;
 	}
 
 	@media (min-width: 1025px) {

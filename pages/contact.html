@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>WIJJ - Jouw team voor toekomst</title>
+		<title>WIJJ - Jouw team voor toekomst - Contact</title>
 		<!-- Standaard favicon -->
 		<link
 			rel="icon"
@@ -67,7 +67,7 @@
 		></script>
 		<script defer src="js/script.js"></script>
 	</head>
-	<body class="theme-home">
+	<body class="theme-general">
 		<a class="skiplink" href="#main-content">Ga naar hoofdcontent</a>
 
 		<header>
@@ -135,7 +135,9 @@
 							>
 								<i class="fa-solid fa-magnifying-glass"></i>
 							</a>
-							<a href="/contact" class="contact-btn">Contact</a>
+							<a href="/contact" class="contact-btn" aria-current="page"
+								>Contact</a
+							>
 						</div>
 					</div>
 				</nav>
@@ -202,7 +204,9 @@
 							>
 								<i class="fa-solid fa-magnifying-glass"></i>
 							</a>
-							<a href="/contact" class="contact-btn">Contact</a>
+							<a href="/contact" class="contact-btn" aria-current="page"
+								>Contact</a
+							>
 						</div>
 					</div>
 				</nav>
@@ -210,30 +214,92 @@
 		</header>
 
 		<main>
-			<h1>Contact</h1>
-			<p>
-				Meer weten over onze dienstverlening? Nader kennismaken, sparren over
-				mogelijkheden? Vul onderstaand fomulier in, dan nemen wij contact met u
-				op.
-			</p>
-			<form class="contact-form">
-				<label for="voornaam">Voornaam:</label><br />
-				<input type="text" id="voornaam" name="voornaam" /><br />
-				<label for="achternaam">Achternaam:</label><br />
-				<input type="text" id="achternaam" name="achternaam" /><br />
-				<label for="email">E-mail*:</label><br />
-				<input type="text" id="email" name="email" /><br />
-				<label for="telefoonnummer">Telefoonnummer:</label><br />
-				<input type="text" id="telefoonnummer" name="telefoonnummer" /><br />
-				<label for="bericht">Bericht:</label><br />
-				<textarea id="bericht" name="bericht"></textarea><br />
-				<p class="small">
-					Uw gegevens worden uitsluitend gebruikt op uw bericht te reageren.
-				</p>
-				<span>
-					<input type="submit" value="verzenden" />
-				</span>
-			</form>
+			<section id="main-content">
+				<h1>Contact</h1>
+				<div class="text-container">
+					<p>
+						Meer weten over onze dienstverlening? Nader kennismaken, sparren
+						over mogelijkheden? <br />
+						Vul onderstaand fomulier in, dan nemen wij contact met je op.
+					</p>
+					<form class="contact-form">
+						<div class="row">
+							<div class="form-group">
+								<label for="voornaam"
+									>Voornaam: <span class="small">(verplicht)</span></label
+								>
+								<input
+									type="text"
+									id="voornaam"
+									name="voornaam"
+									autocomplete="given-name"
+									required
+									aria-required="true"
+								/>
+							</div>
+							<div class="form-group">
+								<label for="achternaam"
+									>Achternaam: <span class="small">(verplicht)</span></label
+								>
+								<input
+									type="text"
+									id="achternaam"
+									name="achternaam"
+									autocomplete="family-name"
+									required
+									aria-required="true"
+								/>
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group">
+								<label for="email"
+									>E-mailadres: <span class="small">(verplicht)</span></label
+								>
+								<input
+									type="email"
+									id="email"
+									name="email"
+									autocomplete="email"
+									required
+									aria-required="true"
+								/>
+							</div>
+							<div class="form-group">
+								<label for="telefoonnummer">Telefoonnummer:</label>
+								<input
+									type="text"
+									id="telefoonnummer"
+									name="telefoonnummer"
+									autocomplete="tel"
+								/>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="form-group">
+								<label for="bericht"
+									>Uw bericht: <span class="small">(verplicht)</span></label
+								>
+								<textarea
+									rows="8"
+									id="bericht"
+									name="bericht"
+									required
+									aria-required="true"
+								></textarea>
+							</div>
+						</div>
+						<div class="row">
+							<p class="small">
+								Uw gegevens worden uitsluitend gebruikt op uw bericht te
+								reageren.
+							</p>
+						</div>
+						<input type="submit" value="verzenden" />
+					</form>
+				</div>
+			</section>
 		</main>
 		<footer>
 			<div class="contact-container">

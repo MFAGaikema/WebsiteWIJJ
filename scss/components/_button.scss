@@ -47,6 +47,8 @@ input[type='submit'],
 .contact-btn {
 	color: #fff;
 	padding: 5px 20px;
+	width: fit-content;
+	margin: auto;
 
 	&:hover {
 		text-decoration: none;

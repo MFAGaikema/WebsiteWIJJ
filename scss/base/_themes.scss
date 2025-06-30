@@ -27,11 +27,16 @@
 
 	main {
 		.intro {
-			background-color: #bde4f7;
+			background-color: var(--intro-bg-blue);
 		}
 
 		section:nth-child(2) {
 			background-color: var(--very-light-grey);
+		}
+
+		.text-container {
+			display: block;
+			text-align: start;
 		}
 	}
 }
@@ -45,11 +50,16 @@
 
 	main {
 		.intro {
-			background-color: #f9d298;
+			background-color: var(--intro-bg-orange);
 		}
 
 		section:nth-child(2) {
 			background-color: var(--very-light-grey);
+		}
+
+		.text-container {
+			display: block;
+			text-align: start;
 		}
 	}
 }
@@ -63,11 +73,19 @@
 
 	main {
 		.intro {
-			background-color: #dec8df;
+			background-color: var(--intro-bg-purple);
 		}
 
 		section:nth-child(2) {
 			background-color: var(--very-light-grey);
 		}
+	}
+}
+
+.theme-general {
+	@include mixins.theme-colors(green);
+
+	main {
+		margin-top: var(--header-height);
 	}
 }

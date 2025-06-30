@@ -130,14 +130,13 @@ header.addEventListener('keydown', (e) => {
 //ADD PADDING TO SECOND SECTION BASED ON HEIGHT OF INTRO SECTION
 
 const adjustPaddingTopSecondSection = () => {
+	if (!secondSection || !introSection) {
+		return;
+	}
+
 	window.innerWidth >= 768
 		? (secondSection.style.paddingTop = `${introSection.offsetHeight}px`)
 		: (secondSection.style.paddingTop = '2.5em');
-	// if (window.innerWidth >= 768) {
-	// 	secondSection.style.paddingTop = `${introSection.offsetHeight}px`;
-	// } else {
-	// 	secondSection.style.paddingTop = '2.5em';
-	// }
 };
 
 window.onload = () => adjustPaddingTopSecondSection();

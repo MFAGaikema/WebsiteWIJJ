@@ -12,7 +12,9 @@ section {
 		}
 	}
 
-	article:not(:last-child) {
-		padding-bottom: 2em;
+	&.text-container {
+		@media (min-width: 1025px) {
+			padding: 2.5em 0;
+		}
 	}
 }
