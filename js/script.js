@@ -242,3 +242,26 @@ window.addEventListener('keydown', (e) => {
 		closeDropdownMenu(coachenBtn);
 	}
 });
+
+////////////////////////////////////////////////
+///////////FUNCTIONS FOR FORMCONTROL////////////
+////////////////////////////////////////////////
+
+document
+	.getElementsByClassName('contact-form')[0]
+	.addEventListener('submit', async function (e) {
+		e.preventDefault();
+
+		const data = new FormData(e.target);
+		const jsonData = Object.fromEntries(data.entries());
+
+		await fetch('https://hooks.zapier.com/hooks/catch/23606786/ubeugic/', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(jsonData),
+		});
+
+		alert('Verzonden!'); // of redirect
+	});
