@@ -252,15 +252,12 @@ document
 	.addEventListener('submit', async function (e) {
 		e.preventDefault();
 
-		const data = new FormData(e.target);
-		const jsonData = Object.fromEntries(data.entries());
+		const form = e.target;
+		const formData = new FormData(form);
 
-		await fetch('https://hooks.zapier.com/hooks/catch/23606786/ubeugic/', {
+		await fetch(ZAPIER_WEBHOOK, {
 			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify(jsonData),
+			body: formData,
 		});
 
 		alert('Verzonden!'); // of redirect
