@@ -247,18 +247,23 @@ window.addEventListener('keydown', (e) => {
 ///////////FUNCTIONS FOR FORMCONTROL////////////
 ////////////////////////////////////////////////
 
-document
-	.getElementsByClassName('contact-form')[0]
-	.addEventListener('submit', async function (e) {
-		e.preventDefault();
+const form = document.getElementsByClassName('contact-form')[0];
 
-		const form = e.target;
-		const formData = new FormData(form);
+form.addEventListener('submit', async (e) => {
+	e.preventDefault();
 
-		await fetch(ZAPIER_WEBHOOK, {
-			method: 'POST',
-			body: formData,
-		});
+	const formData = new FormData(form);
+	const data = Object.fromEntries(formData.entries());
 
-		alert('Verzonden!'); // of redirect
+	const response = await fetch('/.netlify/functions/sendToZapier', {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify(data),
 	});
+
+	if (response.ok) {
+		alert('Bericht verzonden!');
+	} else {
+		alert('Er ging iets mis.');
+	}
+});
