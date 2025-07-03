@@ -255,7 +255,7 @@ form.addEventListener('submit', async (e) => {
 	const formData = new FormData(form);
 	const data = Object.fromEntries(formData.entries());
 
-	const response = await fetch('/.netlify/functions/sendToZapier', {
+	const response = await fetch('/.netlify/functions/sendToMake', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify(data),
