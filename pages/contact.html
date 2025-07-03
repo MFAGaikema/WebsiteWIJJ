@@ -227,9 +227,7 @@
 						name="contact"
 						method="POST"
 						data-netlify="true"
-						data-netlify-honeypot="botfield"
 					>
-						<input type="hidden" name="botfield" />
 						<div class="row">
 							<div class="form-group">
 								<label for="voornaam"
@@ -297,6 +295,17 @@
 								></textarea>
 							</div>
 						</div>
+						<!-- Honeypot -->
+						<div style="display: none" aria-hidden="true">
+							<label for="bot-field">Laat dit veld leeg</label>
+							<input
+								type="text"
+								name="bot-field"
+								id="bot-field"
+								tabindex="-1"
+								autocomplete="off"
+							/>
+						</div>
 						<div class="row">
 							<p class="small">
 								Je gegevens worden uitsluitend gebruikt op je bericht te
@@ -305,6 +314,12 @@
 						</div>
 						<input type="submit" value="verzenden" />
 					</form>
+					<div id="confirmation" style="display: none">
+						<p>
+							Bedankt voor je bericht. We nemen zo snel mogelijk contact met je
+							op.
+						</p>
+					</div>
 				</div>
 			</section>
 		</main>

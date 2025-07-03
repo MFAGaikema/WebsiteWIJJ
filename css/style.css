@@ -421,6 +421,7 @@ ul {
 button:focus-visible,
 a:focus-visible,
 input[type=text]:focus-visible,
+input[type=email]:focus-visible,
 input[type=submit]:focus-visible,
 textarea:focus-visible {
   outline: 2px solid #000;
@@ -431,6 +432,7 @@ textarea:focus-visible {
   button:focus-visible,
   a:focus-visible,
   input[type=text]:focus-visible,
+  input[type=email]:focus-visible,
   input[type=submit]:focus-visible,
   textarea:focus-visible {
     outline: 3px solid #000;
@@ -903,7 +905,7 @@ input[type=submit],
   border-radius: 5px;
   width: 100%;
   padding: 5px 10px;
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
 }
 @media (min-width: 768px) {
   .contact-form input[type=text],
@@ -926,7 +928,7 @@ input[type=submit],
   text-align: start;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.875rem;
 }
 @media (min-width: 768px) {
   .contact-form .row {

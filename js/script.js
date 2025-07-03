@@ -37,6 +37,12 @@ const dropdownNavItems = Array.from(
 	document.getElementsByClassName('dropdown-nav-item')
 );
 
+//CONTACT
+
+//contact form
+const form = document.getElementsByClassName('contact-form')[0];
+const confirmation = document.getElementById('confirmation');
+
 ////////////////////////////////////////////////
 ///////////////GENERAL FUNCTIONS////////////////
 ////////////////////////////////////////////////
@@ -247,13 +253,17 @@ window.addEventListener('keydown', (e) => {
 ///////////FUNCTIONS FOR FORMCONTROL////////////
 ////////////////////////////////////////////////
 
-const form = document.getElementsByClassName('contact-form')[0];
-
 form.addEventListener('submit', async (e) => {
 	e.preventDefault();
 
 	const formData = new FormData(form);
 	const data = Object.fromEntries(formData.entries());
+
+	// Stop als honeypot is ingevuld
+	if (data['bot-field']) {
+		console.warn('Bot gedetecteerd.');
+		return;
+	}
 
 	const response = await fetch('/.netlify/functions/sendToMake', {
 		method: 'POST',
@@ -262,7 +272,9 @@ form.addEventListener('submit', async (e) => {
 	});
 
 	if (response.ok) {
-		alert('Bericht verzonden!');
+		form.reset();
+		form.style.display = 'none';
+		confirmation.style.display = 'block';
 	} else {
 		alert('Er ging iets mis.');
 	}
