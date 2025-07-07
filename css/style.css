@@ -20,6 +20,7 @@
   --contact-container-blue: #daeef8;
   --contact-container-orange: #fdefdf;
   --contact-container-purple: #ece5ef;
+  --alert-red: #d60000;
   --header-height: 5rem;
   --padding-left-right: 1.25rem;
   --margin-hr: var(--padding-left-right);
@@ -423,6 +424,7 @@ a:focus-visible,
 input[type=text]:focus-visible,
 input[type=email]:focus-visible,
 input[type=submit]:focus-visible,
+input[type=tel]:focus-visible,
 textarea:focus-visible {
   outline: 2px solid #000;
   outline-offset: 2px;
@@ -434,6 +436,7 @@ textarea:focus-visible {
   input[type=text]:focus-visible,
   input[type=email]:focus-visible,
   input[type=submit]:focus-visible,
+  input[type=tel]:focus-visible,
   textarea:focus-visible {
     outline: 3px solid #000;
     outline-offset: 3px;
@@ -900,6 +903,7 @@ input[type=submit],
 }
 .contact-form input[type=text],
 .contact-form input[type=email],
+.contact-form input[type=tel],
 .contact-form textarea {
   border: 1px solid #767676;
   border-radius: 5px;
@@ -910,6 +914,7 @@ input[type=submit],
 @media (min-width: 768px) {
   .contact-form input[type=text],
   .contact-form input[type=email],
+  .contact-form input[type=tel],
   .contact-form textarea {
     border: 2px solid #767676;
   }
@@ -943,6 +948,22 @@ input[type=submit],
 .contact-form .row p {
   text-align: center;
   width: 100%;
+}
+.contact-form .row p.alert {
+  margin-top: 5px;
+  color: var(--alert-red);
+  font-weight: 600;
+}
+.contact-form .row .alert {
+  text-align: start;
+  border-color: var(--alert-red);
+}
+
+#confirmation {
+  background-color: var(--standard-green);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
 hr {

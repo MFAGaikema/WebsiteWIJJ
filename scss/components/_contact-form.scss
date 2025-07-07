@@ -3,6 +3,7 @@
 
 	input[type='text'],
 	input[type='email'],
+	input[type='tel'],
 	textarea {
 		border: 1px solid #767676;
 		border-radius: 5px;
@@ -46,6 +47,24 @@
 		p {
 			text-align: center;
 			width: 100%;
+
+			&.alert {
+				margin-top: 5px;
+				color: var(--alert-red);
+				font-weight: 600;
+			}
+		}
+
+		.alert {
+			text-align: start;
+			border-color: var(--alert-red);
 		}
 	}
+}
+
+#confirmation {
+	background-color: var(--standard-green);
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 10px;
 }

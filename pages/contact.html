@@ -222,103 +222,100 @@
 						over mogelijkheden? <br />
 						Vul onderstaand fomulier in, dan nemen wij contact met je op.
 					</p>
-					<form
-						class="contact-form"
-						name="contact"
-						method="POST"
-						data-netlify="true"
-					>
-						<div class="row">
-							<div class="form-group">
-								<label for="voornaam"
-									>Voornaam: <span class="small">(verplicht)</span></label
-								>
-								<input
-									type="text"
-									id="voornaam"
-									name="voornaam"
-									autocomplete="given-name"
-									required
-									aria-required="true"
-								/>
+					<div class="form-container">
+						<form
+							class="contact-form"
+							name="contact"
+							method="POST"
+							data-netlify="true"
+							novalidate
+						>
+							<div class="row">
+								<div class="form-group">
+									<label for="voornaam"
+										>Voornaam: <span class="small">(verplicht)</span></label
+									>
+									<input
+										type="text"
+										id="voornaam"
+										name="voornaam"
+										autocomplete="given-name"
+										required
+										aria-required="true"
+									/>
+								</div>
+								<div class="form-group">
+									<label for="achternaam"
+										>Achternaam: <span class="small">(verplicht)</span></label
+									>
+									<input
+										type="text"
+										id="achternaam"
+										name="achternaam"
+										autocomplete="family-name"
+										required
+										aria-required="true"
+									/>
+								</div>
 							</div>
-							<div class="form-group">
-								<label for="achternaam"
-									>Achternaam: <span class="small">(verplicht)</span></label
-								>
-								<input
-									type="text"
-									id="achternaam"
-									name="achternaam"
-									autocomplete="family-name"
-									required
-									aria-required="true"
-								/>
+							<div class="row">
+								<div class="form-group">
+									<label for="email"
+										>E-mailadres: <span class="small">(verplicht)</span></label
+									>
+									<input
+										type="email"
+										id="email"
+										name="email"
+										autocomplete="email"
+										required
+										aria-required="true"
+									/>
+								</div>
+								<div class="form-group">
+									<label for="telefoonnummer">Telefoonnummer:</label>
+									<input
+										type="tel"
+										id="telefoonnummer"
+										name="telefoonnummer"
+										autocomplete="tel"
+									/>
+								</div>
 							</div>
-						</div>
-						<div class="row">
-							<div class="form-group">
-								<label for="email"
-									>E-mailadres: <span class="small">(verplicht)</span></label
-								>
-								<input
-									type="email"
-									id="email"
-									name="email"
-									autocomplete="email"
-									required
-									aria-required="true"
-								/>
-							</div>
-							<div class="form-group">
-								<label for="telefoonnummer">Telefoonnummer:</label>
-								<input
-									type="text"
-									id="telefoonnummer"
-									name="telefoonnummer"
-									autocomplete="tel"
-								/>
-							</div>
-						</div>
 
-						<div class="row">
-							<div class="form-group">
-								<label for="bericht"
-									>Je bericht: <span class="small">(verplicht)</span></label
-								>
-								<textarea
-									rows="8"
-									id="bericht"
-									name="bericht"
-									required
-									aria-required="true"
-								></textarea>
+							<div class="row">
+								<div class="form-group">
+									<label for="bericht"
+										>Je bericht: <span class="small">(verplicht)</span></label
+									>
+									<textarea
+										rows="8"
+										id="bericht"
+										name="bericht"
+										required
+										aria-required="true"
+									></textarea>
+								</div>
 							</div>
-						</div>
-						<!-- Honeypot -->
-						<div style="display: none" aria-hidden="true">
-							<label for="bot-field">Laat dit veld leeg</label>
-							<input
-								type="text"
-								name="bot-field"
-								id="bot-field"
-								tabindex="-1"
-								autocomplete="off"
-							/>
-						</div>
-						<div class="row">
-							<p class="small">
-								Je gegevens worden uitsluitend gebruikt op je bericht te
-								reageren.
-							</p>
-						</div>
-						<input type="submit" value="verzenden" />
-					</form>
-					<div id="confirmation" style="display: none">
-						<p>
-							Bedankt voor je bericht. We nemen zo snel mogelijk contact met je
-							op.
-						</p>
+							<!-- Honeypot -->
+							<div style="display: none" aria-hidden="true">
+								<label for="bot-field">Laat dit veld leeg</label>
+								<input
+									type="text"
+									name="bot-field"
+									id="bot-field"
+									tabindex="-1"
+									autocomplete="off"
+								/>
+							</div>
+							<div class="row">
+								<p class="small">
+									Je gegevens worden uitsluitend gebruikt op je bericht te
+									reageren.
+								</p>
+							</div>
+							<input type="submit" value="verzenden" />
+						</form>
 					</div>
 				</div>
 			</section>

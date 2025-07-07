@@ -40,8 +40,8 @@ const dropdownNavItems = Array.from(
 //CONTACT
 
 //contact form
-const form = document.getElementsByClassName('contact-form')[0];
-const confirmation = document.getElementById('confirmation');
+const form = document.querySelector('.contact-form');
+const formContainer = document.querySelector('.form-container');
 
 ////////////////////////////////////////////////
 ///////////////GENERAL FUNCTIONS////////////////
@@ -253,11 +253,75 @@ window.addEventListener('keydown', (e) => {
 ///////////FUNCTIONS FOR FORMCONTROL////////////
 ////////////////////////////////////////////////
 
+const showError = (key, validation) => {
+	const inputElement = document.getElementById(key);
+	inputElement.classList.add('alert');
+
+	//check if paragraph with alert already exists
+	if (inputElement.nextSibling.nodeName == 'P') {
+		return;
+	}
+
+	const alert = document.createElement('p');
+
+	alert.classList.add('alert');
+	alert.setAttribute('role', 'alert');
+	inputElement.after(alert);
+
+	if (validation == 'emptyFields') {
+		const inputLabel = key.charAt(0).toUpperCase() + key.slice(1);
+		alert.textContent = `${inputLabel} is niet gevuld`;
+	}
+
+	if (validation == 'validEmail') {
+		alert.textContent = 'E-mailadres is niet geldig';
+	}
+};
+
+const requiredFieldsValidation = (requiredFields) => {
+	for (const [key, value] of requiredFields) {
+		if (!value || value.trim() == '') {
+			showError(key, 'emptyFields');
+		}
+	}
+};
+
+const validateEmail = ([key, value]) => {
+	const regex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/g;
+
+	if (!regex.test(value)) {
+		showError(key, 'validEmail');
+	}
+};
+
+const formValidation = (data) => {
+	//remove botfield from validation
+	const formFields = Object.entries(data).filter(
+		(entry) => entry[0] !== 'bot-field'
+	);
+
+	//required fields validation
+	const requiredFields = formFields.filter(
+		(entry) => entry[0] !== 'telefoonnummer'
+	);
+
+	requiredFieldsValidation(requiredFields);
+
+	//email validation
+	const emailField = Object.entries(data).find((entry) => entry[0] == 'email');
+
+	validateEmail(emailField);
+};
+
+let submitted = false;
+
 form.addEventListener('submit', async (e) => {
+	submitted = true;
 	e.preventDefault();
 
 	const formData = new FormData(form);
 	const data = Object.fromEntries(formData.entries());
+	formValidation(data);
 
 	// Stop als honeypot is ingevuld
 	if (data['bot-field']) {
@@ -265,17 +329,40 @@ form.addEventListener('submit', async (e) => {
 		return;
 	}
 
-	const response = await fetch('/.netlify/functions/sendToMake', {
-		method: 'POST',
-		headers: { 'Content-Type': 'application/json' },
-		body: JSON.stringify(data),
-	});
+	// const response = await fetch('/.netlify/functions/sendToMake', {
+	// 	method: 'POST',
+	// 	headers: { 'Content-Type': 'application/json' },
+	// 	body: JSON.stringify(data),
+	// });
 
-	if (response.ok) {
-		form.reset();
-		form.style.display = 'none';
-		confirmation.style.display = 'block';
-	} else {
-		alert('Er ging iets mis.');
-	}
+	// if (response.ok) {
+	// 	form.reset();
+	// 	form.style.display = 'none';
+	// 	formContainer.innerHTML = `<div id="confirmation role="status">
+	// 					<p>
+	// 						Bedankt voor je bericht! We nemen zo snel mogelijk contact met je
+	// 						op.
+	// 					</p>
+	// 				</div>`;
+	// } else {
+	// 	alert('Er ging iets mis.');
+	// }
 });
+
+//remove alert from inputfield when typing
+const removeAlertInputfield = (event) => {
+	//Will only apply if user has already tried to submit the form
+	if (submitted) {
+		const inputElement = event.target;
+
+		if (!inputElement.value || inputElement.value.trim() == '') {
+			showError(inputElement.name, 'emptyFields');
+		} else {
+			if (inputElement.nextSibling.nodeName == 'P') {
+				inputElement.nextSibling.remove();
+			}
+		}
+	}
+};
+
+form.addEventListener('input', removeAlertInputfield);
