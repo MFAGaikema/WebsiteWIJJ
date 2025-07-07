@@ -51,13 +51,27 @@
 			&.alert {
 				margin-top: 5px;
 				color: var(--alert-red);
-				font-weight: 600;
 			}
 		}
 
 		.alert {
 			text-align: start;
 			border-color: var(--alert-red);
+			font-size: 0.75rem;
+		}
+	}
+
+	.form-error-container {
+		margin: 1rem 0;
+		border: 2px solid var(--alert-red);
+		border-radius: 10px;
+		padding: 10px;
+
+		ul {
+			margin-top: 5px;
+			text-align: start;
+			list-style-type: disc;
+			margin-left: 1rem;
 		}
 	}
 }

@@ -42,6 +42,8 @@ const dropdownNavItems = Array.from(
 //contact form
 const form = document.querySelector('.contact-form');
 const formContainer = document.querySelector('.form-container');
+const formErrorContainer = document.querySelector('.form-error-container');
+const errorList = document.querySelector('.error-list');
 
 ////////////////////////////////////////////////
 ///////////////GENERAL FUNCTIONS////////////////
@@ -265,7 +267,10 @@ const showError = (key, validation) => {
 	const alert = document.createElement('p');
 
 	alert.classList.add('alert');
-	alert.setAttribute('role', 'alert');
+	alert.setAttribute('id', `${inputElement.name}-error`);
+
+	inputElement.setAttribute('aria-invalid', 'true');
+	inputElement.setAttribute('aria-describedby', `${inputElement.name}-error`);
 	inputElement.after(alert);
 
 	if (validation == 'emptyFields') {
@@ -278,10 +283,28 @@ const showError = (key, validation) => {
 	}
 };
 
+const addErrorToList = (key, validation) => {
+	const li = document.createElement('li');
+	li.classList.add('alert');
+
+	errorList.appendChild(li);
+
+	if (validation == 'emptyFields') {
+		const inputLabel = key.charAt(0).toUpperCase() + key.slice(1);
+		li.textContent = `${inputLabel} is niet gevuld`;
+	}
+
+	if (validation == 'validEmail') {
+		li.textContent = 'E-mailadres is niet geldig';
+	}
+};
+
 const requiredFieldsValidation = (requiredFields) => {
 	for (const [key, value] of requiredFields) {
 		if (!value || value.trim() == '') {
 			showError(key, 'emptyFields');
+			formErrorContainer.style = 'display: block';
+			addErrorToList(key, 'emptyFields');
 		}
 	}
 };
@@ -291,10 +314,15 @@ const validateEmail = ([key, value]) => {
 
 	if (!regex.test(value)) {
 		showError(key, 'validEmail');
+		formErrorContainer.style = 'display: block';
+		addErrorToList(key, 'validEmail');
 	}
 };
 
 const formValidation = (data) => {
+	//make sure errorlist is empty
+	errorList.innerHTML = '';
+
 	//remove botfield from validation
 	const formFields = Object.entries(data).filter(
 		(entry) => entry[0] !== 'bot-field'
