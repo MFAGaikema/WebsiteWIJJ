@@ -255,12 +255,31 @@ window.addEventListener('keydown', (e) => {
 ///////////FUNCTIONS FOR FORMCONTROL////////////
 ////////////////////////////////////////////////
 
+//FUNCTIONS FOR FORM VALIDATION
+
+//Variables
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+let triedToSubmit = false;
+let formDataIsValid = true;
+
+const setErrorText = (element, key, validation) => {
+	if (validation == 'emptyFields') {
+		const inputLabel = key.charAt(0).toUpperCase() + key.slice(1);
+		element.textContent = `${inputLabel} is niet gevuld`;
+	}
+
+	if (validation == 'validEmail') {
+		element.textContent = 'E-mailadres is niet geldig';
+	}
+};
+
 const showError = (key, validation) => {
 	const inputElement = document.getElementById(key);
 	inputElement.classList.add('alert');
 
-	//check if paragraph with alert already exists
-	if (inputElement.nextSibling.nodeName == 'P') {
+	//check if paragraph with alert already exists, replaces text of paragraph
+	if (inputElement.nextElementSibling) {
+		setErrorText(inputElement.nextElementSibling, key, validation);
 		return;
 	}
 
@@ -273,14 +292,7 @@ const showError = (key, validation) => {
 	inputElement.setAttribute('aria-describedby', `${inputElement.name}-error`);
 	inputElement.after(alert);
 
-	if (validation == 'emptyFields') {
-		const inputLabel = key.charAt(0).toUpperCase() + key.slice(1);
-		alert.textContent = `${inputLabel} is niet gevuld`;
-	}
-
-	if (validation == 'validEmail') {
-		alert.textContent = 'E-mailadres is niet geldig';
-	}
+	setErrorText(alert, key, validation);
 };
 
 const addErrorToList = (key, validation) => {
@@ -289,14 +301,7 @@ const addErrorToList = (key, validation) => {
 
 	errorList.appendChild(li);
 
-	if (validation == 'emptyFields') {
-		const inputLabel = key.charAt(0).toUpperCase() + key.slice(1);
-		li.textContent = `${inputLabel} is niet gevuld`;
-	}
-
-	if (validation == 'validEmail') {
-		li.textContent = 'E-mailadres is niet geldig';
-	}
+	setErrorText(li, key, validation);
 };
 
 const requiredFieldsValidation = (requiredFields) => {
@@ -305,17 +310,21 @@ const requiredFieldsValidation = (requiredFields) => {
 			showError(key, 'emptyFields');
 			formErrorContainer.style = 'display: block';
 			addErrorToList(key, 'emptyFields');
+			formDataIsValid = false;
 		}
 	}
 };
 
 const validateEmail = ([key, value]) => {
-	const regex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/g;
+	// const regex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/g;
 
-	if (!regex.test(value)) {
-		showError(key, 'validEmail');
-		formErrorContainer.style = 'display: block';
-		addErrorToList(key, 'validEmail');
+	if (!emailRegex.test(value)) {
+		if (value || value.trim() !== '') {
+			addErrorToList(key, 'validEmail');
+			showError(key, 'validEmail');
+			formErrorContainer.style = 'display: block';
+			formDataIsValid = false;
+		}
 	}
 };
 
@@ -341,56 +350,77 @@ const formValidation = (data) => {
 	validateEmail(emailField);
 };
 
-let submitted = false;
-
 form.addEventListener('submit', async (e) => {
-	submitted = true;
+	triedToSubmit = true;
+	formDataIsValid = true;
 	e.preventDefault();
 
 	const formData = new FormData(form);
 	const data = Object.fromEntries(formData.entries());
+
 	formValidation(data);
 
-	// Stop als honeypot is ingevuld
+	// Stop if honeypot is filled (only bots do that)
 	if (data['bot-field']) {
 		console.warn('Bot gedetecteerd.');
 		return;
 	}
 
-	// const response = await fetch('/.netlify/functions/sendToMake', {
-	// 	method: 'POST',
-	// 	headers: { 'Content-Type': 'application/json' },
-	// 	body: JSON.stringify(data),
-	// });
+	//If form has not been filled in correctly
+	if (!formDataIsValid) {
+		return;
+	}
 
-	// if (response.ok) {
-	// 	form.reset();
-	// 	form.style.display = 'none';
-	// 	formContainer.innerHTML = `<div id="confirmation role="status">
-	// 					<p>
-	// 						Bedankt voor je bericht! We nemen zo snel mogelijk contact met je
-	// 						op.
-	// 					</p>
-	// 				</div>`;
-	// } else {
-	// 	alert('Er ging iets mis.');
-	// }
+	//remove error container if form has been filled in correctly
+	formErrorContainer.remove();
+
+	const response = await fetch('/.netlify/functions/sendToMake', {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify(data),
+	});
+
+	if (response.ok) {
+		form.reset();
+		form.style.display = 'none';
+		formContainer.innerHTML = `<div id="confirmation" role="status">
+						<p>
+							Bedankt voor je bericht! We nemen zo snel mogelijk contact met je
+							op.
+						</p>
+					</div>`;
+	} else {
+		alert('Er ging iets mis.');
+	}
 });
 
 //remove alert from inputfield when typing
-const removeAlertInputfield = (event) => {
+const resetAlertInputfield = (e) => {
 	//Will only apply if user has already tried to submit the form
-	if (submitted) {
-		const inputElement = event.target;
+	if (triedToSubmit) {
+		const inputElement = e.target;
 
+		//show error if field is empty
 		if (!inputElement.value || inputElement.value.trim() == '') {
 			showError(inputElement.name, 'emptyFields');
 		} else {
-			if (inputElement.nextSibling.nodeName == 'P') {
-				inputElement.nextSibling.remove();
+			inputElement.setAttribute('aria-invalid', 'false');
+			//remove error
+			if (inputElement.nextElementSibling) {
+				inputElement.nextElementSibling.remove();
+				inputElement.classList.remove('alert');
+			}
+
+			//show error if email is not valid
+			if (inputElement.name == 'email') {
+				const value = inputElement.value;
+				if (!emailRegex.test(value)) {
+					showError(inputElement.name, 'validEmail');
+					formDataIsValid = false;
+				}
 			}
 		}
 	}
 };
 
-form.addEventListener('input', removeAlertInputfield);
+form.addEventListener('input', resetAlertInputfield);

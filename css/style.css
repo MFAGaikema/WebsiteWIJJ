@@ -928,6 +928,10 @@ input[type=submit],
   width: 100%;
   padding: 0.5rem 0;
 }
+.contact-form a {
+  text-decoration: underline;
+  text-transform: none;
+}
 .contact-form .row {
   display: flex;
   text-align: start;
@@ -952,11 +956,12 @@ input[type=submit],
 .contact-form .row p.alert {
   margin-top: 5px;
   color: var(--alert-red);
-}
-.contact-form .row .alert {
-  text-align: start;
-  border-color: var(--alert-red);
   font-size: 0.75rem;
+  text-align: start;
+}
+.contact-form .row input.alert,
+.contact-form .row textarea.alert {
+  border-color: var(--alert-red);
 }
 .contact-form .form-error-container {
   margin: 1rem 0;
@@ -972,8 +977,10 @@ input[type=submit],
 }
 
 #confirmation {
-  background-color: var(--standard-green);
-  color: #fff;
+  background-color: #fff;
+  color: var(--standard-green);
+  border: 3px solid var(--standard-green);
+  font-weight: 600;
   padding: 10px 20px;
   border-radius: 10px;
 }

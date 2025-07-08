@@ -27,6 +27,11 @@
 		padding: 0.5rem 0;
 	}
 
+	a {
+		text-decoration: underline;
+		text-transform: none;
+	}
+
 	.row {
 		display: flex;
 		text-align: start;
@@ -51,13 +56,16 @@
 			&.alert {
 				margin-top: 5px;
 				color: var(--alert-red);
+				font-size: 0.75rem;
+				text-align: start;
 			}
 		}
 
-		.alert {
-			text-align: start;
-			border-color: var(--alert-red);
-			font-size: 0.75rem;
+		input,
+		textarea {
+			&.alert {
+				border-color: var(--alert-red);
+			}
 		}
 	}
 
@@ -77,8 +85,10 @@
 }
 
 #confirmation {
-	background-color: var(--standard-green);
-	color: #fff;
+	background-color: #fff;
+	color: var(--standard-green);
+	border: 3px solid var(--standard-green);
+	font-weight: 600;
 	padding: 10px 20px;
 	border-radius: 10px;
 }
