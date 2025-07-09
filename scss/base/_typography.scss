@@ -6,13 +6,6 @@ html {
 	font-size: var(--standard-font-size);
 }
 
-// h1,
-// h2,
-// h3,
-// nav {
-// 	color: var(--standard-green);
-// }
-
 h1,
 h2,
 h3,
@@ -63,6 +56,7 @@ h3 {
 
 	&.small {
 		font-size: 1.125rem;
+		text-transform: none;
 	}
 }
 

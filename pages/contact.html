@@ -66,6 +66,7 @@
 			crossorigin="anonymous"
 		></script>
 		<script defer src="js/script.js"></script>
+		<script defer src="js/contact.js"></script>
 	</head>
 	<body class="theme-general">
 		<a class="skiplink" href="#main-content">Ga naar hoofdcontent</a>
@@ -231,16 +232,20 @@
 							novalidate
 						>
 							<div
-								class="form-error-container"
+								id="form-error-container"
 								role="alert"
 								aria-live="assertive"
 								style="display: none"
+								tabindex="-1"
 							>
-								<strong
-									>Het formulier kon niet verzonden worden omdat er fouten
-									zijn:</strong
-								>
-								<ul class="error-list"></ul>
+								<div class="user-error">
+									<strong
+										>Het formulier kon niet verzonden worden omdat er fouten
+										zijn:</strong
+									>
+									<ul class="error-list"></ul>
+								</div>
+								<div class="general-error"></div>
 							</div>
 							<div class="row">
 								<div class="form-group">
@@ -341,7 +346,7 @@
 					<h2>Zullen wijj je helpen?</h2>
 					<div class="contact-details-container">
 						<div class="contact-details">
-							<h4>Adres:</h4>
+							<h3 class="small">Adres:</h3>
 							<p>
 								WIJJ BV<br />
 								Pagendijk 38<br />
@@ -356,7 +361,7 @@
 						</div>
 						<div class="social-media-container">
 							<div class="social-media">
-								<h4>Social media:</h4>
+								<h3 class="small">Social media:</h3>
 								<span class="social-media-icons">
 									<a aria-label="Bezoek onze Facebook pagina" href=""
 										><i

@@ -156,6 +156,7 @@ h3 {
 }
 h3.small {
   font-size: 1.125rem;
+  text-transform: none;
 }
 
 h4 {
@@ -425,7 +426,8 @@ input[type=text]:focus-visible,
 input[type=email]:focus-visible,
 input[type=submit]:focus-visible,
 input[type=tel]:focus-visible,
-textarea:focus-visible {
+textarea:focus-visible,
+#form-error-container:focus-visible {
   outline: 2px solid #000;
   outline-offset: 2px;
   border-radius: 2px;
@@ -437,7 +439,8 @@ textarea:focus-visible {
   input[type=email]:focus-visible,
   input[type=submit]:focus-visible,
   input[type=tel]:focus-visible,
-  textarea:focus-visible {
+  textarea:focus-visible,
+  #form-error-container:focus-visible {
     outline: 3px solid #000;
     outline-offset: 3px;
   }
@@ -963,13 +966,13 @@ input[type=submit],
 .contact-form .row textarea.alert {
   border-color: var(--alert-red);
 }
-.contact-form .form-error-container {
+.contact-form #form-error-container {
   margin: 1rem 0;
   border: 2px solid var(--alert-red);
   border-radius: 10px;
   padding: 10px;
 }
-.contact-form .form-error-container ul {
+.contact-form #form-error-container ul {
   margin-top: 5px;
   text-align: start;
   list-style-type: disc;
