@@ -82,10 +82,19 @@
 	}
 }
 
+.theme-contact {
+	@include mixins.theme-colors(green);
+
+	main {
+		margin-top: var(--header-height);
+	}
+}
+
 .theme-general {
 	@include mixins.theme-colors(green);
 
 	main {
 		margin-top: var(--header-height);
+		text-align: start;
 	}
 }

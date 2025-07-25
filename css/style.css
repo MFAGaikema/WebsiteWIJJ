@@ -388,6 +388,38 @@ ul {
   background-color: var(--very-light-grey);
 }
 
+.theme-contact h1,
+.theme-contact h2,
+.theme-contact h3,
+.theme-contact h4,
+.theme-contact a:not(.contact-btn),
+.theme-contact i {
+  color: var(--standard-green);
+}
+.theme-contact .contact-container {
+  background-color: var(--contact-container-green);
+}
+.theme-contact .contact-container a {
+  color: var(--standard-green);
+}
+.theme-contact .contact-btn,
+.theme-contact .footer-bottom-container {
+  background-color: var(--dark-green);
+}
+.theme-contact .contact-btn:hover {
+  background-color: var(--standard-green);
+}
+.theme-contact .download-btn {
+  color: var(--standard-green);
+}
+.theme-contact .contact-details-container a:hover,
+.theme-contact .contact-details-container i:hover {
+  color: var(--dark-green);
+}
+.theme-contact main {
+  margin-top: var(--header-height);
+}
+
 .theme-general h1,
 .theme-general h2,
 .theme-general h3,
@@ -418,6 +450,7 @@ ul {
 }
 .theme-general main {
   margin-top: var(--header-height);
+  text-align: start;
 }
 
 button:focus-visible,
@@ -665,6 +698,9 @@ section:not(.intro) {
   color: #fff;
   text-decoration: none;
   text-transform: none;
+}
+.footer-bottom-container .footer-links ul a[aria-current=page] {
+  text-decoration: underline;
 }
 .footer-bottom-container .footer-links ul a:hover {
   text-decoration: underline;

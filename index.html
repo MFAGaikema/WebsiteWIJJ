@@ -106,8 +106,32 @@
 								</li>
 							</ul>
 						</li>
-						<li><a href="/zorgen">Zorgen</a></li>
-						<li><a href="/werken">Werken</a></li>
+						<li>
+							<a href="/zorgen">Zorgen</a>
+							<ul class="sub-menu">
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/huishoudelijke-hulp">Huishoudelijke hulp</a>
+								</li>
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/safe-houses">Safe houses</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/werken">Werken</a>
+							<ul class="sub-menu">
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/beschut-werk">Beschut werk</a>
+								</li>
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/op-maat-uitzenden">Op maat uitzenden</a>
+								</li>
+							</ul>
+						</li>
 						<li>
 							<a href="/over-ons">Over Ons</a>
 							<ul class="sub-menu">
@@ -143,13 +167,14 @@
 					<ul class="nav-list">
 						<li>
 							<div class="dropdown-nav-item">
-								<a class="dropdown-link-coachen" href="/coachen"> Coachen </a>
+								<a class="dropdown-link" href="/coachen"> Coachen </a>
 								<button
-									class="dropdown-btn coachen-btn"
+									class="dropdown-btn"
+									data-label="Coachen"
+									aria-label="Coachen menu uitklappen"
 									aria-haspopup="true"
 									aria-expanded="false"
 									aria-controls="coachen-menu"
-									aria-label="Coachen menu uitklappen"
 								>
 									<i class="fa-solid fa-chevron-down"></i>
 								</button>
@@ -169,13 +194,58 @@
 								</li>
 							</ul>
 						</li>
-						<li><a href="/zorgen">Zorgen</a></li>
-						<li><a href="/werken">Werken</a></li>
 						<li>
-							<div class="dropdown-nav-item dropdown-overons">
-								<a class="dropdown-link-overons" href="">Over Ons </a>
+							<div class="dropdown-nav-item">
+								<a class="dropdown-link" href="/zorgen"> Zorgen </a>
 								<button
-									class="dropdown-btn overons-btn"
+									class="dropdown-btn"
+									data-label="Zorgen"
+									aria-label="Zorgen menu uitklappen"
+									aria-haspopup="true"
+									aria-expanded="false"
+									aria-controls="zorgen-menu"
+								>
+									<i class="fa-solid fa-chevron-down"></i>
+								</button>
+							</div>
+							<ul id="zorgen-menu" class="dropdown-menu" hidden>
+								<li>
+									<a href="/huishoudelijke-hulp">Huishoudelijke hulp</a>
+								</li>
+								<li>
+									<a href="/safe-houses">Safe houses</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="dropdown-nav-item">
+								<a class="dropdown-link" href="/werken"> Werken </a>
+								<button
+									class="dropdown-btn"
+									data-label="Werken"
+									aria-label="Werken menu uitklappen"
+									aria-haspopup="true"
+									aria-expanded="false"
+									aria-controls="werken-menu"
+								>
+									<i class="fa-solid fa-chevron-down"></i>
+								</button>
+							</div>
+							<ul id="werken-menu" class="dropdown-menu" hidden>
+								<li>
+									<a href="/beschut-werk">Beschut werk</a>
+								</li>
+								<li>
+									<a href="/op-maat-uitzenden">Op maat uitzenden</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="dropdown-nav-item">
+								<a class="dropdown-link" href="">Over Ons </a>
+								<button
+									class="dropdown-btn"
+									data-label="Over ons"
 									aria-label="Over ons menu uitklappen"
 									aria-haspopup="true"
 									aria-expanded="false"
@@ -398,10 +468,10 @@
 								>Algemene voorwaarden</a
 							>
 						</li>
-						<li><a href="/pages/klachtenregeling.html">Klachtenregeling</a></li>
-						<li><a href="/pages/privacybeleid.html">Privacybeleid</a></li>
-						<li><a href="/pages/cookiebeleid.html">Cookiebeleid</a></li>
-						<li><a href="/pages/sitemap.html">Sitemap</a></li>
+						<li><a href="/klachtenregeling">Klachtenregeling</a></li>
+						<li><a href="/privacybeleid">Privacybeleid</a></li>
+						<li><a href="/cookiebeleid">Cookiebeleid</a></li>
+						<li><a href="/sitemap">Sitemap</a></li>
 					</ul>
 				</nav>
 				<div class="btn-slogan-container">

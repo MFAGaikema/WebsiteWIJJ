@@ -16,8 +16,9 @@ const mobileTabletNavMenu = document.getElementById('mobile-tablet-navbar');
 //desktop elements
 const introSection = document.querySelector('.intro');
 const secondSection = document.querySelectorAll('section')[1];
-const coachenLink = document.querySelector('.dropdown-link-coachen');
-const overonsLink = document.querySelector('.dropdown-link-overons');
+//const coachenLink = document.querySelector('.dropdown-link-coachen');
+//const overonsLink = document.querySelector('.dropdown-link-overons');
+const dropdownLinks = document.querySelectorAll('.dropdown-link');
 const otherNavLinks = Array.from(
 	document.querySelectorAll('.nav-list > li > a')
 );
@@ -25,8 +26,10 @@ const rightNavbarContainer = document.querySelector(
 	'#desktop-navbar .nav-right-container'
 );
 
-const coachenBtn = document.querySelector('.coachen-btn');
-const overonsBtn = document.querySelector('.overons-btn');
+//const coachenBtn = document.querySelector('.coachen-btn');
+//const overonsBtn = document.querySelector('.overons-btn');
+const dropdownBtns = document.querySelectorAll('.dropdown-btn');
+
 const coachenMenu = document.getElementById('coachen-menu');
 const overonsMenu = document.getElementById('overons-menu');
 const chevrons = Array.from(document.getElementsByClassName('fa-chevron-down'));
@@ -62,11 +65,11 @@ let initialHeaderPosition = window.pageYOffset;
 const handleScrollingHeader = () => {
 	const currentHeaderPosition = window.pageYOffset;
 
-	if (
-		!menuIsExpanded(navbarToggleBtn) &&
-		!menuIsExpanded(coachenBtn) &&
-		!menuIsExpanded(overonsBtn)
-	) {
+	const menusAreExpanded = Array.from(dropdownBtns).some((btn) =>
+		menuIsExpanded(btn)
+	);
+
+	if (!menuIsExpanded(navbarToggleBtn) && !menusAreExpanded) {
 		initialHeaderPosition > currentHeaderPosition || currentHeaderPosition <= 0
 			? (header.style.transform = 'translateY(0)')
 			: (header.style.transform = 'translateY(-100%)');
@@ -153,55 +156,87 @@ window.onload = () => adjustPaddingTopSecondSection();
 window.onresize = () => adjustPaddingTopSecondSection();
 
 //DROPDOWN BEHAVIOUR NAVIGATION MENU DESKTOP
-const openDropdownMenu = (button) => {
+const openDropdownMenu = (button, dropdownMenu) => {
 	button.querySelector('.fa-chevron-down').style.transform = 'rotate(180deg)';
 	button.setAttribute('aria-expanded', true);
+	button.setAttribute('aria-label', `${button.dataset.label} menu inklappen`);
+	dropdownMenu.hidden = false;
 
-	if (button.classList[1] === 'coachen-btn') {
-		button.setAttribute('aria-label', 'Coachen menu inklappen');
-		coachenMenu.hidden = false;
+	// if (button.classList[1] === 'coachen-btn') {
+	// 	button.setAttribute('aria-label', 'Coachen menu inklappen');
+	// 	coachenMenu.hidden = false;
 
-		if (menuIsExpanded(overonsBtn)) {
-			closeDropdownMenu(overonsBtn);
-		}
-	}
+	// 	if (menuIsExpanded(overonsBtn)) {
+	// 		closeDropdownMenu(overonsBtn);
+	// 	}
+	// }
 
-	if (button.classList[1] === 'overons-btn') {
-		button.setAttribute('aria-label', 'Over ons menu inklappen');
-		overonsMenu.hidden = false;
+	// if (button.classList[1] === 'overons-btn') {
+	// 	button.setAttribute('aria-label', 'Over ons menu inklappen');
+	// 	overonsMenu.hidden = false;
 
-		if (menuIsExpanded(coachenBtn)) {
-			closeDropdownMenu(coachenBtn);
-		}
-	}
+	// 	if (menuIsExpanded(coachenBtn)) {
+	// 		closeDropdownMenu(coachenBtn);
+	// 	}
+	// }
 };
 
-const closeDropdownMenu = (button) => {
+const closeDropdownMenu = (button, dropdownMenu) => {
 	button.querySelector('.fa-chevron-down').style.transform = 'rotate(0deg)';
 	button.setAttribute('aria-expanded', false);
+	button.setAttribute('aria-label', `${button.dataset.label} menu uitklappen`);
+	dropdownMenu.hidden = true;
 
-	if (button.classList[1] === 'coachen-btn') {
-		button.setAttribute('aria-label', 'Coachen menu uitklappen');
-		coachenMenu.hidden = true;
-	}
+	// if (button.classList[1] === 'coachen-btn') {
+	// 	button.setAttribute('aria-label', 'Coachen menu uitklappen');
+	// 	coachenMenu.hidden = true;
+	// }
 
-	if (button.classList[1] === 'overons-btn') {
-		button.setAttribute('aria-label', 'Over ons menu uitklappen');
-		overonsMenu.hidden = true;
-	}
+	// if (button.classList[1] === 'overons-btn') {
+	// 	button.setAttribute('aria-label', 'Over ons menu uitklappen');
+	// 	overonsMenu.hidden = true;
+	// }
+};
+
+const getDropdownMenu = (button) => {
+	const controlledId = button.getAttribute('aria-controls');
+	const dropdownMenu = document.getElementById(controlledId);
+
+	return dropdownMenu;
 };
 
 const toggleDropdownMenu = (button) => {
 	let expanded = menuIsExpanded(button);
 
 	if (!expanded) {
-		openDropdownMenu(button);
+		openDropdownMenu(button, getDropdownMenu(button));
 	} else {
-		closeDropdownMenu(button);
+		closeDropdownMenu(button, getDropdownMenu(button));
 	}
 };
 
-const closeDropdownMenuWhenOutsideDropdownLinkOrMenu = (element) => {
+//EVENTLISTENERS TO OPEN AND CLOSE DROPDOWN MENUS
+
+//onclick events//
+
+dropdownBtns.forEach((button) => {
+	button.addEventListener('click', (e) => {
+		toggleDropdownMenu(e.currentTarget);
+
+		const otherDropdownBtns = Array.from(dropdownBtns).filter((dropdownBtn) => {
+			return dropdownBtn !== button;
+		});
+
+		otherDropdownBtns.forEach((btn) => {
+			closeDropdownMenu(btn, getDropdownMenu(btn));
+		});
+	});
+});
+
+//close dropdown menus when click is outside dropdown menu or dropdown button
+window.addEventListener('click', (e) => {
+	const element = e.target;
+
 	const isInDropdownMenu = dropdownMenus.some((dropdownMenu) =>
 		dropdownMenu.contains(element)
 	);
@@ -210,48 +245,35 @@ const closeDropdownMenuWhenOutsideDropdownLinkOrMenu = (element) => {
 	);
 
 	if (!isInDropdownMenu && !isInDropdownBtn) {
-		closeDropdownMenu(coachenBtn);
-		closeDropdownMenu(overonsBtn);
+		dropdownBtns.forEach((btn) => closeDropdownMenu(btn, getDropdownMenu(btn)));
 	}
-};
-
-//EVENTLISTENERS TO OPEN AND CLOSE DROPDOWN MENUS
-
-//onclick events
-coachenBtn.addEventListener('click', () => {
-	toggleDropdownMenu(coachenBtn);
 });
 
-overonsBtn.addEventListener('click', () => {
-	toggleDropdownMenu(overonsBtn);
-});
+//on hover events//
 
-window.addEventListener('click', (e) =>
-	closeDropdownMenuWhenOutsideDropdownLinkOrMenu(e.target)
-);
+//open and close dropdown menus
+dropdownLinks.forEach((link) => {
+	link.addEventListener('mouseover', (e) => {
+		const button = e.target.nextElementSibling;
+		openDropdownMenu(button, getDropdownMenu(button));
 
-//on hover events
-window.addEventListener('mouseover', (e) => {
-	closeDropdownMenuWhenOutsideDropdownLinkOrMenu(e.target);
-});
+		//close other dropdownmenus
+		const otherDropdownLinks = Array.from(dropdownLinks).filter(
+			(dropdownLink) => {
+				return dropdownLink !== link;
+			}
+		);
 
-coachenLink.addEventListener('mouseover', () => {
-	openDropdownMenu(coachenBtn);
-	closeDropdownMenu(overonsBtn);
-});
-
-overonsLink.addEventListener('mouseover', () => {
-	openDropdownMenu(overonsBtn);
-	closeDropdownMenu(coachenBtn);
+		otherDropdownLinks.forEach((dropdownLink) => {
+			const btn = dropdownLink.nextElementSibling;
+			closeDropdownMenu(btn, getDropdownMenu(btn));
+		});
+	});
 });
 
 //keydown events
 window.addEventListener('keydown', (e) => {
 	if (e.key === 'Escape') {
-		closeDropdownMenu(overonsBtn);
-		closeDropdownMenu(coachenBtn);
+		dropdownBtns.forEach((btn) => closeDropdownMenu(btn, getDropdownMenu(btn)));
 	}
 });
-
-console.log(document.querySelectorAll('h3.small'));
-console.log('ddd');

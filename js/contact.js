@@ -2,13 +2,12 @@
 ///////////FUNCTIONS FOR FORMCONTROL////////////
 ////////////////////////////////////////////////
 
-//FUNCTIONS FOR FORM VALIDATION
-
-//Variables
+//VARIABLES
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 let triedToSubmit = false;
 let formDataIsValid = true;
 
+//FUNCTIONS FOR FORM VALIDATION
 const setErrorText = (element, key, validation) => {
 	if (validation == 'emptyFields') {
 		const inputLabel = key.charAt(0).toUpperCase() + key.slice(1);

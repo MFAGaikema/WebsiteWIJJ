@@ -20,6 +20,10 @@
 				text-decoration: none;
 				text-transform: none;
 
+				&[aria-current='page'] {
+					text-decoration: underline;
+				}
+
 				&:hover {
 					text-decoration: underline;
 				}
