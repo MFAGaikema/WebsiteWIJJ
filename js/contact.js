@@ -11,7 +11,9 @@ let formDataIsValid = true;
 const setErrorText = (element, key, validation) => {
 	if (validation == 'emptyFields') {
 		const inputLabel = key.charAt(0).toUpperCase() + key.slice(1);
-		element.textContent = `${inputLabel} is niet gevuld`;
+		element.textContent = `${
+			inputLabel === 'Email' ? 'E-mail' : inputLabel
+		} is niet gevuld`;
 	}
 
 	if (validation == 'validEmail') {
@@ -113,11 +115,20 @@ const showGeneralError = () => {
 };
 
 const fetchAndSendDataForEmail = async (data) => {
-	const response = await fetch('/.netlify/functions/sendToMake', {
-		method: 'POST',
-		headers: { 'Content-Type': 'application/json' },
-		body: JSON.stringify(data),
+	const formData = new FormData();
+
+	//change formData into a format so Make can read all seperate values instead of the object itself
+	Object.entries(data).forEach(([key, value]) => {
+		formData.append(key, value);
 	});
+
+	const response = await fetch(
+		'https://hook.eu2.make.com/qcise7j08gtt4kr885tsb5ya8av6dfd8',
+		{
+			method: 'POST',
+			body: formData,
+		}
+	);
 
 	if (response.ok) {
 		showComfirmation();
