@@ -89,12 +89,6 @@
 			background-color: #cbe8ed;
 		}
 
-		// @media (min-width: 1200px) {
-		// 	section:nth-child(2) {
-		// 		background-color: var(--very-light-grey);
-		// 	}
-		// }
-
 		.text-container {
 			display: block;
 			text-align: start;
@@ -115,10 +109,8 @@
 			background-color: #cbe8ed;
 		}
 
-		// @media (min-width: 1200px) {
-		// 	section:nth-child(2) {
-		// 		background-color: var(--very-light-grey);
-		// 	}
-		// }
+		.text-container {
+			text-align: start;
+		}
 	}
 }

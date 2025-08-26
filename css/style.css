@@ -172,6 +172,9 @@ p {
   font-size: 1rem;
   line-height: 1.5;
 }
+p.small {
+  font-size: 0.75rem;
+}
 
 a {
   text-decoration: none;
@@ -538,6 +541,9 @@ ul {
 .theme-ontmoet-het-team-van-wijj main .intro {
   background-color: #cbe8ed;
 }
+.theme-ontmoet-het-team-van-wijj main .text-container {
+  text-align: start;
+}
 
 button:focus-visible,
 a:focus-visible,
@@ -632,6 +638,9 @@ input[type=submit]:focus-visible {
 
 .form-container {
   width: 100%;
+}
+.form-container p {
+  margin-bottom: 1.5em;
 }
 
 header {

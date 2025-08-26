@@ -79,6 +79,24 @@ const handleScrollingHeader = () => {
 
 window.addEventListener('scroll', handleScrollingHeader);
 
+//Add aria-current="page" to the correct links of the active page
+const urlActivePage = document.URL;
+const hrefActivePage = urlActivePage.split('/').pop();
+
+const headerLinks = Array.from(document.querySelectorAll('header a'));
+const footerLinks = Array.from(document.querySelectorAll('footer a'));
+const navLinks = [...headerLinks, ...footerLinks];
+
+navLinks.forEach((link) => {
+	const href = link.getAttribute('href').replace('/', '');
+
+	if (href === hrefActivePage) {
+		link.setAttribute('aria-current', 'page');
+	} else {
+		link.removeAttribute('aria-current', 'page');
+	}
+});
+
 ////////////////////////////////////////////////
 ////////FUNCTIONS FOR MOBILE DEVICES////////////
 ////////////////////////////////////////////////
