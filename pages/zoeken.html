@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>WIJJ - Jouw team voor toekomst - Modulaire re-integratie</title>
+		<title>WIJJ - Jouw team voor toekomst - Zoeken</title>
 		<!-- Standaard favicon -->
 		<link
 			rel="icon"
@@ -65,9 +65,9 @@
 			src="https://kit.fontawesome.com/d4e6b0151b.js"
 			crossorigin="anonymous"
 		></script>
-		<script defer src="/js/script.js"></script>
+		<script defer src="js/script.js"></script>
 	</head>
-	<body class="theme-coachen">
+	<body class="theme-general">
 		<a class="skiplink" href="#main-content">Ga naar hoofdcontent</a>
 
 		<header>
@@ -87,21 +87,12 @@
 					<ul class="nav-list">
 						<li>
 							<a href="/coachen">Coachen</a>
-							<ul class="sub-menu">
+							<ul class="sub-menu link-list">
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/modulaire-reintegratie" aria-current="page"
-										>Modulaire re-integratie</a
-									>
+									<a href="/uwv-trajecten">UWV trajecten</a>
 								</li>
-								<li>
-									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/werk-fit-traject">Werkfit traject</a>
-								</li>
-								<li>
-									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/naar-werk-traject">Naar werk traject</a>
-								</li>
+
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
 									<a href="/gemeentelijk-traject">Gemeentelijk traject </a>
@@ -110,7 +101,7 @@
 						</li>
 						<li>
 							<a href="/zorgen">Zorgen</a>
-							<ul class="sub-menu">
+							<ul class="sub-menu link-list">
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
 									<a href="/huishoudelijke-hulp">Huishoudelijke hulp</a>
@@ -123,27 +114,25 @@
 						</li>
 						<li>
 							<a href="/werken">Werken</a>
-							<ul class="sub-menu">
+							<ul class="sub-menu link-list">
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/beschut-werk">Beschut werk</a>
-								</li>
-								<li>
-									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/op-maat-uitzenden">Op maat uitzenden</a>
+									<a href="/uitzenden-op-maat">Uitzenden op maat</a>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<a href="/over-ons">Over Ons</a>
-							<ul class="sub-menu">
+							<a href="/over-ons">Over ons</a>
+							<ul class="sub-menu link-list">
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/over-ons">Over ons</a>
+									<a href="/dit-is-wijj">Dit is WIJJ</a>
 								</li>
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/over-wijj">Over WIJJ</a>
+									<a href="/ontmoet-het-team-van-wijj"
+										>Ontmoet het team van WIJJ</a
+									>
 								</li>
 							</ul>
 						</li>
@@ -158,6 +147,7 @@
 								href="/zoeken"
 								aria-label="Ga naar zoekpagina"
 								class="search-btn"
+								aria-current="page"
 							>
 								<i class="fa-solid fa-magnifying-glass"></i>
 							</a>
@@ -183,16 +173,9 @@
 							</div>
 							<ul id="coachen-menu" class="dropdown-menu" hidden>
 								<li>
-									<a href="/modulaire-reintegratie" aria-current="page"
-										>Modulaire re-integratie</a
-									>
+									<a href="/uwv-trajecten">UWV trajecten</a>
 								</li>
-								<li>
-									<a href="/werk-fit-traject">Werkfit traject</a>
-								</li>
-								<li>
-									<a href="/naar-werk-traject">Naar werk traject</a>
-								</li>
+
 								<li>
 									<a href="/gemeentelijk-traject">Gemeentelijk traject</a>
 								</li>
@@ -237,16 +220,13 @@
 							</div>
 							<ul id="werken-menu" class="dropdown-menu" hidden>
 								<li>
-									<a href="/beschut-werk">Beschut werk</a>
-								</li>
-								<li>
-									<a href="/op-maat-uitzenden">Op maat uitzenden</a>
+									<a href="/uitzenden-op-maat">Uitzenden op maat</a>
 								</li>
 							</ul>
 						</li>
 						<li>
 							<div class="dropdown-nav-item">
-								<a class="dropdown-link" href="">Over Ons </a>
+								<a class="dropdown-link" href="/over-ons">Over ons </a>
 								<button
 									class="dropdown-btn"
 									data-label="Over ons"
@@ -259,8 +239,12 @@
 								</button>
 							</div>
 							<ul id="overons-menu" class="dropdown-menu" hidden>
-								<li><a href="/over-ons">Over ons</a></li>
-								<li><a href="/over-wijj">Over WIJJ</a></li>
+								<li><a href="/dit-is-wijj">Dit is WIJJ</a></li>
+								<li>
+									<a href="/ontmoet-het-team-van-wijj"
+										>Ontmoet het team van WIJJ</a
+									>
+								</li>
 							</ul>
 						</li>
 					</ul>
@@ -273,6 +257,7 @@
 								href="/zoeken"
 								aria-label="Ga naar zoekpagina"
 								class="search-btn"
+								aria-current="page"
 							>
 								<i class="fa-solid fa-magnifying-glass"></i>
 							</a>
@@ -282,67 +267,12 @@
 				</nav>
 			</div>
 		</header>
-		<div class="background-image wide-container"></div>
+
 		<main>
-			<section id="main-content" class="intro">
-				<h1>Modulaire re-integratie</h1>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero modi
-					voluptatem odio nisi aperiam inventore obcaecati explicabo neque
-					beatae, recusandae error aspernatur ipsum, optio ut accusantium
-					officia fugit est corporis?
-				</p>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero modi
-					voluptatem odio nisi aperiam inventore obcaecati explicabo neque
-					beatae, recusandae error aspernatur ipsum, optio ut accusantium
-					officia fugit est corporis?
-				</p>
-			</section>
-			<section>
+			<section id="main-content">
 				<div class="text-container">
-					<h2 class="small">Werkplezier draagt bij aan levensplezier</h2>
-					<p>
-						WIJJ Coachen heeft veel ervaring en zijn deskundig in het begeleiden
-						van UWV re-integratietrajecten. Daarin zijn wij altijd gericht op
-						het creëren van mogelijkheden. Wij weten uit ervaring wat nodig is
-						om weer aan het werk te komen en hoe je dat aanpakt. WIJJ zijn ervan
-						overtuigd dat plezier in het werk bijdraagt aan plezier in het
-						leven.
-					</p>
-				</div>
-			</section>
-			<section>
-				<div class="text-container">
-					<h2 class="small">Werkplezier draagt bij aan levensplezier</h2>
-					<p>
-						De modulaire Re-integratie dienst bestaat uit 4 losse re-integratie
-						diensten. Wij begeleiden cliënten met name de participatie
-						interventie en het bevorderen van maatschappelijke deelname. Door
-						heftige life-events (verlies van een baan, langdurige
-						uitkeringsafhankelijkheid, echtscheiding, sterfgeval, ernstige
-						ziekte of trauma) kun je grip op het leven volledig kwijt raken.
-						Vaak ben je hierdoor ook een langere tijd uit het werkproces geraakt
-						en heb je moeite met het deelnemen aan de maatschappij. Om hier
-						herstel en verandering te krijgen, kun je wel een (onder)steun in de
-						rug gebruiken. Wij kunnen je helpen om deel te nemen in de
-						maatschappij. Wij gaan samen met jou onderzoeken waar je problemen
-						liggen op de volgende punten:
-					</p>
-					<ul class="steps-list">
-						<li>Het in kaart brengen van de probleem gebieden/ pijn punten;</li>
-						<li>Creëren van rust, regelmaat en structuur;</li>
-						<li>Basale levensvoorwaarde creëren;</li>
-						<li>Communiceren met ouders, vrienden, gezin of familieleden;</li>
-						<li>Maatschappelijke participatie;</li>
-						<li>Schulden in kaart brengen;</li>
-						<li>Herstellen van het sociale netwerk;</li>
-						<li>Gezondheid- lichamelijk en psychisch in kaart brengen;</li>
-						<li>Stimuleren van de zelfredzaamheid.</li>
-					</ul>
-					<a href="/contact" class="contact-btn blue large">
-						<i class="fa-solid fa-circle-user"></i>Neem nu contact op
-					</a>
+					<h1>Zoeken</h1>
+					<p>Tekst</p>
 				</div>
 			</section>
 		</main>
@@ -423,8 +353,12 @@
 							>
 						</li>
 						<li><a href="/klachtenregeling">Klachtenregeling</a></li>
-						<li><a href="/privacybeleid">Privacybeleid</a></li>
-						<li><a href="/cookiebeleid">Cookiebeleid</a></li>
+						<li>
+							<a href="/privacybeleid">Privacybeleid</a>
+						</li>
+						<li>
+							<a href="/cookiebeleid">Cookiebeleid</a>
+						</li>
 						<li><a href="/sitemap">Sitemap</a></li>
 					</ul>
 				</nav>

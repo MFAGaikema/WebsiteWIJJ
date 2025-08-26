@@ -8,12 +8,20 @@
 	color: #fff;
 
 	.footer-links {
+		width: 100%;
+		max-width: 800px;
+
 		ul {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
 			gap: 10px 30px;
 			font-size: var(--standard-font-size);
+			width: 100%;
+
+			@media (min-width: 768px) {
+				justify-content: space-between;
+			}
 
 			a {
 				color: #fff;

@@ -1,0 +1,17 @@
+.link-list {
+	li {
+		display: flex;
+
+		&:not(:last-child) {
+			margin-bottom: 5px;
+		}
+
+		i {
+			margin-right: 1em;
+		}
+
+		a {
+			text-transform: none;
+		}
+	}
+}

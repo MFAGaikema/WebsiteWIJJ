@@ -1,0 +1,17 @@
+.sitemap-list {
+	text-align: start;
+	width: 100%;
+	list-style-position: inside;
+
+	ul {
+		padding-left: 3rem;
+	}
+
+	li {
+		list-style-type: circle;
+		a {
+			text-decoration: underline;
+			text-transform: none;
+		}
+	}
+}

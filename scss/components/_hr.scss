@@ -1,9 +1,10 @@
 hr {
 	border-top: 1px solid #777;
 	width: calc(100% - (2 * var(--margin-hr)));
+	max-width: 800px;
 	margin: 0 var(--margin-hr);
 
 	@media (min-width: 1200px) {
-		width: var(--max-width-wide-container);
+		max-width: var(--max-width-wide-container);
 	}
 }

@@ -8,6 +8,12 @@
 		color: var(--standard-#{$color});
 	}
 
+	main {
+		.intro {
+			background-color: var(--bg-#{$color});
+		}
+	}
+
 	.contact-container {
 		background-color: var(--contact-container-#{$color});
 

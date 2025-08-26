@@ -1,6 +1,6 @@
 section {
 	text-align: center;
-	padding: 2.5em var(--padding-left-right);
+	padding: var(--padding-top-bottom) var(--padding-left-right);
 
 	&:not(.intro) {
 		width: 100%;

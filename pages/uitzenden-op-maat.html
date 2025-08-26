@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>WIJJ - Jouw team voor toekomst - Werkfit traject</title>
+		<title>WIJJ - Jouw team voor toekomst - Uitzenden op maat</title>
 		<!-- Standaard favicon -->
 		<link
 			rel="icon"
@@ -65,9 +65,9 @@
 			src="https://kit.fontawesome.com/d4e6b0151b.js"
 			crossorigin="anonymous"
 		></script>
-		<script defer src="/js/script.js"></script>
+		<script defer src="js/script.js"></script>
 	</head>
-	<body class="theme-coachen">
+	<body class="theme-werken">
 		<a class="skiplink" href="#main-content">Ga naar hoofdcontent</a>
 
 		<header>
@@ -87,21 +87,12 @@
 					<ul class="nav-list">
 						<li>
 							<a href="/coachen">Coachen</a>
-							<ul class="sub-menu">
+							<ul class="sub-menu link-list">
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/modulaire-reintegratie">Modulaire re-integratie</a>
+									<a href="/uwv-trajecten">UWV trajecten</a>
 								</li>
-								<li>
-									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/werk-fit-traject" aria-current="page"
-										>Werkfit traject</a
-									>
-								</li>
-								<li>
-									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/naar-werk-traject">Naar werk traject</a>
-								</li>
+
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
 									<a href="/gemeentelijk-traject">Gemeentelijk traject </a>
@@ -110,7 +101,7 @@
 						</li>
 						<li>
 							<a href="/zorgen">Zorgen</a>
-							<ul class="sub-menu">
+							<ul class="sub-menu link-list">
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
 									<a href="/huishoudelijke-hulp">Huishoudelijke hulp</a>
@@ -119,31 +110,35 @@
 									<i class="fa-solid fa-chevron-right"></i>
 									<a href="/safe-houses">Safe houses</a>
 								</li>
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/wmo-begeleiding">WMO begeleiding</a>
+								</li>
 							</ul>
 						</li>
 						<li>
 							<a href="/werken">Werken</a>
-							<ul class="sub-menu">
+							<ul class="sub-menu link-list">
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/beschut-werk">Beschut werk</a>
-								</li>
-								<li>
-									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/op-maat-uitzenden">Op maat uitzenden</a>
+									<a href="/uitzenden-op-maat" aria-current="page"
+										>Uitzenden op maat</a
+									>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<a href="/over-ons">Over Ons</a>
-							<ul class="sub-menu">
+							<a href="/over-ons">Over ons</a>
+							<ul class="sub-menu link-list">
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/over-ons">Over ons</a>
+									<a href="/dit-is-wijj">Dit is WIJJ</a>
 								</li>
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/over-wijj">Over WIJJ</a>
+									<a href="/ontmoet-het-team-van-wijj"
+										>Ontmoet het team van WIJJ</a
+									>
 								</li>
 							</ul>
 						</li>
@@ -183,16 +178,9 @@
 							</div>
 							<ul id="coachen-menu" class="dropdown-menu" hidden>
 								<li>
-									<a href="/modulaire-reintegratie">Modulaire re-integratie</a>
+									<a href="/uwv-trajecten">UWV trajecten</a>
 								</li>
-								<li>
-									<a href="/werk-fit-traject" aria-current="page"
-										>Werkfit traject</a
-									>
-								</li>
-								<li>
-									<a href="/naar-werk-traject">Naar werk traject</a>
-								</li>
+
 								<li>
 									<a href="/gemeentelijk-traject">Gemeentelijk traject</a>
 								</li>
@@ -219,6 +207,9 @@
 								<li>
 									<a href="/safe-houses">Safe houses</a>
 								</li>
+								<li>
+									<a href="/wmo-begeleiding">WMO begeleiding</a>
+								</li>
 							</ul>
 						</li>
 						<li>
@@ -237,16 +228,15 @@
 							</div>
 							<ul id="werken-menu" class="dropdown-menu" hidden>
 								<li>
-									<a href="/beschut-werk">Beschut werk</a>
-								</li>
-								<li>
-									<a href="/op-maat-uitzenden">Op maat uitzenden</a>
+									<a href="/uitzenden-op-maat" aria-current="page"
+										>Uitzenden op maat</a
+									>
 								</li>
 							</ul>
 						</li>
 						<li>
 							<div class="dropdown-nav-item">
-								<a class="dropdown-link" href="">Over Ons </a>
+								<a class="dropdown-link" href="/over-ons">Over ons </a>
 								<button
 									class="dropdown-btn"
 									data-label="Over ons"
@@ -259,8 +249,12 @@
 								</button>
 							</div>
 							<ul id="overons-menu" class="dropdown-menu" hidden>
-								<li><a href="/over-ons">Over ons</a></li>
-								<li><a href="/over-wijj">Over WIJJ</a></li>
+								<li><a href="/dit-is-wijj">Dit is WIJJ</a></li>
+								<li>
+									<a href="/ontmoet-het-team-van-wijj"
+										>Ontmoet het team van WIJJ</a
+									>
+								</li>
 							</ul>
 						</li>
 					</ul>
@@ -285,81 +279,160 @@
 		<div class="background-image wide-container"></div>
 		<main>
 			<section id="main-content" class="intro">
-				<h1>Werkfit traject</h1>
+				<h1>Uitzenden op maat</h1>
 				<p>
-					WIJJ helpen je om werkfit te worden met drie kerncompetenties van het
-					UWV: persoonlijke effectiviteit, inzicht in je arbeidsmarktpositie en
-					versterking van werknemersvaardigheden. Samen met je coach bepaal je
-					de beste aanpak, waarbij we werken aan arbeidsritme, vaardigheden en
-					motivatie, eventueel via vrijwilligerswerk of een werkervaringsplek.
-				</p>
-				<p>
-					Onze coaching geeft je zelfvertrouwen, energie en regie over je
-					loopbaan, zodat je met plezier en perspectief de volgende stap zet.
-					Met onze ervaring in UWV-re-integratietrajecten zorgen we voor een
-					aanpak die écht werkt.
+					WIJJ heeft als visie dat het persoonlijke weer terug moet keren in de
+					uitzendbranche. Hoe? Door persoonlijk het gesprek aan te gaan met
+					werkgever en werkzoekenden om de wensen van beide partijen te
+					onderzoeken. Op deze manier is WIJJ er van overtuigd om de juiste
+					matches te kunnen creëren.
 				</p>
 			</section>
 			<section>
 				<div class="text-container">
-					<h2 class="small">Werkfit traject doet veel voor werknemers</h2>
+					<h2>Hoe werkt werken via WIJJ?</h2>
 					<p>
-						In dit traject onderzoek je jezelf, je kwaliteiten en talenten. Maar
-						je onderzoekt ook je belemmeringen. We gebruiken hierbij de 3
-						kerncompetenties die UWV heeft opgesteld en samen met je coach
-						bepaal je welke competentie voor jou geschikt kan zijn. Het
-						versterken van werknemersvaardigheden zal worden ingezet als je
-						langer uit het arbeidsproces bent, er wordt gewerkt aan het weer
-						opbouwen van arbeidsritme en vaardigheden. Er kan gekozen worden
-						voor vrijwilligerswerk of een werkervaringsplek. De in te zetten
-						instrumenten worden in overleg met jou gekozen.
+						Volgens WIJJ draait de uitzendbranche om het bijdragen en helpen in
+						het werkgeluk van werkzoekenden aan de ene kant en aan de andere
+						kant het ondersteunen van werkgevers/opdrachtgevers in het oplossen
+						van personeelstekorten/HR vraagstukken. Daarom gaat WIJJ graag het
+						gesprek aan met werkzoekenden om achter de motivatie en beweegreden
+						van de kandidaat te komen. Wat wil je graag, waar ben je goed in,
+						maar voornamelijk het allerbelangrijkste, wat vind je leuk om te
+						doen?
+					</p>
+					<p>
+						Nu is het tijd om dat anders te doen: bij WIJJ staat de kandidaat
+						altijd centraal. Beter werk en beter betaald. Daar gaan wij voor!
 					</p>
 				</div>
 			</section>
 			<section>
-				<div class="text-container">
-					<h2 class="small">Wat levert onze coaching je op?</h2>
-					<div class="content-wrapper">
-						<article>
-							<img src="/assets/images/icons/SmileyBlue.png" alt="" />
-							<p class="uppercase-bold">Zelfvertrouwen, energie en balans</p>
-						</article>
-						<article>
-							<img src="/assets/images/icons/ClockBlue.png" alt="" />
-							<p class="uppercase-bold">Regie over leven en werk weer terug</p>
-						</article>
-						<article>
-							<img src="/assets/images/icons/GlassBlue.png" alt="" />
-							<p class="uppercase-bold">
-								Ontdekken van talenten, uitdagingen en doelen
-							</p>
-						</article>
-						<article>
-							<img src="/assets/images/icons/ArrowBlue.png" alt="" />
-							<p class="uppercase-bold">
-								Tevreden en weer zin om een volgende stap te zetten
-							</p>
-						</article>
-						<article>
-							<img src="/assets/images/icons/ShoeBlue.png" alt="" />
-							<p class="uppercase-bold">Vol energie en werkfit aan het werk</p>
-						</article>
-					</div>
+				<div class="content-wrapper text-container">
+					<article>
+						<img src="/assets/images/icons/WijjWerkenJobPurple.png" alt="" />
+						<h3>Voor werkzoekenden: wij willen met jou in gesprek</h3>
+						<p>
+							WIJJ gaan graag het gesprek aan met werkzoekenden om achter de
+							motivatie en beweegredenen van de kandidaat te komen. Wat wil je
+							graag, waar ben je goed in, maar vooral het allerbelangrijkste:
+							wat vind je leuk om te doen? Want daar gaat het om.
+						</p>
+						<p>
+							Tussen de duizenden uitzendaanbieders is het daarom dus hoog tijd
+							om dat eens anders te doen. Bij WIJJ staat de kandidaat altijd
+							centraal! Wij luisteren en zoeken naar beter werk dat beter
+							betaalt.
+						</p>
+					</article>
+					<article>
+						<img
+							src="/assets/images/icons/WIJJWerkenUserGlassPurple.png"
+							alt=""
+						/>
+						<h3>Voor opdrachtgevers: wij helpen werkgevers</h3>
+						<p>
+							Voor de opdrachtgever zullen WIJJ een sparringpartner zijn die
+							zich transparant opstelt en een luisterend oor biedt.
+						</p>
+						<p>
+							WIJJ profileren ons dan ook als een transparante en eerlijke
+							organisatie die voor elke opdrachtgever een zelfde kostprijs zal
+							hanteren.
+						</p>
+						<p>
+							WIJJ willen ons dan ook graag hard maken voor de
+							werkgever/opdrachtgever om middels de persoonlijke gesprekken met
+							de kandidaat een juiste match te kunnen creëren.
+						</p>
+					</article>
 				</div>
 			</section>
 			<hr />
 			<section>
 				<div class="text-container">
-					<h2 class="small">Visie van de coaches</h2>
-					<p>
-						WIJJ Coachen heeft veel ervaring en is deskundig in het begeleiden
-						van UWV re-integratietrajecten. Daarin zijn wij altijd gericht op
-						het creëren van mogelijkheden. Wij weten uit ervaring wat nodig is
-						om weer aan het werk te komen en hoe je dat aanpakt. WIJJ zijn ervan
-						overtuigd dat plezier in het werk bijdraagt aan plezier in het
-						leven. WIJJ helpen je graag dit te bereiken.
-					</p>
-					<a href="/contact" class="contact-btn blue large">
+					<h2>Onze vacatures</h2>
+					<div class="content-wrapper vacatures">
+						<article>
+							<h3 class="small">Leerling helpende of verzorgende - BBL</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+								diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+								aliquam erat volutpat. Ut wisi enim ad m
+							</p>
+							<a
+								href=""
+								aria-label="Meer informatie over de vacature Leerling helpende of verzorgende - BBL"
+								>Meer informatie</a
+							>
+						</article>
+						<article>
+							<h3 class="small">Leerling helpende of verzorgende - BBL</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+								diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+								aliquam erat volutpat. Ut wisi enim ad m
+							</p>
+							<a
+								href=""
+								aria-label="Meer informatie over de vacature Leerling helpende of verzorgende - BBL"
+								>Meer informatie</a
+							>
+						</article>
+						<article>
+							<h3 class="small">Leerling helpende of verzorgende - BBL</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+								diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+								aliquam erat volutpat. Ut wisi enim ad m
+							</p>
+							<a
+								href=""
+								aria-label="Meer informatie over de vacature Leerling helpende of verzorgende - BBL"
+								>Meer informatie</a
+							>
+						</article>
+						<article>
+							<h3 class="small">Leerling helpende of verzorgende - BBL</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+								diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+								aliquam erat volutpat. Ut wisi enim ad m
+							</p>
+							<a
+								href=""
+								aria-label="Meer informatie over de vacature Leerling helpende of verzorgende - BBL"
+								>Meer informatie</a
+							>
+						</article>
+						<article>
+							<h3 class="small">Leerling helpende of verzorgende - BBL</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+								diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+								aliquam erat volutpat. Ut wisi enim ad m
+							</p>
+							<a
+								href=""
+								aria-label="Meer informatie over de vacature Leerling helpende of verzorgende - BBL"
+								>Meer informatie</a
+							>
+						</article>
+						<article>
+							<h3 class="small">Leerling helpende of verzorgende - BBL</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+								diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+								aliquam erat volutpat. Ut wisi enim ad m
+							</p>
+							<a
+								href=""
+								aria-label="Meer informatie over de vacature Leerling helpende of verzorgende - BBL"
+								>Meer informatie</a
+							>
+						</article>
+					</div>
+					<a href="/contact" class="contact-btn large">
 						<i class="fa-solid fa-circle-user"></i>Neem nu contact op
 					</a>
 				</div>

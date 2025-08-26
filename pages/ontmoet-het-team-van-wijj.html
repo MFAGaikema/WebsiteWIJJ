@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>WIJJ - Jouw team voor toekomst - Naar werk traject</title>
+		<title>WIJJ - Jouw team voor toekomst - Ontmoet het team van WIJJ</title>
 		<!-- Standaard favicon -->
 		<link
 			rel="icon"
@@ -65,14 +65,14 @@
 			src="https://kit.fontawesome.com/d4e6b0151b.js"
 			crossorigin="anonymous"
 		></script>
-		<script defer src="/js/script.js"></script>
+		<script defer src="js/script.js"></script>
 	</head>
-	<body class="theme-coachen">
+	<body class="theme-ontmoet-het-team-van-wijj">
 		<a class="skiplink" href="#main-content">Ga naar hoofdcontent</a>
 
 		<header>
 			<div class="header-container wide-container">
-				<a class="header-logo" href="/">
+				<a class="header-logo" href="/" aria-current="page">
 					<img src="/assets/images/logos/LogoWIJJ.svg" alt="WIJJ" />
 				</a>
 				<button
@@ -87,21 +87,12 @@
 					<ul class="nav-list">
 						<li>
 							<a href="/coachen">Coachen</a>
-							<ul class="sub-menu">
+							<ul class="sub-menu link-list">
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/modulaire-reintegratie">Modulaire re-integratie</a>
+									<a href="/uwv-trajecten">UWV trajecten</a>
 								</li>
-								<li>
-									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/werk-fit-traject">Werkfit traject</a>
-								</li>
-								<li>
-									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/naar-werk-traject" aria-current="page"
-										>Naar werk traject</a
-									>
-								</li>
+
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
 									<a href="/gemeentelijk-traject">Gemeentelijk traject </a>
@@ -110,7 +101,7 @@
 						</li>
 						<li>
 							<a href="/zorgen">Zorgen</a>
-							<ul class="sub-menu">
+							<ul class="sub-menu link-list">
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
 									<a href="/huishoudelijke-hulp">Huishoudelijke hulp</a>
@@ -119,31 +110,33 @@
 									<i class="fa-solid fa-chevron-right"></i>
 									<a href="/safe-houses">Safe houses</a>
 								</li>
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/wmo-begeleiding">WMO begeleiding</a>
+								</li>
 							</ul>
 						</li>
 						<li>
 							<a href="/werken">Werken</a>
-							<ul class="sub-menu">
+							<ul class="sub-menu link-list">
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/beschut-werk">Beschut werk</a>
-								</li>
-								<li>
-									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/op-maat-uitzenden">Op maat uitzenden</a>
+									<a href="/uitzenden-op-maat">Uitzenden op maat</a>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<a href="/over-ons">Over Ons</a>
-							<ul class="sub-menu">
+							<a href="/over-ons">Over ons</a>
+							<ul class="sub-menu link-list">
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/over-ons">Over ons</a>
+									<a href="/dit-is-wijj">Dit is WIJJ</a>
 								</li>
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/over-wijj">Over WIJJ</a>
+									<a href="/ontmoet-het-team-van-wijj" aria-current="page"
+										>Ontmoet het team van WIJJ</a
+									>
 								</li>
 							</ul>
 						</li>
@@ -183,16 +176,9 @@
 							</div>
 							<ul id="coachen-menu" class="dropdown-menu" hidden>
 								<li>
-									<a href="/modulaire-reintegratie">Modulaire re-integratie</a>
+									<a href="/uwv-trajecten">UWV trajecten</a>
 								</li>
-								<li>
-									<a href="/werk-fit-traject">Werkfit traject</a>
-								</li>
-								<li>
-									<a href="/naar-werk-traject" aria-current="page"
-										>Naar werk traject</a
-									>
-								</li>
+
 								<li>
 									<a href="/gemeentelijk-traject">Gemeentelijk traject</a>
 								</li>
@@ -219,6 +205,9 @@
 								<li>
 									<a href="/safe-houses">Safe houses</a>
 								</li>
+								<li>
+									<a href="/wmo-begeleiding">WMO begeleiding</a>
+								</li>
 							</ul>
 						</li>
 						<li>
@@ -237,16 +226,13 @@
 							</div>
 							<ul id="werken-menu" class="dropdown-menu" hidden>
 								<li>
-									<a href="/beschut-werk">Beschut werk</a>
-								</li>
-								<li>
-									<a href="/op-maat-uitzenden">Op maat uitzenden</a>
+									<a href="/uitzenden-op-maat">Uitzenden op maat</a>
 								</li>
 							</ul>
 						</li>
 						<li>
 							<div class="dropdown-nav-item">
-								<a class="dropdown-link" href="">Over Ons </a>
+								<a class="dropdown-link" href="/over-ons">Over ons </a>
 								<button
 									class="dropdown-btn"
 									data-label="Over ons"
@@ -259,8 +245,12 @@
 								</button>
 							</div>
 							<ul id="overons-menu" class="dropdown-menu" hidden>
-								<li><a href="/over-ons">Over ons</a></li>
-								<li><a href="/over-wijj">Over WIJJ</a></li>
+								<li><a href="/dit-is-wijj">Dit is WIJJ</a></li>
+								<li>
+									<a href="/ontmoet-het-team-van-wijj" aria-current="page"
+										>Ontmoet het team van WIJJ</a
+									>
+								</li>
 							</ul>
 						</li>
 					</ul>
@@ -285,43 +275,95 @@
 		<div class="background-image wide-container"></div>
 		<main>
 			<section id="main-content" class="intro">
-				<h1>Naar werk traject</h1>
+				<h1>Ontmoet het team van WIJJ</h1>
 				<p>
-					Het doel van het “Naar werk” traject is het vinden van nieuw, passend
-					en duurzaam werk.
+					Al meer dan 15 jaar onderscheiden we ons door oprechte betrokkenheid
+					en een sterke dosis doorzettingskracht. We laten mensen niet los, maar
+					blijven begeleiden, motiveren en kansen creëren, net zo lang tot ze
+					hun plek op de arbeidsmarkt hebben gevonden. Dat doen we door middel
+					van:
 				</p>
-				<p>
-					We kijken samen naar welk werk goed en geschikt voor jou is. In dit
-					traject helpen wij je bij het solliciteren, presenteren en netwerken.
-				</p>
+
+				<ul>
+					<li>
+						<strong>Coachen</strong>: Bieden van persoonlijke begeleiding en
+						ontwikkeling;
+					</li>
+					<li>
+						<strong>Zorgen</strong>: Ondersteuning vanuit de WMO, kansarmen weer
+						perspectief bieden;
+					</li>
+					<li>
+						<strong>Werken</strong>: Creëren van kansen om talent in te zetten
+						en mee te doen.
+					</li>
+				</ul>
 			</section>
 			<section>
 				<div class="text-container">
-					<h2 class="small">Werkplezier draagt bij aan levensplezier</h2>
 					<p>
-						Als we in kaart hebben waar de problemen liggen gaan we er mee aan
-						de slag in kleine stapjes. Een goed gesprek, het weer naar buiten
-						gaan, in contact komen met (nieuwe) mensen, een hobby oppakken zijn
-						onder andere activiteiten die hier goed bij helpen. Met het doel dat
-						je in beweging komt en eigen regie krijgt, op weg naar een
-						vervolgtraject gericht op het vinden van werk.
+						Persoonlijke ondersteuning, motivatie en hulp vormen de kern van
+						onze dienstverlening. Daarom staat maatwerk bij ons centraal. Onze
+						coaches en medewerkers spreken de taal van de werkvloer en fungeren
+						tegelijkertijd als inspirerende sparringpartners voor
+						opdrachtgevers, zoals overheden en private partijen.
+					</p>
+					<p>
+						Ons team ondersteunt het volledige coachingstraject. We zoeken
+						passende vacatures en begeleiden het proces van sollicitatie tot en
+						met het gesprek. Een goede voorbereiding is soms essentieel. Daarom
+						bieden we dagbesteding aan om een gezond dag- en nachtritme op te
+						bouwen. We halen onze kandidaten op en brengen ze weer thuis, zodat
+						ook zonder rijbewijs of auto iedereen de kans krijgt om aan zichzelf
+						te werken.
+					</p>
+					<p>
+						Daarnaast bieden we ondersteuning aan werkgevers. Van werving en
+						selectie tot reorganisatie, ARBO-beleid en ziektewettrajecten: wij
+						leveren praktische oplossingen voor een sterke en prettige
+						werkvloer.
 					</p>
 				</div>
 			</section>
+			<hr />
 			<section>
 				<div class="text-container">
-					<h2 class="small">Werkplezier draagt bij aan levensplezier</h2>
-					<p>
-						WIJJ Coachen BV heeft veel ervaring en zijn deskundig in het
-						begeleiden van UWV re-integratietrajecten. Daarin zijn wij altijd
-						gericht op het creëren van mogelijkheden. Wij weten uit ervaring wat
-						nodig is om weer aan het werk te komen en hoe u dat aanpakt. WIJJ
-						zijn ervan overtuigd dat plezier in het werk bijdraagt aan plezier
-						in het leven. WIJJ helpen u er graag dit te bereiken.
-					</p>
-					<a href="/contact" class="contact-btn blue large">
-						<i class="fa-solid fa-circle-user"></i>Neem nu contact op
-					</a>
+					<h2>Onze mensen</h2>
+					<div class="content-wrapper">
+						<article class="team-member">
+							<img src="/assets/images/team/JeroenFoto.png" alt="Jeroen Udo" />
+							<div class="team-member-info">
+								<h4>Jeroen Udo</h4>
+								<h5>Directeur</h5>
+								<p>
+									Ik ben Jeroen, een doortastende alleskunner die zich volledig
+									inzet voor mijn cliënten. Met sterke communicatieve
+									vaardigheden en een open persoonlijkheid weet ik altijd het
+									beste resultaat te behalen. Ik denk in oplossingen en heb een
+									onmiskenbare drive om doelen te bereiken. Ik ben altijd op
+									zoek naar de mens achter de cliënt, wat mij tot een
+									waardevolle en betrokken partner maakt.
+								</p>
+							</div>
+						</article>
+						<article class="team-member">
+							<img src="/assets/images/team/ReneFoto.png" alt="Rene Kalf" />
+							<div class="team-member-info">
+								<h4>Rene Kalf</h4>
+								<h5>Consultant</h5>
+								<p>
+									Ik ben Rene, een resultaatgerichte professional met een brede
+									skillset die zich volledig inzet voor de wensen en behoeften
+									van mijn cliënten. Door mijn uitstekende communicatieve
+									vaardigheden en open houding weet ik snel de juiste oplossing
+									te vinden. Met een sterke focus op doelgericht werken en een
+									natuurlijke drive om resultaten te behalen, ben ik altijd op
+									zoek naar de mens achter de cliënt. Dit maakt mij een
+									betrokken en waardevolle partner in elke samenwerking.
+								</p>
+							</div>
+						</article>
+					</div>
 				</div>
 			</section>
 		</main>

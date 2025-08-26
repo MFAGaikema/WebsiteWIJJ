@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>WIJJ - Jouw team voor toekomst - Werken</title>
+		<title>WIJJ - Jouw team voor toekomst - Dit is WIJJ</title>
 		<!-- Standaard favicon -->
 		<link
 			rel="icon"
@@ -67,12 +67,12 @@
 		></script>
 		<script defer src="js/script.js"></script>
 	</head>
-	<body class="theme-werken">
+	<body class="theme-over-ons">
 		<a class="skiplink" href="#main-content">Ga naar hoofdcontent</a>
 
 		<header>
 			<div class="header-container wide-container">
-				<a class="header-logo" href="/">
+				<a class="header-logo" href="/" aria-current="page">
 					<img src="/assets/images/logos/LogoWIJJ.svg" alt="WIJJ" />
 				</a>
 				<button
@@ -87,19 +87,12 @@
 					<ul class="nav-list">
 						<li>
 							<a href="/coachen">Coachen</a>
-							<ul class="sub-menu">
+							<ul class="sub-menu link-list">
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/modulaire-reintegratie">Modulaire re-integratie</a>
+									<a href="/uwv-trajecten">UWV trajecten</a>
 								</li>
-								<li>
-									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/werk-fit-traject">Werkfit traject</a>
-								</li>
-								<li>
-									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/naar-werk-traject">Naar werk traject</a>
-								</li>
+
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
 									<a href="/gemeentelijk-traject">Gemeentelijk traject </a>
@@ -108,7 +101,7 @@
 						</li>
 						<li>
 							<a href="/zorgen">Zorgen</a>
-							<ul class="sub-menu">
+							<ul class="sub-menu link-list">
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
 									<a href="/huishoudelijke-hulp">Huishoudelijke hulp</a>
@@ -117,33 +110,33 @@
 									<i class="fa-solid fa-chevron-right"></i>
 									<a href="/safe-houses">Safe houses</a>
 								</li>
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/wmo-begeleiding">WMO begeleiding</a>
+								</li>
 							</ul>
 						</li>
 						<li>
 							<a href="/werken">Werken</a>
-							<ul class="sub-menu">
+							<ul class="sub-menu link-list">
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/beschut-werk">Beschut werk</a>
-								</li>
-								<li>
-									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/op-maat-uitzenden" aria-current="page"
-										>Op maat uitzenden</a
-									>
+									<a href="/uitzenden-op-maat">Uitzenden op maat</a>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<a href="/over-ons">Over Ons</a>
-							<ul class="sub-menu">
+							<a href="/over-ons">Over ons</a>
+							<ul class="sub-menu link-list">
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/over-ons">Over ons</a>
+									<a href="/dit-is-wijj" aria-current="page">Dit is WIJJ</a>
 								</li>
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/over-wijj">Over WIJJ</a>
+									<a href="/ontmoet-het-team-van-wijj"
+										>Ontmoet het team van WIJJ</a
+									>
 								</li>
 							</ul>
 						</li>
@@ -183,14 +176,9 @@
 							</div>
 							<ul id="coachen-menu" class="dropdown-menu" hidden>
 								<li>
-									<a href="/modulaire-reintegratie">Modulaire re-integratie</a>
+									<a href="/uwv-trajecten">UWV trajecten</a>
 								</li>
-								<li>
-									<a href="/werk-fit-traject">Werkfit traject</a>
-								</li>
-								<li>
-									<a href="/naar-werk-traject">Naar werk traject</a>
-								</li>
+
 								<li>
 									<a href="/gemeentelijk-traject">Gemeentelijk traject</a>
 								</li>
@@ -217,6 +205,9 @@
 								<li>
 									<a href="/safe-houses">Safe houses</a>
 								</li>
+								<li>
+									<a href="/wmo-begeleiding">WMO begeleiding</a>
+								</li>
 							</ul>
 						</li>
 						<li>
@@ -235,18 +226,13 @@
 							</div>
 							<ul id="werken-menu" class="dropdown-menu" hidden>
 								<li>
-									<a href="/beschut-werk">Beschut werk</a>
-								</li>
-								<li>
-									<a href="/op-maat-uitzenden" aria-current="page"
-										>Op maat uitzenden</a
-									>
+									<a href="/uitzenden-op-maat">Uitzenden op maat</a>
 								</li>
 							</ul>
 						</li>
 						<li>
 							<div class="dropdown-nav-item">
-								<a class="dropdown-link" href="">Over Ons </a>
+								<a class="dropdown-link" href="/over-ons">Over ons </a>
 								<button
 									class="dropdown-btn"
 									data-label="Over ons"
@@ -259,8 +245,14 @@
 								</button>
 							</div>
 							<ul id="overons-menu" class="dropdown-menu" hidden>
-								<li><a href="/over-ons">Over ons</a></li>
-								<li><a href="/over-wijj">Over WIJJ</a></li>
+								<li>
+									<a href="/dit-is-wijj" aria-current="page">Dit is WIJJ</a>
+								</li>
+								<li>
+									<a href="/ontmoet-het-team-van-wijj"
+										>Ontmoet het team van WIJJ</a
+									>
+								</li>
 							</ul>
 						</li>
 					</ul>
@@ -285,163 +277,63 @@
 		<div class="background-image wide-container"></div>
 		<main>
 			<section id="main-content" class="intro">
-				<h1>Uitzenden op maat</h1>
+				<h1>Dit is WIJJ</h1>
 				<p>
-					WIJJ heeft als visie dat het persoonlijke weer terug moet keren in de
-					uitzendbranche. Hoe? Door persoonlijk het gesprek aan te gaan met
-					werkgever en werkzoekenden om de wensen van beide partijen te
-					onderzoeken. Op deze manier is WIJJ er van overtuigt om dé juiste
-					matches te kunnen creëren.
+					WIJJ is in 2011 gestart door Jeroen en Joost. Twee mensen met één
+					missie: anderen inspireren en begeleiden naar een toekomst vol
+					werkplezier en nieuwe kansen.
 				</p>
 			</section>
 			<section>
 				<div class="text-container">
-					<h2>Hoe werkt werken via WIJJ?</h2>
-					<p>
-						Volgens WIJJ draait de uitzendbranche om het bijdragen en helpen in
-						het werkgeluk van werkzoekenden aan de ene kant en aan de andere
-						kant het ondersteunen van werkgevers/opdrachtgevers in het oplossen
-						van personeelstekorten/HR vraagstukken. Daarom gaat WIJJ graag het
-						gesprek aan met werkzoekenden om achter de motivatie en beweegreden
-						van de kandidaat te komen. Wat wil je graag, waar ben je goed in,
-						maar voornamelijk het allerbelangrijkste, wat vind je leuk om te
-						doen?
-					</p>
-					<p>
-						Nu is het tijd om dat anders te doen: bij WIJJ staat de kandidaat
-						altijd centraal. Beter werk en beter betaald. Daar gaan wij voor!
-					</p>
-				</div>
-			</section>
-			<section>
-				<div class="content-wrapper text-container">
-					<article>
-						<img src="/assets/images/icons/WijjWerkenJobPurple.png" alt="" />
-						<h3>Voor werkzoekenden: wij willen met jou in gesprek</h3>
-						<p>
-							WIJJ gaan graag het gesprek aan met werkzoekenden om achter de
-							motivatie en beweegredenen van de kandidaat te komen. Wat wil je
-							graag, waar ben je goed in, maar vooral het allerbelangrijkste:
-							wat vind je leuk om te doen? Want daar gaat het om.
-						</p>
-						<p>
-							Tussen de duizenden uitzendaanbieders is het daarom dus hoog tijd
-							om dat eens anders te doen. Bij WIJJ staat de kandidaat altijd
-							centraal! Wij luisteren en zoeken naar beter werk dat beter
-							betaalt.
-						</p>
-					</article>
-					<article>
+					<p class="logo-container">
 						<img
-							src="/assets/images/icons/WIJJWerkenUserGlassPurple.png"
-							alt=""
+							src="/assets/images/logos/LogoWIJJ.svg"
+							alt="Logo WIJJ: een W met daarnaast een ei met de letters i, j en j erin"
 						/>
-						<h3>Voor opdrachtgevers: wij helpen werkgevers</h3>
-						<p>
-							Voor de opdrachtgever zullen WIJJ een sparringpartner zijn die
-							zich transparant opstelt en een luisterend oor biedt.
-						</p>
-						<p>
-							WIJJ profileren ons dan ook als een transparante en eerlijke
-							organisatie die voor elke opdrachtgever een zelfde kostprijs zal
-							hanteren.
-						</p>
-						<p>
-							WIJJ willen ons dan ook graag hard maken voor de
-							werkgever/opdrachtgever om middels de persoonlijke gesprekken met
-							de kandidaat een juiste match te kunnen creëren.
-						</p>
-					</article>
-				</div>
-			</section>
-			<hr />
-			<section>
-				<div class="text-container">
-					<h2>Onze vacatures</h2>
-					<div class="content-wrapper vacatures">
-						<article>
-							<h3 class="small">Leerling helpende of verzorgende - BBL</h3>
-							<p>
-								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-								diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-								aliquam erat volutpat. Ut wisi enim ad m
-							</p>
-							<a
-								href=""
-								aria-label="Meer informatie over de vacature Leerling helpende of verzorgende - BBL"
-								>Meer informatie</a
-							>
-						</article>
-						<article>
-							<h3 class="small">Leerling helpende of verzorgende - BBL</h3>
-							<p>
-								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-								diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-								aliquam erat volutpat. Ut wisi enim ad m
-							</p>
-							<a
-								href=""
-								aria-label="Meer informatie over de vacature Leerling helpende of verzorgende - BBL"
-								>Meer informatie</a
-							>
-						</article>
-						<article>
-							<h3 class="small">Leerling helpende of verzorgende - BBL</h3>
-							<p>
-								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-								diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-								aliquam erat volutpat. Ut wisi enim ad m
-							</p>
-							<a
-								href=""
-								aria-label="Meer informatie over de vacature Leerling helpende of verzorgende - BBL"
-								>Meer informatie</a
-							>
-						</article>
-						<article>
-							<h3 class="small">Leerling helpende of verzorgende - BBL</h3>
-							<p>
-								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-								diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-								aliquam erat volutpat. Ut wisi enim ad m
-							</p>
-							<a
-								href=""
-								aria-label="Meer informatie over de vacature Leerling helpende of verzorgende - BBL"
-								>Meer informatie</a
-							>
-						</article>
-						<article>
-							<h3 class="small">Leerling helpende of verzorgende - BBL</h3>
-							<p>
-								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-								diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-								aliquam erat volutpat. Ut wisi enim ad m
-							</p>
-							<a
-								href=""
-								aria-label="Meer informatie over de vacature Leerling helpende of verzorgende - BBL"
-								>Meer informatie</a
-							>
-						</article>
-						<article>
-							<h3 class="small">Leerling helpende of verzorgende - BBL</h3>
-							<p>
-								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-								diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-								aliquam erat volutpat. Ut wisi enim ad m
-							</p>
-							<a
-								href=""
-								aria-label="Meer informatie over de vacature Leerling helpende of verzorgende - BBL"
-								>Meer informatie</a
-							>
-						</article>
-					</div>
-					<hr />
-					<a href="/contact" class="contact-btn large">
-						<i class="fa-solid fa-circle-user"></i>Neem nu contact op
-					</a>
+					</p>
+					<p>
+						De naam WIJJ staat voor Werk Inspiratie Jeroen en Joost. Ons logo –
+						een ei – vertelt dat verhaal. Een ei staat voor een nieuw begin, een
+						nieuw leven of een nieuwe periode. De donkere rand laat zien dat elk
+						begin start met wrijving en moeite. Van daaruit beweeg je naar het
+						licht, waar ruimte ontstaat voor groei en een nieuwe fase.
+					</p>
+
+					<p>
+						In ons logo zit nog een diepere betekenis. Het woord "ijj" vormt het
+						ei:
+					</p>
+					<ul>
+						<li>
+							De <strong>i</strong> staat voor WIJJ. Wij zijn kleiner afgebeeld,
+							omdat wij ons ondergeschikt maken aan de cliënt en de
+							opdrachtgever. De i draagt een pet, als symbool van de begeleider;
+						</li>
+						<li>
+							De eerste <strong>j</strong> staat voor de cliënt: degene die
+							centraal staat en de begeleiding ontvangt;
+						</li>
+						<li>
+							De tweede <strong>j</strong> symboliseert de opdrachtgever, zoals
+							UWV, gemeente of justitie. Ook deze j draagt een pet, als teken
+							van verantwoordelijkheid en richting.
+						</li>
+					</ul>
+					<p>
+						Samen – begeleider, cliënt en opdrachtgever – lopen we van de
+						donkere rand naar het licht, naar een toekomst waarin nieuwe
+						mogelijkheden ontstaan.
+					</p>
+					<p>
+						Ons motto is dan ook: <strong>“Van wrijving komt glans”</strong>.
+					</p>
+					<p>
+						WIJJ zijn uitgegroeid tot een betrokken team dat mensen ondersteunt
+						bij werk, participatie en persoonlijke groei. Met warmte, inspiratie
+						en een duidelijke focus op resultaat staan wij naast jou, zodat jij
+						weer mee kunt doen.
+					</p>
 				</div>
 			</section>
 		</main>

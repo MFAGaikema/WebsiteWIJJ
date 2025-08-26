@@ -11,7 +11,7 @@
 	margin-inline: auto;
 
 	& > *:not(h2):not(:last-child) {
-		margin-bottom: 2.5rem;
+		margin-bottom: 2rem;
 	}
 
 	hr {
@@ -19,20 +19,28 @@
 		width: 100%;
 	}
 
-	.services-list {
-		text-align: start;
-		i {
-			margin-right: 10px;
-		}
-	}
-
-	.steps-list {
+	ul {
 		text-align: start;
 		list-style-type: square;
-		padding-left: var(--padding-left-right);
+		width: 100%;
+		list-style-position: inside;
 
-		@media (min-width: 1200px) {
-			padding-left: 1rem;
+		li:has(a) {
+			list-style-type: none;
 		}
 	}
+
+	ol {
+		list-style: decimal;
+		margin-left: 2em;
+	}
+
+	.logo-container {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.form-container {
+	width: 100%;
 }

@@ -26,14 +26,6 @@
 	}
 
 	main {
-		.intro {
-			background-color: var(--intro-bg-blue);
-		}
-
-		section:nth-child(2) {
-			background-color: var(--very-light-grey);
-		}
-
 		.text-container {
 			display: block;
 			text-align: start;
@@ -49,14 +41,6 @@
 	}
 
 	main {
-		.intro {
-			background-color: var(--intro-bg-orange);
-		}
-
-		section:nth-child(2) {
-			background-color: var(--very-light-grey);
-		}
-
 		.text-container {
 			display: block;
 			text-align: start;
@@ -69,16 +53,6 @@
 
 	.background-image {
 		background-image: url(/assets/images//bg-images/DEF_WIJJ_paarsklein.png);
-	}
-
-	main {
-		.intro {
-			background-color: var(--intro-bg-purple);
-		}
-
-		section:nth-child(2) {
-			background-color: var(--very-light-grey);
-		}
 	}
 }
 
@@ -95,6 +69,56 @@
 
 	main {
 		margin-top: var(--header-height);
-		text-align: start;
+		p {
+			text-align: start;
+			width: 100%;
+		}
+	}
+}
+
+.theme-over-ons {
+	@include mixins.theme-colors(green);
+
+	.background-image {
+		background-image: url(/assets/images/bg-images/DEF_WIJJ_mozaiekklein.png);
+		aspect-ratio: 3 / 1;
+	}
+
+	main {
+		.intro {
+			background-color: #cbe8ed;
+		}
+
+		// @media (min-width: 1200px) {
+		// 	section:nth-child(2) {
+		// 		background-color: var(--very-light-grey);
+		// 	}
+		// }
+
+		.text-container {
+			display: block;
+			text-align: start;
+		}
+	}
+}
+
+.theme-ontmoet-het-team-van-wijj {
+	@include mixins.theme-colors(green);
+
+	.background-image {
+		background-image: url(/assets/images/bg-images/DEF_WIJJ_mozaiekklein.png);
+		aspect-ratio: 3 / 1;
+	}
+
+	main {
+		.intro {
+			background-color: #cbe8ed;
+		}
+
+		// @media (min-width: 1200px) {
+		// 	section:nth-child(2) {
+		// 		background-color: var(--very-light-grey);
+		// 	}
+		// }
 	}
 }

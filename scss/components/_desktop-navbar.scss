@@ -27,7 +27,7 @@
 				background-color: #fff;
 				top: 100%;
 				left: -20px;
-				min-width: 130px;
+				min-width: 160px;
 				padding: 30px 20px 20px;
 				border-bottom-left-radius: var(--border-radius);
 				border-bottom-right-radius: var(--border-radius);
@@ -40,6 +40,14 @@
 					bottom: 1px;
 					z-index: -2;
 					box-shadow: var(--nav-shadow);
+				}
+
+				a {
+					text-transform: none;
+				}
+
+				li:not(:last-child) {
+					margin-bottom: 10px;
 				}
 			}
 		}

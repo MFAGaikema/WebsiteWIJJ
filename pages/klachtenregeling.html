@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WIJJ - Jouw team voor toekomst - Klachtenregeling</title>
+		<!-- Standaard favicon -->
+		<link
+			rel="icon"
+			href="/Assets/Images/favicon_io/favicon.ico"
+			type="image/x-icon"
+		/>
+
+		<!-- PNG favicons voor verschillende formaten -->
+		<link
+			rel="icon"
+			href="/Assets/Images/favicon_io/favicon-32x32.png"
+			type="image/png"
+			sizes="32x32"
+		/>
+		<link
+			rel="icon"
+			href="/Assets/Images/favicon_io/favicon-16x16.png"
+			type="image/png"
+			sizes="16x16"
+		/>
+
+		<!-- Apple Touch Icon voor iOS-apparaten -->
+		<link
+			rel="apple-touch-icon"
+			href="/Assets/Images/favicon_io/apple-touch-icon.png"
+			sizes="180x180"
+		/>
+
+		<!-- Android Chrome iconen -->
+		<link
+			rel="icon"
+			href="/Assets/Images/favicon_io/android-chrome-192x192.png"
+			type="image/png"
+			sizes="192x192"
+		/>
+		<link
+			rel="icon"
+			href="/Assets/Images/favicon_io/android-chrome-512x512.png"
+			type="image/png"
+			sizes="512x512"
+		/>
+
+		<!-- Web App Manifest -->
+		<link rel="manifest" href="/Assets/Images/favicon_io/site.webmanifest" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+		/>
+
+		<script
+			src="https://kit.fontawesome.com/d4e6b0151b.js"
+			crossorigin="anonymous"
+		></script>
+		<script defer src="js/script.js"></script>
+	</head>
+	<body class="theme-general">
+		<a class="skiplink" href="#main-content">Ga naar hoofdcontent</a>
+
+		<header>
+			<div class="header-container wide-container">
+				<a class="header-logo" href="/">
+					<img src="/assets/images/logos/LogoWIJJ.svg" alt="WIJJ" />
+				</a>
+				<button
+					aria-expanded="false"
+					aria-controls="mobile-tablet-navbar"
+					class="navbar-toggle-btn"
+					aria-label="Open navigatie"
+				>
+					<i class="fa-solid fa-bars fa-2xl"></i>
+				</button>
+				<nav id="mobile-tablet-navbar" hidden>
+					<ul class="nav-list">
+						<li>
+							<a href="/coachen">Coachen</a>
+							<ul class="sub-menu link-list">
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/uwv-trajecten">UWV trajecten</a>
+								</li>
+
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/gemeentelijk-traject">Gemeentelijk traject </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/zorgen">Zorgen</a>
+							<ul class="sub-menu link-list">
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/huishoudelijke-hulp">Huishoudelijke hulp</a>
+								</li>
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/safe-houses">Safe houses</a>
+								</li>
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/wmo-begeleiding">WMO begeleiding</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/werken">Werken</a>
+							<ul class="sub-menu link-list">
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/uitzenden-op-maat">Uitzenden op maat</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/over-ons">Over ons</a>
+							<ul class="sub-menu">
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/dit-is-wijj">Dit is WIJJ</a>
+								</li>
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/ontmoet-het-team-van-wijj"
+										>Ontmoet het team van WIJJ</a
+									>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<hr />
+					<div class="nav-bottom-container">
+						<a class="phone-number" href="tel:+31857600204"
+							>Bel nu: 085-7600204</a
+						>
+						<div class="nav-search-contact-container">
+							<a
+								href="/zoeken"
+								aria-label="Ga naar zoekpagina"
+								class="search-btn"
+							>
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</a>
+							<a href="/contact" class="contact-btn">Contact</a>
+						</div>
+					</div>
+				</nav>
+				<nav id="desktop-navbar">
+					<ul class="nav-list">
+						<li>
+							<div class="dropdown-nav-item">
+								<a class="dropdown-link" href="/coachen"> Coachen </a>
+								<button
+									class="dropdown-btn"
+									data-label="Coachen"
+									aria-label="Coachen menu uitklappen"
+									aria-haspopup="true"
+									aria-expanded="false"
+									aria-controls="coachen-menu"
+								>
+									<i class="fa-solid fa-chevron-down"></i>
+								</button>
+							</div>
+							<ul id="coachen-menu" class="dropdown-menu" hidden>
+								<li>
+									<a href="/uwv-trajecten">UWV trajecten</a>
+								</li>
+
+								<li>
+									<a href="/gemeentelijk-traject">Gemeentelijk traject</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="dropdown-nav-item">
+								<a class="dropdown-link" href="/zorgen"> Zorgen </a>
+								<button
+									class="dropdown-btn"
+									data-label="Zorgen"
+									aria-label="Zorgen menu uitklappen"
+									aria-haspopup="true"
+									aria-expanded="false"
+									aria-controls="zorgen-menu"
+								>
+									<i class="fa-solid fa-chevron-down"></i>
+								</button>
+							</div>
+							<ul id="zorgen-menu" class="dropdown-menu" hidden>
+								<li>
+									<a href="/huishoudelijke-hulp">Huishoudelijke hulp</a>
+								</li>
+								<li>
+									<a href="/safe-houses">Safe houses</a>
+								</li>
+								<li>
+									<a href="/wmo-begeleiding">WMO begeleiding</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="dropdown-nav-item">
+								<a class="dropdown-link" href="/werken"> Werken </a>
+								<button
+									class="dropdown-btn"
+									data-label="Werken"
+									aria-label="Werken menu uitklappen"
+									aria-haspopup="true"
+									aria-expanded="false"
+									aria-controls="werken-menu"
+								>
+									<i class="fa-solid fa-chevron-down"></i>
+								</button>
+							</div>
+							<ul id="werken-menu" class="dropdown-menu" hidden>
+								<li>
+									<a href="/uitzenden-op-maat">Uitzenden op maat</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="dropdown-nav-item">
+								<a class="dropdown-link" href="/over-ons">Over ons </a>
+								<button
+									class="dropdown-btn"
+									data-label="Over ons"
+									aria-label="Over ons menu uitklappen"
+									aria-haspopup="true"
+									aria-expanded="false"
+									aria-controls="overons-menu"
+								>
+									<i class="fa-solid fa-chevron-down"></i>
+								</button>
+							</div>
+							<ul id="overons-menu" class="dropdown-menu" hidden>
+								<li><a href="/dit-is-wijj">Dit is WIJJ</a></li>
+								<li>
+									<a href="/ontmoet-het-team-van-wijj"
+										>Ontmoet het team van WIJJ</a
+									>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<div class="nav-right-container">
+						<a class="phone-number" href="tel:+31857600204"
+							>Bel nu: 085-7600204</a
+						>
+						<div class="nav-search-contact-container">
+							<a
+								href="/zoeken"
+								aria-label="Ga naar zoekpagina"
+								class="search-btn"
+							>
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</a>
+							<a href="/contact" class="contact-btn">Contact</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<section id="main-content">
+				<div class="text-container">
+					<h1>Klachtenregeling</h1>
+					<p>Tekst</p>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="contact-container">
+				<div class="text-container">
+					<h2>Zullen wijj je helpen?</h2>
+					<div class="contact-details-container">
+						<div class="contact-details">
+							<h3 class="small">Adres:</h3>
+							<p>
+								WIJJ BV<br />
+								Pagendijk 38<br />
+								7271DH Borculo<br />
+								<a href="tel:+31857600204">085-7600204</a><br />
+								<a href="mailto:info@wijj.nu">info@wijj.nu</a>
+							</p>
+							<p>
+								KVK: 6668506<br />
+								AGB Code: 98101613
+							</p>
+						</div>
+						<div class="social-media-container">
+							<div class="social-media">
+								<h3 class="small">Social media:</h3>
+								<span class="social-media-icons">
+									<a aria-label="Bezoek onze Facebook pagina" href=""
+										><i
+											aria-hidden="true"
+											class="fa-brands fa-square-facebook"
+										></i
+									></a>
+									<a aria-label="Bezoek onze Instagram" href="http://"
+										><i
+											aria-hidden="true"
+											class="fa-brands fa-square-instagram"
+										></i
+									></a>
+									<a aria-label="Bezoek onze Linkedin pagina" href="http://"
+										><i aria-hidden="true" class="fa-brands fa-linkedin"></i
+									></a>
+								</span>
+							</div>
+							<img src="/assets/images/logos/LogoWIJJ.svg" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="organisations">
+				<h2 class="small">Wijj zijn aangesloten bij:</h2>
+				<div class="organisation-container">
+					<a target="_blank" href="https://www.blikopwerk.nl/">
+						<img
+							src="/assets/images/logos/blik-op-werk-logo.png"
+							alt="Blik op werk"
+						/>
+					</a>
+					<a target="_blank" href="https://www.s-bb.nl/">
+						<img
+							src="/assets/images/logos/sbb-logo.png"
+							alt="Samenwerkingsorganisatie Beroepsonderwijs Bedrijfsleven"
+						/>
+					</a>
+					<a target="_blank" href="https://bvkz.nl/">
+						<img
+							src="/assets/images/logos/LogoBVKZtransparent.png"
+							alt="Branchevereniging kleinschalige zorg"
+						/>
+					</a>
+				</div>
+			</div>
+			<div class="footer-bottom-container">
+				<nav class="footer-links">
+					<ul>
+						<li>
+							<a href="/pages/algemene-voorwaarden.html"
+								>Algemene voorwaarden</a
+							>
+						</li>
+						<li>
+							<a href="/klachtenregeling" aria-current="page"
+								>Klachtenregeling</a
+							>
+						</li>
+						<li>
+							<a href="/privacybeleid">Privacybeleid</a>
+						</li>
+						<li><a href="/cookiebeleid">Cookiebeleid</a></li>
+						<li><a href="/sitemap">Sitemap</a></li>
+					</ul>
+				</nav>
+				<div class="btn-slogan-container">
+					<button class="download-btn">
+						Download onze brochure <i class="fa-solid fa-download"></i>
+					</button>
+					<p class="slogan">Wijj: jouw team voor toekomst</p>
+				</div>
+				<p class="copyright">WIJJ &copy; 2025</p>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,7 +1,7 @@
 :root {
 	//text properties
 	--standard-font-size: 14px;
-	--heading-margin-bottom-h1-h2: 0.75em;
+	--heading-margin-bottom-h2: 0.75em;
 	--heading-margin-bottom-h3: 1rem;
 	--heading-margin-bottom-h4: 1.125rem;
 	--icon-font-size: 2.5rem;
@@ -15,9 +15,10 @@
 	--dark-blue: color-mix(in srgb, var(--standard-blue) 80%, black);
 	--dark-orange: color-mix(in srgb, var(--standard-orange) 90%, black);
 	--dark-purple: color-mix(in srgb, var(--standard-purple) 75%, black);
-	--intro-bg-blue: #bde4f7;
-	--intro-bg-orange: #f9d298;
-	--intro-bg-purple: #dec8df;
+	--bg-green: #cbe8ed;
+	--bg-blue: #bde4f7;
+	--bg-orange: #f9d298;
+	--bg-purple: #dec8df;
 	--very-light-grey: #f9f8f8;
 	--contact-container-green: #ebf6f8;
 	--contact-container-blue: #daeef8;
@@ -28,6 +29,7 @@
 	//layout
 	--header-height: 5rem;
 	--padding-left-right: 1.25rem;
+	--padding-top-bottom: 2.5rem;
 	--margin-hr: var(--padding-left-right);
 	--width-social-media-container: 8rem;
 	--max-width-wide-container: 1200px;
