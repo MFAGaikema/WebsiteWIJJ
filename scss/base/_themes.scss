@@ -40,6 +40,12 @@
 		background-image: url(/assets/images//bg-images/DEF_WIJJ_oranjeklein.png);
 	}
 
+	&.huishoudelijke-hulp {
+		.background-image {
+			background-image: url(/assets/images//bg-images/DEF_WIJJ_oranjehuishoudelijkehulp.png);
+		}
+	}
+
 	main {
 		.text-container {
 			display: block;
@@ -84,24 +90,10 @@
 		aspect-ratio: 3 / 1;
 	}
 
-	main {
-		.intro {
-			background-color: #cbe8ed;
+	&.dit-is-wijj {
+		.background-image {
+			background-image: url(/assets/images/bg-images/DEF_WIJJ_DitIsWijj.png);
 		}
-
-		.text-container {
-			display: block;
-			text-align: start;
-		}
-	}
-}
-
-.theme-ontmoet-het-team-van-wijj {
-	@include mixins.theme-colors(green);
-
-	.background-image {
-		background-image: url(/assets/images/bg-images/DEF_WIJJ_mozaiekklein.png);
-		aspect-ratio: 3 / 1;
 	}
 
 	main {
@@ -110,6 +102,7 @@
 		}
 
 		.text-container {
+			display: block;
 			text-align: start;
 		}
 	}

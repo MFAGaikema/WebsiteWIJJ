@@ -346,6 +346,9 @@ ul {
 .theme-zorgen .background-image {
   background-image: url(/assets/images//bg-images/DEF_WIJJ_oranjeklein.png);
 }
+.theme-zorgen.huishoudelijke-hulp .background-image {
+  background-image: url(/assets/images//bg-images/DEF_WIJJ_oranjehuishoudelijkehulp.png);
+}
 .theme-zorgen main .text-container {
   display: block;
   text-align: start;
@@ -495,53 +498,14 @@ ul {
   background-image: url(/assets/images/bg-images/DEF_WIJJ_mozaiekklein.png);
   aspect-ratio: 3/1;
 }
+.theme-over-ons.dit-is-wijj .background-image {
+  background-image: url(/assets/images/bg-images/DEF_WIJJ_DitIsWijj.png);
+}
 .theme-over-ons main .intro {
   background-color: #cbe8ed;
 }
 .theme-over-ons main .text-container {
   display: block;
-  text-align: start;
-}
-
-.theme-ontmoet-het-team-van-wijj h1,
-.theme-ontmoet-het-team-van-wijj h2,
-.theme-ontmoet-het-team-van-wijj h3,
-.theme-ontmoet-het-team-van-wijj h4,
-.theme-ontmoet-het-team-van-wijj a:not(.contact-btn),
-.theme-ontmoet-het-team-van-wijj i {
-  color: var(--standard-green);
-}
-.theme-ontmoet-het-team-van-wijj main .intro {
-  background-color: var(--bg-green);
-}
-.theme-ontmoet-het-team-van-wijj .contact-container {
-  background-color: var(--contact-container-green);
-}
-.theme-ontmoet-het-team-van-wijj .contact-container a {
-  color: var(--standard-green);
-}
-.theme-ontmoet-het-team-van-wijj .contact-btn,
-.theme-ontmoet-het-team-van-wijj .footer-bottom-container {
-  background-color: var(--dark-green);
-}
-.theme-ontmoet-het-team-van-wijj .contact-btn:hover {
-  background-color: var(--standard-green);
-}
-.theme-ontmoet-het-team-van-wijj .download-btn {
-  color: var(--standard-green);
-}
-.theme-ontmoet-het-team-van-wijj .contact-details-container a:hover,
-.theme-ontmoet-het-team-van-wijj .contact-details-container i:hover {
-  color: var(--dark-green);
-}
-.theme-ontmoet-het-team-van-wijj .background-image {
-  background-image: url(/assets/images/bg-images/DEF_WIJJ_mozaiekklein.png);
-  aspect-ratio: 3/1;
-}
-.theme-ontmoet-het-team-van-wijj main .intro {
-  background-color: #cbe8ed;
-}
-.theme-ontmoet-het-team-van-wijj main .text-container {
   text-align: start;
 }
 
