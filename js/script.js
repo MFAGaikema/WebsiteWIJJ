@@ -7,6 +7,7 @@
 //general
 const header = document.querySelector('header');
 const headerLogoLink = document.querySelector('.header-logo');
+const copyright = document.querySelector('.copyright');
 
 //mobile-tablet elements
 const navbarToggleBtn = document.querySelector('.navbar-toggle-btn');
@@ -16,8 +17,6 @@ const mobileTabletNavMenu = document.getElementById('mobile-tablet-navbar');
 //desktop elements
 const introSection = document.querySelector('.intro');
 const secondSection = document.querySelectorAll('section')[1];
-//const coachenLink = document.querySelector('.dropdown-link-coachen');
-//const overonsLink = document.querySelector('.dropdown-link-overons');
 const dropdownLinks = document.querySelectorAll('.dropdown-link');
 const otherNavLinks = Array.from(
 	document.querySelectorAll('.nav-list > li > a')
@@ -26,8 +25,6 @@ const rightNavbarContainer = document.querySelector(
 	'#desktop-navbar .nav-right-container'
 );
 
-//const coachenBtn = document.querySelector('.coachen-btn');
-//const overonsBtn = document.querySelector('.overons-btn');
 const dropdownBtns = document.querySelectorAll('.dropdown-btn');
 
 const coachenMenu = document.getElementById('coachen-menu');
@@ -96,6 +93,11 @@ navLinks.forEach((link) => {
 		link.removeAttribute('aria-current', 'page');
 	}
 });
+
+//Generate current year for footer
+const currentYear = new Date().getFullYear();
+
+copyright.innerText = `WIJJ \u00A9 ${currentYear}`;
 
 ////////////////////////////////////////////////
 ////////FUNCTIONS FOR MOBILE DEVICES////////////
