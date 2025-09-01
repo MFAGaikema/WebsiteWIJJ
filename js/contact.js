@@ -91,6 +91,7 @@ const formValidation = (data) => {
 	fieldValidation(requiredFields);
 };
 
+//FUNCTIONS FOR FORM PROCESSING
 const showComfirmation = () => {
 	form.reset();
 	form.style.display = 'none';
@@ -143,6 +144,7 @@ form.addEventListener('submit', async (e) => {
 	e.preventDefault();
 
 	const formData = new FormData(form);
+
 	const data = Object.fromEntries(formData.entries());
 
 	// Stop if honeypot is filled (only bots do that)
@@ -161,6 +163,19 @@ form.addEventListener('submit', async (e) => {
 		generalError.style = 'display: none';
 		return;
 	}
+
+	//generate a contactnumber for the data-object to be send to Make
+	const now = new Date();
+	const hours = String(now.getHours()).padStart(2, '0');
+	const minutes = String(now.getMinutes()).padStart(2, '0');
+	const seconds = String(now.getSeconds()).padStart(2, '0');
+	const milliseconds = String(now.getMilliseconds()).padStart(3, '0');
+
+	const number = `${hours}${minutes}${seconds}${milliseconds}`;
+
+	const contactNumber = `${currentYear} - ${number}`;
+
+	data['contactNumber'] = contactNumber;
 
 	fetchAndSendDataForEmail(data);
 

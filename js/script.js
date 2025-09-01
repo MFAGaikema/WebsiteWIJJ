@@ -51,6 +51,9 @@ const generalError = document.querySelector('.general-error');
 ///////////////GENERAL FUNCTIONS////////////////
 ////////////////////////////////////////////////
 
+//VARIABLES
+const currentYear = new Date().getFullYear();
+
 //check if menu is expanded
 const menuIsExpanded = (button) => {
 	return button.getAttribute('aria-expanded') === 'true';
@@ -95,8 +98,6 @@ navLinks.forEach((link) => {
 });
 
 //Generate current year for footer
-const currentYear = new Date().getFullYear();
-
 copyright.innerText = `WIJJ \u00A9 ${currentYear}`;
 
 ////////////////////////////////////////////////
