@@ -8,43 +8,37 @@
 		<link
 			rel="icon"
 			href="/Assets/Images/favicon_io/favicon.ico"
-			type="image/x-icon"
-		/>
+			type="image/x-icon" />
 
 		<!-- PNG favicons voor verschillende formaten -->
 		<link
 			rel="icon"
 			href="/Assets/Images/favicon_io/favicon-32x32.png"
 			type="image/png"
-			sizes="32x32"
-		/>
+			sizes="32x32" />
 		<link
 			rel="icon"
 			href="/Assets/Images/favicon_io/favicon-16x16.png"
 			type="image/png"
-			sizes="16x16"
-		/>
+			sizes="16x16" />
 
 		<!-- Apple Touch Icon voor iOS-apparaten -->
 		<link
 			rel="apple-touch-icon"
 			href="/Assets/Images/favicon_io/apple-touch-icon.png"
-			sizes="180x180"
-		/>
+			sizes="180x180" />
 
 		<!-- Android Chrome iconen -->
 		<link
 			rel="icon"
 			href="/Assets/Images/favicon_io/android-chrome-192x192.png"
 			type="image/png"
-			sizes="192x192"
-		/>
+			sizes="192x192" />
 		<link
 			rel="icon"
 			href="/Assets/Images/favicon_io/android-chrome-512x512.png"
 			type="image/png"
-			sizes="512x512"
-		/>
+			sizes="512x512" />
 
 		<!-- Web App Manifest -->
 		<link rel="manifest" href="/Assets/Images/favicon_io/site.webmanifest" />
@@ -53,18 +47,15 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
-			rel="stylesheet"
-		/>
+			rel="stylesheet" />
 		<link rel="stylesheet" href="/css/style.css" />
 		<link
 			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-		/>
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
 		<script
 			src="https://kit.fontawesome.com/d4e6b0151b.js"
-			crossorigin="anonymous"
-		></script>
+			crossorigin="anonymous"></script>
 		<script defer src="/js/script.js"></script>
 	</head>
 	<body class="theme-coachen">
@@ -72,15 +63,14 @@
 
 		<header>
 			<div class="header-container wide-container">
-				<a class="header-logo" href="/">
+				<a class="header-logo" href="/" aria-current="page">
 					<img src="/assets/images/logos/LogoWIJJ.svg" alt="WIJJ" />
 				</a>
 				<button
 					aria-expanded="false"
 					aria-controls="mobile-tablet-navbar"
 					class="navbar-toggle-btn"
-					aria-label="Open navigatie"
-				>
+					aria-label="Open navigatie">
 					<i class="fa-solid fa-bars fa-2xl"></i>
 				</button>
 				<nav id="mobile-tablet-navbar" hidden>
@@ -92,10 +82,11 @@
 									<i class="fa-solid fa-chevron-right"></i>
 									<a href="/uwv-trajecten">UWV trajecten</a>
 								</li>
-
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/gemeentelijk-traject">Gemeentelijk traject </a>
+									<a href="/gemeentelijke-trajecten"
+										>Gemeentelijke trajecten
+									</a>
 								</li>
 							</ul>
 						</li>
@@ -121,12 +112,12 @@
 							<ul class="sub-menu link-list">
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/uitzenden-op-maat">Uitzenden-op-maat</a>
+									<a href="/uitzenden-op-maat">Uitzenden op maat</a>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<a href="/over-ons">Over ons</a>
+							<a href="/over-ons">Over Ons</a>
 							<ul class="sub-menu link-list">
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
@@ -150,8 +141,7 @@
 							<a
 								href="/zoeken"
 								aria-label="Ga naar zoekpagina"
-								class="search-btn"
-							>
+								class="search-btn">
 								<i class="fa-solid fa-magnifying-glass"></i>
 							</a>
 							<a href="/contact" class="contact-btn">Contact</a>
@@ -169,8 +159,7 @@
 									aria-label="Coachen menu uitklappen"
 									aria-haspopup="true"
 									aria-expanded="false"
-									aria-controls="coachen-menu"
-								>
+									aria-controls="coachen-menu">
 									<i class="fa-solid fa-chevron-down"></i>
 								</button>
 							</div>
@@ -178,9 +167,8 @@
 								<li>
 									<a href="/uwv-trajecten">UWV trajecten</a>
 								</li>
-
 								<li>
-									<a href="/gemeentelijk-traject">Gemeentelijk traject</a>
+									<a href="/gemeentelijke-trajecten">Gemeentelijke trajecten</a>
 								</li>
 							</ul>
 						</li>
@@ -193,8 +181,7 @@
 									aria-label="Zorgen menu uitklappen"
 									aria-haspopup="true"
 									aria-expanded="false"
-									aria-controls="zorgen-menu"
-								>
+									aria-controls="zorgen-menu">
 									<i class="fa-solid fa-chevron-down"></i>
 								</button>
 							</div>
@@ -219,8 +206,7 @@
 									aria-label="Werken menu uitklappen"
 									aria-haspopup="true"
 									aria-expanded="false"
-									aria-controls="werken-menu"
-								>
+									aria-controls="werken-menu">
 									<i class="fa-solid fa-chevron-down"></i>
 								</button>
 							</div>
@@ -232,15 +218,14 @@
 						</li>
 						<li>
 							<div class="dropdown-nav-item">
-								<a class="dropdown-link" href="/over-ons">Over ons </a>
+								<a class="dropdown-link" href="/over-ons">Over Ons </a>
 								<button
 									class="dropdown-btn"
 									data-label="Over ons"
 									aria-label="Over ons menu uitklappen"
 									aria-haspopup="true"
 									aria-expanded="false"
-									aria-controls="overons-menu"
-								>
+									aria-controls="overons-menu">
 									<i class="fa-solid fa-chevron-down"></i>
 								</button>
 							</div>
@@ -262,8 +247,7 @@
 							<a
 								href="/zoeken"
 								aria-label="Ga naar zoekpagina"
-								class="search-btn"
-							>
+								class="search-btn">
 								<i class="fa-solid fa-magnifying-glass"></i>
 							</a>
 							<a href="/contact" class="contact-btn">Contact</a>
@@ -277,50 +261,69 @@
 			<section id="main-content" class="intro">
 				<h1>WIJJ coachen</h1>
 				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero modi
-					voluptatem odio nisi aperiam inventore obcaecati explicabo neque
-					beatae, recusandae error aspernatur ipsum, optio ut accusantium
-					officia fugit est corporis?
-				</p>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero modi
-					voluptatem odio nisi aperiam inventore obcaecati explicabo neque
-					beatae, recusandae error aspernatur ipsum, optio ut accusantium
-					officia fugit est corporis?
+					Bij WIJJ Coachen geloven we dat iedereen recht heeft op richting,
+					ontwikkeling en toekomst. Of je nu bent vastgelopen, opnieuw wilt
+					beginnen of juist werk wilt behouden ondanks uitdagingen: wij staan
+					naast je. Als betrokken team van coaches helpen we mensen vooruit –
+					stap voor stap, met oog voor wie je bent en wat jij nodig hebt.
 				</p>
 			</section>
 			<section>
 				<div class="text-container">
-					<h2 class="small">Werkplezier draagt bij aan levensplezier</h2>
 					<p>
-						Onze filosofie is even eenvoudig als krachtig: werkplezier draagt
-						bij aan levensplezier. Daarom maken we dienstverlening simpel en
-						doeltreffend. We geloven dat wanneer mensen met plezier werken, ze
-						niet alleen groeien in hun vak, maar ook in hun leven. Samenwerken
-						met onze kandidaten voor beter werk voor beter leven.
+						WIJJ Coachen is gespecialiseerd in begeleiding bij re-integratie,
+						persoonlijke ontwikkeling en duurzame inzetbaarheid. We werken in
+						opdracht van het UWV, gemeenten en werkgevers, en bieden trajecten
+						op maat. Of je nu vanuit een uitkeringssituatie komt of al werk
+						hebt, maar vastloopt: wij denken in mogelijkheden. Onze aanpak is
+						mensgericht, praktisch en altijd gericht op duurzame stappen
+						vooruit.
+					</p>
+					<p>
+						We combineren bewezen methodieken met écht contact en betrokkenheid.
+						Bij WIJJ ben je geen dossier, maar onderdeel van een team dat in jou
+						gelooft. Samen creëren we ruimte voor herstel, groei en toekomst.
 					</p>
 				</div>
 			</section>
 			<hr />
 			<section>
 				<div class="text-container">
-					<h2 class="small">Werkplezier draagt bij aan levensplezier</h2>
-					<p>
-						Onze filosofie is even eenvoudig als krachtig: werkplezier draagt
-						bij aan levensplezier. Daarom maken we dienstverlening simpel en
-						doeltreffend. We geloven dat wanneer mensen met plezier werken, ze
-						niet alleen groeien in hun vak, maar ook in hun leven. Samenwerken
-						met onze kandidaten voor beter werk voor beter leven. Wij bieden de
-						volgende diensten aan:
-					</p>
-					<ul class="link-list">
+					<h2 class="small">Onze diensten:</h2>
+					<ul class="services-list">
 						<li>
-							<i class="fa-solid fa-chevron-right"></i>
-							<a href="/uwv-trajecten">UWV trajecten</a>
+							<h3 class="small">UWV trajecten</h3>
+							<p>
+								Zoals Werkfit maken, Naar Werk, Modulaire Re-integratie en
+								Werkbehoud.
+							</p>
+							<a href="/uwv-trajecten"
+								><i class="fa-solid fa-chevron-right"></i>Lees meer over onze
+								UWV trajecten</a
+							>
 						</li>
 						<li>
-							<i class="fa-solid fa-chevron-right"></i>
-							<a href="/gemeentelijk-traject">Gemeentelijk traject</a>
+							<h3 class="small">Gemeentelijke trajecten</h3>
+							<p>
+								Denk aan participatietrajecten, arbeidsmatige dagbesteding,
+								sociale activering en coaching richting werk.
+							</p>
+							<a href="/gemeentelijke-trajecten"
+								><i class="fa-solid fa-chevron-right"></i>Lees meer over onze
+								gemeentelijke trajecten</a
+							>
+						</li>
+						<li>
+							<h3 class="small">Jobcoaching</h3>
+							<p>
+								Wij bieden persoonlijke jobcoaching op de werkvloer voor mensen
+								die ondersteuning nodig hebben om werk te behouden of succesvol
+								in te stromen.
+							</p>
+							<a href="/jobcoaching"
+								><i class="fa-solid fa-chevron-right"></i>Lees meer over onze
+								jobcoaching</a
+							>
 						</li>
 					</ul>
 					<a href="/contact" class="contact-btn blue large">
@@ -355,14 +358,12 @@
 									<a aria-label="Bezoek onze Facebook pagina" href=""
 										><i
 											aria-hidden="true"
-											class="fa-brands fa-square-facebook"
-										></i
+											class="fa-brands fa-square-facebook"></i
 									></a>
 									<a aria-label="Bezoek onze Instagram" href="http://"
 										><i
 											aria-hidden="true"
-											class="fa-brands fa-square-instagram"
-										></i
+											class="fa-brands fa-square-instagram"></i
 									></a>
 									<a aria-label="Bezoek onze Linkedin pagina" href="http://"
 										><i aria-hidden="true" class="fa-brands fa-linkedin"></i
@@ -380,20 +381,17 @@
 					<a target="_blank" href="https://www.blikopwerk.nl/">
 						<img
 							src="/assets/images/logos/blik-op-werk-logo.png"
-							alt="Blik op werk"
-						/>
+							alt="Blik op werk" />
 					</a>
 					<a target="_blank" href="https://www.s-bb.nl/">
 						<img
 							src="/assets/images/logos/sbb-logo.png"
-							alt="Samenwerkingsorganisatie Beroepsonderwijs Bedrijfsleven"
-						/>
+							alt="Samenwerkingsorganisatie Beroepsonderwijs Bedrijfsleven" />
 					</a>
 					<a target="_blank" href="https://bvkz.nl/">
 						<img
 							src="/assets/images/logos/LogoBVKZtransparent.png"
-							alt="Branchevereniging kleinschalige zorg"
-						/>
+							alt="Branchevereniging kleinschalige zorg" />
 					</a>
 				</div>
 			</div>

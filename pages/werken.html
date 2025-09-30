@@ -8,43 +8,37 @@
 		<link
 			rel="icon"
 			href="/Assets/Images/favicon_io/favicon.ico"
-			type="image/x-icon"
-		/>
+			type="image/x-icon" />
 
 		<!-- PNG favicons voor verschillende formaten -->
 		<link
 			rel="icon"
 			href="/Assets/Images/favicon_io/favicon-32x32.png"
 			type="image/png"
-			sizes="32x32"
-		/>
+			sizes="32x32" />
 		<link
 			rel="icon"
 			href="/Assets/Images/favicon_io/favicon-16x16.png"
 			type="image/png"
-			sizes="16x16"
-		/>
+			sizes="16x16" />
 
 		<!-- Apple Touch Icon voor iOS-apparaten -->
 		<link
 			rel="apple-touch-icon"
 			href="/Assets/Images/favicon_io/apple-touch-icon.png"
-			sizes="180x180"
-		/>
+			sizes="180x180" />
 
 		<!-- Android Chrome iconen -->
 		<link
 			rel="icon"
 			href="/Assets/Images/favicon_io/android-chrome-192x192.png"
 			type="image/png"
-			sizes="192x192"
-		/>
+			sizes="192x192" />
 		<link
 			rel="icon"
 			href="/Assets/Images/favicon_io/android-chrome-512x512.png"
 			type="image/png"
-			sizes="512x512"
-		/>
+			sizes="512x512" />
 
 		<!-- Web App Manifest -->
 		<link rel="manifest" href="/Assets/Images/favicon_io/site.webmanifest" />
@@ -53,18 +47,15 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
-			rel="stylesheet"
-		/>
+			rel="stylesheet" />
 		<link rel="stylesheet" href="/css/style.css" />
 		<link
 			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-		/>
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
 		<script
 			src="https://kit.fontawesome.com/d4e6b0151b.js"
-			crossorigin="anonymous"
-		></script>
+			crossorigin="anonymous"></script>
 		<script defer src="js/script.js"></script>
 	</head>
 	<body class="theme-werken">
@@ -72,15 +63,14 @@
 
 		<header>
 			<div class="header-container wide-container">
-				<a class="header-logo" href="/">
+				<a class="header-logo" href="/" aria-current="page">
 					<img src="/assets/images/logos/LogoWIJJ.svg" alt="WIJJ" />
 				</a>
 				<button
 					aria-expanded="false"
 					aria-controls="mobile-tablet-navbar"
 					class="navbar-toggle-btn"
-					aria-label="Open navigatie"
-				>
+					aria-label="Open navigatie">
 					<i class="fa-solid fa-bars fa-2xl"></i>
 				</button>
 				<nav id="mobile-tablet-navbar" hidden>
@@ -92,10 +82,11 @@
 									<i class="fa-solid fa-chevron-right"></i>
 									<a href="/uwv-trajecten">UWV trajecten</a>
 								</li>
-
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
-									<a href="/gemeentelijk-traject">Gemeentelijk traject </a>
+									<a href="/gemeentelijke-trajecten"
+										>Gemeentelijke trajecten
+									</a>
 								</li>
 							</ul>
 						</li>
@@ -110,6 +101,10 @@
 									<i class="fa-solid fa-chevron-right"></i>
 									<a href="/safe-houses">Safe houses</a>
 								</li>
+								<li>
+									<i class="fa-solid fa-chevron-right"></i>
+									<a href="/wmo-begeleiding">WMO begeleiding</a>
+								</li>
 							</ul>
 						</li>
 						<li>
@@ -122,7 +117,7 @@
 							</ul>
 						</li>
 						<li>
-							<a href="/over-ons">Over ons</a>
+							<a href="/over-ons">Over Ons</a>
 							<ul class="sub-menu link-list">
 								<li>
 									<i class="fa-solid fa-chevron-right"></i>
@@ -146,8 +141,7 @@
 							<a
 								href="/zoeken"
 								aria-label="Ga naar zoekpagina"
-								class="search-btn"
-							>
+								class="search-btn">
 								<i class="fa-solid fa-magnifying-glass"></i>
 							</a>
 							<a href="/contact" class="contact-btn">Contact</a>
@@ -165,8 +159,7 @@
 									aria-label="Coachen menu uitklappen"
 									aria-haspopup="true"
 									aria-expanded="false"
-									aria-controls="coachen-menu"
-								>
+									aria-controls="coachen-menu">
 									<i class="fa-solid fa-chevron-down"></i>
 								</button>
 							</div>
@@ -174,9 +167,8 @@
 								<li>
 									<a href="/uwv-trajecten">UWV trajecten</a>
 								</li>
-
 								<li>
-									<a href="/gemeentelijk-traject">Gemeentelijk traject</a>
+									<a href="/gemeentelijke-trajecten">Gemeentelijke trajecten</a>
 								</li>
 							</ul>
 						</li>
@@ -189,8 +181,7 @@
 									aria-label="Zorgen menu uitklappen"
 									aria-haspopup="true"
 									aria-expanded="false"
-									aria-controls="zorgen-menu"
-								>
+									aria-controls="zorgen-menu">
 									<i class="fa-solid fa-chevron-down"></i>
 								</button>
 							</div>
@@ -200,6 +191,9 @@
 								</li>
 								<li>
 									<a href="/safe-houses">Safe houses</a>
+								</li>
+								<li>
+									<a href="/wmo-begeleiding">WMO begeleiding</a>
 								</li>
 							</ul>
 						</li>
@@ -212,8 +206,7 @@
 									aria-label="Werken menu uitklappen"
 									aria-haspopup="true"
 									aria-expanded="false"
-									aria-controls="werken-menu"
-								>
+									aria-controls="werken-menu">
 									<i class="fa-solid fa-chevron-down"></i>
 								</button>
 							</div>
@@ -225,15 +218,14 @@
 						</li>
 						<li>
 							<div class="dropdown-nav-item">
-								<a class="dropdown-link" href="/over-ons">Over ons </a>
+								<a class="dropdown-link" href="/over-ons">Over Ons </a>
 								<button
 									class="dropdown-btn"
 									data-label="Over ons"
 									aria-label="Over ons menu uitklappen"
 									aria-haspopup="true"
 									aria-expanded="false"
-									aria-controls="overons-menu"
-								>
+									aria-controls="overons-menu">
 									<i class="fa-solid fa-chevron-down"></i>
 								</button>
 							</div>
@@ -255,8 +247,7 @@
 							<a
 								href="/zoeken"
 								aria-label="Ga naar zoekpagina"
-								class="search-btn"
-							>
+								class="search-btn">
 								<i class="fa-solid fa-magnifying-glass"></i>
 							</a>
 							<a href="/contact" class="contact-btn">Contact</a>
@@ -269,73 +260,74 @@
 		<main>
 			<section id="main-content" class="intro">
 				<h1>WIJJ werken</h1>
+				<p><strong> Samen aan de slag. Op maat. Met perspectief. </strong></p>
 				<p>
-					WIJJ heeft als visie dat het persoonlijke weer terug moet keren in de
-					uitzendbranche. Hoe? Door persoonlijk het gesprek aan te gaan met
-					werkgever en werkzoekenden om de wensen van beide partijen te
-					onderzoeken. Op deze manier is WIJJ er van overtuigt om dé juiste
-					matches te kunnen creëren.
+					Bij WIJJ Werken geloven we dat iedereen een plek verdient op de
+					arbeidsmarkt. Werk geeft structuur, zelfvertrouwen en kansen en wij
+					helpen mensen om die stap te zetten. Of je nu al langere tijd
+					thuiszit, uit een re-integratietraject komt of vastloopt op je werk:
+					WIJJ Werken staat voor je klaar.
 				</p>
 			</section>
 			<section>
 				<div class="text-container">
-					<h2>Hoe werkt werken via WIJJ?</h2>
 					<p>
-						Volgens WIJJ draait de uitzendbranche om het bijdragen en helpen in
-						het werkgeluk van werkzoekenden aan de ene kant en aan de andere
-						kant het ondersteunen van werkgevers/opdrachtgevers in het oplossen
-						van personeelstekorten/HR vraagstukken. Daarom gaat WIJJ graag het
-						gesprek aan met werkzoekenden om achter de motivatie en beweegreden
-						van de kandidaat te komen. Wat wil je graag, waar ben je goed in,
-						maar voornamelijk het allerbelangrijkste, wat vind je leuk om te
-						doen?
+						We kijken niet naar beperkingen, maar naar mogelijkheden. Met
+						maatwerk, begeleiding en echte aandacht zorgen we dat mensen
+						duurzaam aan het werk kunnen. Daarbij werken we nauw samen met
+						werkgevers die openstaan voor sociaal ondernemerschap en
+						maatschappelijke impact.
 					</p>
 					<p>
-						Nu is het tijd om dat anders te doen: bij WIJJ staat de kandidaat
-						altijd centraal. Beter werk en beter betaald. Daar gaan wij voor!
+						WIJJ Werken is er voor mensen met een afstand tot de arbeidsmarkt én
+						voor organisaties die hen een kans willen geven. We begeleiden,
+						matchen, coachen én blijven betrokken, ook ná plaatsing.
 					</p>
 				</div>
 			</section>
 			<hr />
 			<section>
-				<div class="content-wrapper text-container">
-					<article>
-						<img src="/assets/images/icons/WijjWerkenJobPurple.png" alt="" />
-						<h3>Voor werkzoekenden: wij willen met jou in gesprek</h3>
-						<p>
-							WIJJ gaan graag het gesprek aan met werkzoekenden om achter de
-							motivatie en beweegredenen van de kandidaat te komen. Wat wil je
-							graag, waar ben je goed in, maar vooral het allerbelangrijkste:
-							wat vind je leuk om te doen? Want daar gaat het om.
-						</p>
-						<p>
-							Tussen de duizenden uitzendaanbieders is het daarom dus hoog tijd
-							om dat eens anders te doen. Bij WIJJ staat de kandidaat altijd
-							centraal! Wij luisteren en zoeken naar beter werk dat beter
-							betaalt.
-						</p>
-					</article>
-					<article>
-						<img
-							src="/assets/images/icons/WIJJWerkenUserGlassPurple.png"
-							alt=""
-						/>
-						<h3>Voor opdrachtgevers: wij helpen werkgevers</h3>
-						<p>
-							Voor de opdrachtgever zullen WIJJ een sparringpartner zijn die
-							zich transparant opstelt en een luisterend oor biedt.
-						</p>
-						<p>
-							WIJJ profileren ons dan ook als een transparante en eerlijke
-							organisatie die voor elke opdrachtgever een zelfde kostprijs zal
-							hanteren.
-						</p>
-						<p>
-							WIJJ willen ons dan ook graag hard maken voor de
-							werkgever/opdrachtgever om middels de persoonlijke gesprekken met
-							de kandidaat een juiste match te kunnen creëren.
-						</p>
-					</article>
+				<div class="text-container">
+					<h2 class="small">Onze diensten:</h2>
+					<div class="article-container">
+						<article>
+							<img src="/assets/images/icons/WijjWerkenJobPurple.png" alt="" />
+							<h3 class="small">Uitzenden op maat</h3>
+							<h4 class="small">
+								Voor mensen met een afstand tot de arbeidsmarkt die via WIJJ
+								Werken aan het werk gaan
+							</h4>
+							<p>
+								Wij bieden geen standaard uitzenden, maar écht maatwerk. We
+								begeleiden werkzoekenden intensief naar een passende werkplek en
+								zorgen voor een warme landing op de werkvloer. Inclusief
+								jobcoaching waar nodig.
+							</p>
+							<p>
+								<a href="/uitzenden-op-maat"
+									>Lees meer over uitzenden op maat</a
+								>
+							</p>
+						</article>
+						<article>
+							<img
+								src="/assets/images/icons/WIJJWerkenUserGlassPurple.png"
+								alt="" />
+							<h3 class="small">Werkgevers en partners</h3>
+							<h4 class="small">
+								Voor werkgevers die met WIJJ Werken willen samenwerken
+							</h4>
+							<p>
+								Wij helpen organisaties aan gemotiveerde medewerkers én bieden
+								ondersteuning op de werkvloer. Als partner in sociaal ondernemen
+								denken we mee in praktische oplossingen die werken voor mens én
+								bedrijf.
+							</p>
+							<p>
+								<a href="/">Lees meer over werkgevers en partners</a>
+							</p>
+						</article>
+					</div>
 				</div>
 			</section>
 			<hr />
@@ -371,14 +363,12 @@
 									<a aria-label="Bezoek onze Facebook pagina" href=""
 										><i
 											aria-hidden="true"
-											class="fa-brands fa-square-facebook"
-										></i
+											class="fa-brands fa-square-facebook"></i
 									></a>
 									<a aria-label="Bezoek onze Instagram" href="http://"
 										><i
 											aria-hidden="true"
-											class="fa-brands fa-square-instagram"
-										></i
+											class="fa-brands fa-square-instagram"></i
 									></a>
 									<a aria-label="Bezoek onze Linkedin pagina" href="http://"
 										><i aria-hidden="true" class="fa-brands fa-linkedin"></i
@@ -396,20 +386,17 @@
 					<a target="_blank" href="https://www.blikopwerk.nl/">
 						<img
 							src="/assets/images/logos/blik-op-werk-logo.png"
-							alt="Blik op werk"
-						/>
+							alt="Blik op werk" />
 					</a>
 					<a target="_blank" href="https://www.s-bb.nl/">
 						<img
 							src="/assets/images/logos/sbb-logo.png"
-							alt="Samenwerkingsorganisatie Beroepsonderwijs Bedrijfsleven"
-						/>
+							alt="Samenwerkingsorganisatie Beroepsonderwijs Bedrijfsleven" />
 					</a>
 					<a target="_blank" href="https://bvkz.nl/">
 						<img
 							src="/assets/images/logos/LogoBVKZtransparent.png"
-							alt="Branchevereniging kleinschalige zorg"
-						/>
+							alt="Branchevereniging kleinschalige zorg" />
 					</a>
 				</div>
 			</div>

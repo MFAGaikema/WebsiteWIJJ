@@ -1,0 +1,47 @@
+.team-member-container {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+
+	.team-member {
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		flex: 0 1 auto;
+		gap: 1em;
+
+		@media (min-width: 768px) {
+			flex-direction: row;
+
+			&:nth-child(even) {
+				flex-direction: row-reverse;
+			}
+		}
+
+		img {
+			height: unset;
+			width: 100%;
+			aspect-ratio: 1 / 1;
+			object-fit: cover;
+			border-radius: 10px;
+			margin: 0;
+
+			@media (min-width: 480px) {
+				width: 40%;
+			}
+		}
+
+		h4 {
+			margin-bottom: 0.25em;
+		}
+
+		h5 {
+			margin-bottom: 1em;
+		}
+
+		.team-member-info {
+			text-align: start;
+			margin-top: 5px;
+		}
+	}
+}

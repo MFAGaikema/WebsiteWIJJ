@@ -1,0 +1,42 @@
+.article-container {
+	@media (min-width: 768px) {
+		--gap: 2rem;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: var(--gap);
+	}
+
+	&.vacatures {
+		article {
+			background-color: var(--intro-bg-purple);
+			border-radius: 10px;
+		}
+	}
+
+	article {
+		@media (min-width: 768px) {
+			flex: 0 0 calc(50% - var(--gap));
+		}
+
+		&:not(:last-of-type) {
+			margin-bottom: 2em;
+
+			@media (min-width: 1025px) {
+				margin-bottom: 0;
+			}
+		}
+
+		p:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+
+		img {
+			display: block;
+			margin-inline: auto;
+			height: 3.75em;
+			width: auto;
+			margin-bottom: 1em;
+		}
+	}
+}

@@ -18,7 +18,8 @@ input[type='submit'] {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
 	font-weight: 500;
 }
 
@@ -61,6 +62,15 @@ h3 {
 
 h4 {
 	font-size: 1.125rem;
+
+	&.small {
+		font-size: 1rem;
+		color: #000 !important;
+	}
+}
+
+h5 {
+	font-size: 1rem;
 }
 
 nav {
@@ -80,7 +90,7 @@ a {
 	text-decoration: none;
 	color: var(--standard-green);
 
-	&:not(:has(i)):hover {
+	&:hover {
 		text-decoration: underline;
 	}
 

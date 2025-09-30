@@ -121,7 +121,8 @@ input[type=submit] {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   font-weight: 500;
 }
 
@@ -163,6 +164,14 @@ h3.small {
 h4 {
   font-size: 1.125rem;
 }
+h4.small {
+  font-size: 1rem;
+  color: #000 !important;
+}
+
+h5 {
+  font-size: 1rem;
+}
 
 nav {
   font-size: 1rem;
@@ -180,7 +189,7 @@ a {
   text-decoration: none;
   color: var(--standard-green);
 }
-a:not(:has(i)):hover {
+a:hover {
   text-decoration: underline;
 }
 a:has(i) i:hover {
@@ -265,6 +274,9 @@ ul {
 }
 .theme-home .background-image {
   background-image: url(/assets/images/bg-images/DEF_WIJJ_intro.png);
+}
+.theme-home main section {
+  text-align: center;
 }
 .theme-home main .intro {
   background-color: #fff;
@@ -569,9 +581,6 @@ input[type=submit]:focus-visible {
 }
 
 .text-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   max-width: var(--max-width-text-container);
   margin-inline: auto;
 }
@@ -722,8 +731,10 @@ main.coachen section:nth-child(2), main.zorgen section:nth-child(2), main.werken
 }
 
 section {
-  text-align: center;
   padding: var(--padding-top-bottom) var(--padding-left-right);
+}
+section.intro {
+  text-align: center;
 }
 section:not(.intro) {
   width: 100%;
@@ -1145,7 +1156,7 @@ hr {
 }
 
 @media (min-width: 768px) {
-  .content-wrapper {
+  .article-container {
     --gap: 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -1153,37 +1164,40 @@ hr {
     gap: var(--gap);
   }
 }
-.content-wrapper.vacatures article {
+.article-container.vacatures article {
   background-color: var(--intro-bg-purple);
-  padding: 10px;
   border-radius: 10px;
 }
 @media (min-width: 768px) {
-  .content-wrapper article {
+  .article-container article {
     flex: 0 0 calc(50% - var(--gap));
   }
 }
-.content-wrapper article:not(:last-of-type) {
+.article-container article:not(:last-of-type) {
   margin-bottom: 2em;
 }
 @media (min-width: 1025px) {
-  .content-wrapper article:not(:last-of-type) {
+  .article-container article:not(:last-of-type) {
     margin-bottom: 0;
   }
 }
-.content-wrapper article p.uppercase-bold {
-  text-transform: uppercase;
-  font-weight: 500;
-}
-.content-wrapper article p:not(:last-child) {
+.article-container article p:not(:last-child) {
   margin-bottom: 1rem;
 }
-.content-wrapper article img {
+.article-container article img {
+  display: block;
+  margin-inline: auto;
   height: 3.75em;
   width: auto;
   margin-bottom: 1em;
 }
-.content-wrapper .team-member {
+
+.team-member-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.team-member-container .team-member {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -1191,14 +1205,14 @@ hr {
   gap: 1em;
 }
 @media (min-width: 768px) {
-  .content-wrapper .team-member {
+  .team-member-container .team-member {
     flex-direction: row;
   }
-  .content-wrapper .team-member:nth-child(even) {
+  .team-member-container .team-member:nth-child(even) {
     flex-direction: row-reverse;
   }
 }
-.content-wrapper .team-member img {
+.team-member-container .team-member img {
   height: unset;
   width: 100%;
   aspect-ratio: 1/1;
@@ -1207,17 +1221,17 @@ hr {
   margin: 0;
 }
 @media (min-width: 480px) {
-  .content-wrapper .team-member img {
+  .team-member-container .team-member img {
     width: 40%;
   }
 }
-.content-wrapper .team-member h4 {
+.team-member-container .team-member h4 {
   margin-bottom: 0.25em;
 }
-.content-wrapper .team-member h5 {
+.team-member-container .team-member h5 {
   margin-bottom: 1em;
 }
-.content-wrapper .team-member .team-member-info {
+.team-member-container .team-member .team-member-info {
   text-align: start;
   margin-top: 5px;
 }
@@ -1237,6 +1251,25 @@ i {
 }
 .link-list li a {
   text-transform: none;
+}
+
+.services-list {
+  display: grid;
+  gap: 1rem;
+}
+.services-list li {
+  padding: 5px 10px;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+}
+.services-list p {
+  margin-bottom: 1rem;
+}
+.services-list a {
+  text-transform: none;
+}
+.services-list a i {
+  margin-right: 10px;
 }
 
 .sitemap-list {
