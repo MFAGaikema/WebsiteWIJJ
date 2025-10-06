@@ -1,18 +1,18 @@
 /coachen /pages/coachen.html 200
-/uwv-trajecten /pages/uwv-trajecten.html 200
-/gemeentelijke-trajecten /pages/gemeentelijke-trajecten.html 200
+/coachen/uwv-trajecten /pages/uwv-trajecten.html 200
+/coachen/gemeentelijke-trajecten /pages/gemeentelijke-trajecten.html 200
 
 /zorgen /pages/zorgen.html 200
-/huishoudelijke-hulp /pages/huishoudelijke-hulp.html 200
-/safe-houses /pages/safe-houses.html 200
-/wmo-begeleiding /pages/wmo-begeleiding.html 200
+/zorgen/huishoudelijke-hulp /pages/huishoudelijke-hulp.html 200
+/zorgen/safe-houses /pages/safe-houses.html 200
+/zorgen/wmo-begeleiding /pages/wmo-begeleiding.html 200
 
 /werken /pages/werken.html 200
-/uitzenden-op-maat /pages/uitzenden-op-maat.html 200
+/werken/uitzenden-op-maat /pages/uitzenden-op-maat.html 200
 
 /over-ons /pages/over-ons.html 200
-/dit-is-wijj /pages/dit-is-wijj.html 200
-/ontmoet-het-team-van-wijj /pages/ontmoet-het-team-van-wijj.html 200
+/over-ons/dit-is-wijj /pages/dit-is-wijj.html 200
+/over-ons/ontmoet-het-team-van-wijj /pages/ontmoet-het-team-van-wijj.html 200
 
 /contact /pages/contact.html 200
 

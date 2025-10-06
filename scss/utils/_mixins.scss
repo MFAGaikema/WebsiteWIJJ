@@ -41,4 +41,10 @@
 			color: var(--dark-#{$color});
 		}
 	}
+
+	.services-list {
+		li {
+			border: 3px solid var(--contact-container-#{$color});
+		}
+	}
 }

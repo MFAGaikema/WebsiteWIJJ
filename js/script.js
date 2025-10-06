@@ -182,24 +182,6 @@ const openDropdownMenu = (button, dropdownMenu) => {
 	button.setAttribute('aria-expanded', true);
 	button.setAttribute('aria-label', `${button.dataset.label} menu inklappen`);
 	dropdownMenu.hidden = false;
-
-	// if (button.classList[1] === 'coachen-btn') {
-	// 	button.setAttribute('aria-label', 'Coachen menu inklappen');
-	// 	coachenMenu.hidden = false;
-
-	// 	if (menuIsExpanded(overonsBtn)) {
-	// 		closeDropdownMenu(overonsBtn);
-	// 	}
-	// }
-
-	// if (button.classList[1] === 'overons-btn') {
-	// 	button.setAttribute('aria-label', 'Over ons menu inklappen');
-	// 	overonsMenu.hidden = false;
-
-	// 	if (menuIsExpanded(coachenBtn)) {
-	// 		closeDropdownMenu(coachenBtn);
-	// 	}
-	// }
 };
 
 const closeDropdownMenu = (button, dropdownMenu) => {
@@ -207,16 +189,6 @@ const closeDropdownMenu = (button, dropdownMenu) => {
 	button.setAttribute('aria-expanded', false);
 	button.setAttribute('aria-label', `${button.dataset.label} menu uitklappen`);
 	dropdownMenu.hidden = true;
-
-	// if (button.classList[1] === 'coachen-btn') {
-	// 	button.setAttribute('aria-label', 'Coachen menu uitklappen');
-	// 	coachenMenu.hidden = true;
-	// }
-
-	// if (button.classList[1] === 'overons-btn') {
-	// 	button.setAttribute('aria-label', 'Over ons menu uitklappen');
-	// 	overonsMenu.hidden = true;
-	// }
 };
 
 const getDropdownMenu = (button) => {
@@ -294,7 +266,24 @@ dropdownLinks.forEach((link) => {
 
 //keydown events
 window.addEventListener('keydown', (e) => {
+	//close dropdown on esc key
 	if (e.key === 'Escape') {
 		dropdownBtns.forEach((btn) => closeDropdownMenu(btn, getDropdownMenu(btn)));
+	}
+
+	//close dropdown when focus is not in dropdown menu anymore
+	if (e.key === 'Tab' && !e.shiftKey) {
+		const currentDropdownMenu = e.target.parentElement.parentElement;
+
+		const lastChildofCurrentDropdownMenu =
+			currentDropdownMenu?.lastElementChild.children[0];
+
+		if (lastChildofCurrentDropdownMenu === e.target) {
+			const dropdownId = currentDropdownMenu.id;
+			const currentDropdownBtn = Array.from(dropdownBtns).find(
+				(btn) => btn.ariaControlsElements[0].id === dropdownId
+			);
+			closeDropdownMenu(currentDropdownBtn, currentDropdownMenu);
+		}
 	}
 });

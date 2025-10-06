@@ -272,6 +272,9 @@ ul {
 .theme-home .contact-details-container i:hover {
   color: var(--dark-green);
 }
+.theme-home .services-list li {
+  border: 3px solid var(--contact-container-green);
+}
 .theme-home .background-image {
   background-image: url(/assets/images/bg-images/DEF_WIJJ_intro.png);
 }
@@ -316,6 +319,9 @@ ul {
 .theme-coachen .contact-details-container i:hover {
   color: var(--dark-blue);
 }
+.theme-coachen .services-list li {
+  border: 3px solid var(--contact-container-blue);
+}
 .theme-coachen .background-image {
   background-image: url(/assets/images//bg-images/DEF_WIJJ_blauwklein.png);
 }
@@ -354,6 +360,9 @@ ul {
 .theme-zorgen .contact-details-container a:hover,
 .theme-zorgen .contact-details-container i:hover {
   color: var(--dark-orange);
+}
+.theme-zorgen .services-list li {
+  border: 3px solid var(--contact-container-orange);
 }
 .theme-zorgen .background-image {
   background-image: url(/assets/images//bg-images/DEF_WIJJ_oranjeklein.png);
@@ -397,6 +406,9 @@ ul {
 .theme-werken .contact-details-container i:hover {
   color: var(--dark-purple);
 }
+.theme-werken .services-list li {
+  border: 3px solid var(--contact-container-purple);
+}
 .theme-werken .background-image {
   background-image: url(/assets/images//bg-images/DEF_WIJJ_paarsklein.png);
 }
@@ -432,6 +444,9 @@ ul {
 .theme-contact .contact-details-container i:hover {
   color: var(--dark-green);
 }
+.theme-contact .services-list li {
+  border: 3px solid var(--contact-container-green);
+}
 .theme-contact main {
   margin-top: var(--header-height);
 }
@@ -466,6 +481,9 @@ ul {
 .theme-general .contact-details-container a:hover,
 .theme-general .contact-details-container i:hover {
   color: var(--dark-green);
+}
+.theme-general .services-list li {
+  border: 3px solid var(--contact-container-green);
 }
 .theme-general main {
   margin-top: var(--header-height);
@@ -505,6 +523,9 @@ ul {
 .theme-over-ons .contact-details-container a:hover,
 .theme-over-ons .contact-details-container i:hover {
   color: var(--dark-green);
+}
+.theme-over-ons .services-list li {
+  border: 3px solid var(--contact-container-green);
 }
 .theme-over-ons .background-image {
   background-image: url(/assets/images/bg-images/DEF_WIJJ_mozaiekklein.png);
@@ -990,7 +1011,6 @@ input[type=submit],
 }
 
 .contact-container {
-  background-color: #ebf6f8;
   padding: var(--padding-top-bottom) var(--padding-left-right);
 }
 .contact-container h2 {
@@ -1255,11 +1275,10 @@ i {
 
 .services-list {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
 }
 .services-list li {
   padding: 5px 10px;
-  border: 2px solid lightgray;
   border-radius: 10px;
 }
 .services-list p {
