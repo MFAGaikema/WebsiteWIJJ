@@ -492,6 +492,10 @@ ul {
   text-align: start;
   width: 100%;
 }
+.theme-general main a {
+  text-decoration: underline;
+  text-transform: none;
+}
 
 .theme-over-ons h1,
 .theme-over-ons h2,
@@ -759,11 +763,6 @@ section.intro {
 }
 section:not(.intro) {
   width: 100%;
-}
-@media (min-width: 768px) {
-  section:nth-child(2) {
-    padding-top: 22rem;
-  }
 }
 @media (min-width: 1025px) {
   section.text-container {
@@ -1297,7 +1296,7 @@ i {
   list-style-position: inside;
 }
 .sitemap-list ul {
-  padding-left: 3rem;
+  padding-left: 2rem;
 }
 .sitemap-list li {
   list-style-type: circle;

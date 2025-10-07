@@ -9,11 +9,11 @@ section {
 		width: 100%;
 	}
 
-	&:nth-child(2) {
-		@media (min-width: 768px) {
-			padding-top: 22rem;
-		}
-	}
+	// &:nth-child(2) {
+	// 	@media (min-width: 768px) {
+	// 		padding-top: 22rem;
+	// 	}
+	// }
 
 	&.text-container {
 		@media (min-width: 1025px) {
