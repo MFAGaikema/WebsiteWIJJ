@@ -43,6 +43,16 @@
 		text-align: center;
 	}
 
+	.slogan {
+		font-size: 1.25rem;
+		padding-bottom: 0;
+		text-transform: uppercase;
+	}
+
+	.copyright {
+		font-weight: 300;
+	}
+
 	//FOCUS
 	button:focus-visible,
 	a:focus-visible {

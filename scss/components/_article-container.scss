@@ -27,15 +27,10 @@
 			}
 		}
 
-		p:not(:last-child) {
-			margin-bottom: 1rem;
-		}
-
 		img {
 			display: block;
 			margin-inline: auto;
 			height: 3.75em;
-			width: auto;
 			margin-bottom: 1em;
 		}
 	}

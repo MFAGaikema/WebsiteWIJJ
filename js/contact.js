@@ -124,7 +124,7 @@ const fetchAndSendDataForEmail = async (data) => {
 	});
 
 	const response = await fetch(
-		'https://hook.eu2.make.com/qcise7j08gtt4kr885tsb5ya8av6dfd8',
+		'https://hook.eu2.make.com/gbweil80hknbiulhqxhiydckxhz18p7u',
 		{
 			method: 'POST',
 			body: formData,
@@ -175,7 +175,18 @@ form.addEventListener('submit', async (e) => {
 
 	const contactNumber = `${currentYear} - ${number}`;
 
+	const currentDateAndTime = now.toLocaleString('nl-NL', {
+		timeZone: 'Europe/Amsterdam',
+		day: '2-digit',
+		month: '2-digit',
+		year: 'numeric',
+		hour: '2-digit',
+		minute: '2-digit',
+		hour12: false,
+	});
+
 	data['contactNumber'] = contactNumber;
+	data['currentDateAndTime'] = currentDateAndTime;
 
 	fetchAndSendDataForEmail(data);
 

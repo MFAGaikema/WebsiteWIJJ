@@ -20,4 +20,11 @@ section {
 			padding: 2.5em 0;
 		}
 	}
+
+	&.one-ps {
+		a {
+			text-transform: none;
+			text-decoration: underline;
+		}
+	}
 }

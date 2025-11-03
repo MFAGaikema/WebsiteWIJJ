@@ -10,10 +10,6 @@ main {
 	&.coachen,
 	&.zorgen,
 	&.werken {
-		section:nth-child(2) {
-			background-color: #eee;
-		}
-
 		@media (min-width: 768px) {
 			.text-container {
 				text-align: start;

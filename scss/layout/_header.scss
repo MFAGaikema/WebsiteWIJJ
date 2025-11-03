@@ -76,6 +76,19 @@ header {
 			}
 		}
 
+		.phone-number {
+			font-size: 1.5rem;
+			text-decoration: underline;
+
+			&:hover {
+				color: var(--dark-green);
+			}
+
+			@media (min-width: 1025px) {
+				font-size: 1.25rem;
+			}
+		}
+
 		//as long as there is no search functionality
 		.nav-right-container {
 			.nav-search-contact-container {
