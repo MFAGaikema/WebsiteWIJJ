@@ -4,8 +4,18 @@
 
 //VARIABLES
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const textarea = document.querySelector('textarea');
 let triedToSubmit = false;
 let formDataIsValid = true;
+
+//FUNCTION FOR FORM CONTROL
+
+//put cursor at start of textarea when clicked on
+textarea.addEventListener('mousedown', (e) => {
+	e.preventDefault();
+	textarea.focus();
+	textarea.setSelectionRange(0, 0);
+});
 
 //FUNCTIONS FOR FORM VALIDATION
 const setErrorText = (element, key, validation) => {

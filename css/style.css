@@ -1121,6 +1121,10 @@ input[type=submit],
   padding: 10px 20px;
   border-radius: 10px;
 }
+#confirmation p {
+  margin-bottom: 0;
+  text-align: center;
+}
 
 hr {
   border-top: 1px solid #777;
