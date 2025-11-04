@@ -4,18 +4,8 @@
 
 //VARIABLES
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-const textarea = document.querySelector('textarea');
 let triedToSubmit = false;
 let formDataIsValid = true;
-
-//FUNCTION FOR FORM CONTROL
-
-//put cursor at start of textarea when clicked on
-textarea.addEventListener('mousedown', (e) => {
-	e.preventDefault();
-	textarea.focus();
-	textarea.setSelectionRange(0, 0);
-});
 
 //FUNCTIONS FOR FORM VALIDATION
 const setErrorText = (element, key, validation) => {
@@ -107,8 +97,7 @@ const showComfirmation = () => {
 	form.style.display = 'none';
 	formContainer.innerHTML = `<div id="confirmation" role="status" tabindex="-1">
 						<p>
-							Bedankt voor je bericht! We nemen zo snel mogelijk contact met je
-							op.
+							Bedankt voor je bericht! Je ontvangt zo meteen een bevestiging per e-mail.
 						</p>
 					</div>`;
 
@@ -133,13 +122,10 @@ const fetchAndSendDataForEmail = async (data) => {
 		formData.append(key, value);
 	});
 
-	const response = await fetch(
-		'https://hook.eu2.make.com/gbweil80hknbiulhqxhiydckxhz18p7u',
-		{
-			method: 'POST',
-			body: formData,
-		}
-	);
+	const response = await fetch(MAKE_WEBHOOK, {
+		method: 'POST',
+		body: formData,
+	});
 
 	if (response.ok) {
 		showComfirmation();
