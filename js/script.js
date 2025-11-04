@@ -275,15 +275,17 @@ window.addEventListener('keydown', (e) => {
 	if (e.key === 'Tab' && !e.shiftKey) {
 		const currentDropdownMenu = e.target.parentElement.parentElement;
 
-		const lastChildofCurrentDropdownMenu =
-			currentDropdownMenu?.lastElementChild.children[0];
+		if (currentDropdownMenu?.classList[0] === 'dropdown-menu') {
+			const lastChildofCurrentDropdownMenu =
+				currentDropdownMenu?.lastElementChild.children[0];
 
-		if (lastChildofCurrentDropdownMenu === e.target) {
-			const dropdownId = currentDropdownMenu.id;
-			const currentDropdownBtn = Array.from(dropdownBtns).find(
-				(btn) => btn.ariaControlsElements[0].id === dropdownId
-			);
-			closeDropdownMenu(currentDropdownBtn, currentDropdownMenu);
+			if (lastChildofCurrentDropdownMenu === e.target) {
+				const dropdownId = currentDropdownMenu.id;
+				const currentDropdownBtn = Array.from(dropdownBtns).find(
+					(btn) => btn.ariaControlsElements[0].id === dropdownId
+				);
+				closeDropdownMenu(currentDropdownBtn, currentDropdownMenu);
+			}
 		}
 	}
 });
