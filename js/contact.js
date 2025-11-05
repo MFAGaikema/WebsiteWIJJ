@@ -115,16 +115,17 @@ const showGeneralError = () => {
 };
 
 const fetchAndSendDataForEmail = async (data) => {
-	const formData = new FormData();
+	//const formData = new FormData();
 
 	//change formData into a format so Make can read all seperate values instead of the object itself
-	Object.entries(data).forEach(([key, value]) => {
-		formData.append(key, value);
-	});
+	// Object.entries(data).forEach(([key, value]) => {
+	// 	formData.append(key, value);
+	// });
 
-	const response = await fetch(MAKE_WEBHOOK, {
+	const response = await fetch('/.netlify/functions/sendToMake', {
 		method: 'POST',
-		body: formData,
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify(data),
 	});
 
 	if (response.ok) {
